@@ -20,6 +20,12 @@
   src: url("/fonts/NeueHaasDisplayLight.ttf");
 }
 
+@font-face {
+  font-family: "New York";
+  font-weight: 400;
+  src: url("/fonts/NewYork.otf");
+}
+
 html,
 body {
   padding: 0;
@@ -27,3 +33,16 @@ body {
   background-color: #111313;
 }
 
+.titleHTML {
+  font-family: "Neue Haas Bold";
+}
+
+.theme-gris {
+  --mainBg: theme("colors.offBlack");
+  --mainText: theme("colors.offWhite");
+}
+
+.theme-maroon {
+  --mainBg: theme("colors.strand");
+  --mainText: theme("colors.maroon");
+}
