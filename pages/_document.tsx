@@ -51,12 +51,19 @@ class Document extends NextDocument {
             crossOrigin=""
             type="font/ttf"
           />
-           <link
+          <link
             rel="preload"
             href="/fonts/NeueHaasDisplayLight.ttf"
             as="font"
             crossOrigin=""
             type="font/ttf"
+          />
+          <link
+            rel="preload"
+            href="/fonts/NewYork.otf"
+            as="font"
+            crossOrigin=""
+            type="font/otf"
           />
           <style
             dangerouslySetInnerHTML={{
@@ -78,6 +85,12 @@ class Document extends NextDocument {
                 font-family: "Neue Haas Light";
                 font-weight: 400;
                 src: url("./fonts/NeueHaasDisplayLight.ttf");
+              }
+
+              @font-face {
+                font-family: "New York";
+                font-weight: 400;
+                src: url("./fonts/NewYork.otf");
               }
             `,
             }}
