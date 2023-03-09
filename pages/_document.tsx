@@ -10,7 +10,7 @@ class Document extends NextDocument {
           <meta name="og:title" content="Synthetic Futures" />
           <meta
             name="og:description"
-            content="An ever evolving canvas you can use with friends."
+            content=""
           />
           <meta
             name="og:image"
