@@ -23,7 +23,8 @@ export const getStaticProps = async (context: any) => {
   const postParam: string = context.params.post;
   const response = posts.filter(
     (postData: Post) =>
-    postData.title.toLowerCase() === postParam.replaceAll("-", " ").toLowerCase()
+      postData.title.toLowerCase() ===
+      postParam.replaceAll("-", " ").toLowerCase()
   );
   return {
     props: { post: response },
@@ -39,22 +40,28 @@ const Post: React.FC<InferGetStaticPropsType<typeof getStaticProps>> = ({
         <title>{post.title}</title>
         <meta
           name="og:url"
-          content={`https://syntheticfutures.xyz/post/${post.title}`}
+          content={`https://syntheticfutures.xyz/post/${post?.title}`}
         />
-        <meta name="og:title" content={""} />
-        <meta name="og:description" content={""} />
-        <meta name="og:image" content={""} />
+        <meta name="og:title" content={`${post?.title}`} />
+        <meta name="og:description" content={`${post?.content?.slice(0, 40)}`} />
+        <meta
+          name="og:image"
+          content={`https://f3manifesto.infura-ipfs.io/ipfs/${post?.mainImage}`}
+        />
         <meta name="twitter:card" content="summary" />
         <meta
           name="og:url"
-          content={`https://syntheticfutures.xyz/post/${post.title}`}
+          content={`https://syntheticfutures.xyz/post/${post?.title}`}
         />
-        <meta name="og:image" content={""} />
+        <meta
+          name="og:image"
+          content={`https://f3manifesto.infura-ipfs.io/ipfs/${post?.mainImage}`}
+        />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:site" content="@emmajane1313" />
         <meta name="twitter:creator" content="@emmajane1313" />
-        <meta name="twitter:image" content={""} />
-        <meta name="twitter:url" content={""} />
+        <meta name="twitter:image" content={`https://f3manifesto.infura-ipfs.io/ipfs/${post?.mainImage}`} />
+        <meta name="twitter:url" content={"@emmajane1313"} />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="canonical" href={""} />
         <link
