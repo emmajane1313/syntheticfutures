@@ -10,7 +10,7 @@ class Document extends NextDocument {
           <meta name="og:title" content="Synthetic Futures" />
           <meta
             name="og:description"
-            content=""
+            content="Physical defense has increased by 300. Magic defense has increased by 300. Level up successful. You have acquired the next rank. New dimensional telemetry awaits. Time to help others with the outbreak. Not out of danger yet."
           />
           <meta
             name="og:image"

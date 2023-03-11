@@ -47,9 +47,9 @@ const Posts: FunctionComponent<PostProps> = ({
                   }`}
                 >
                   <div className="relative w-fit h-fit self-center">
-                    {post?.title.length >= 21
-                      ? post?.title.slice(0, 18) + "..."
-                      : post.title}
+                    {post?.title?.length >= 21
+                      ? post?.title?.slice(0, 18) + "..."
+                      : post?.title}
                   </div>
                 </div>
                 <div

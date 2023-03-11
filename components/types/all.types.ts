@@ -2,7 +2,6 @@ export interface Post {
   title: string;
   content: string;
   mainImage: string;
-  images: string[];
   live: boolean;
 }
 
