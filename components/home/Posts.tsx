@@ -23,7 +23,9 @@ const Posts: FunctionComponent<PostProps> = ({
             }
             key={index}
             className={`relative w-full h-full flex flex-col text-mainText ${
-              post.live ? "cursor-pointer opacity-100" : "cursor-default opacity-50"
+              post.live
+                ? "cursor-pointer opacity-100"
+                : "cursor-default opacity-50"
             }`}
           >
             <div className="relative w-full h-full flex flex-col">
@@ -34,7 +36,7 @@ const Posts: FunctionComponent<PostProps> = ({
               >
                 <div
                   className={`relative w-full sm:w-20 h-fit sm:h-full underline grid grid-flow-cols auto-cols-auto py-2 sm:py-10 underline-offset-4 font-neue sm:pl-0 pl-3 transition-opacity duration-500 ease-in-out ${
-                    hoverPost[index] && "opacity-0"
+                    post?.live && hoverPost[index] && "opacity-0"
                   }`}
                 >
                   <div className="relative w-fit h-fit self-start">
@@ -43,7 +45,7 @@ const Posts: FunctionComponent<PostProps> = ({
                 </div>
                 <div
                   className={`relative w-full h-fit sm:h-full grid grid-flow-cols auto-cols-auto font-york text-[5vw] lg:text-[6vw] whitespace-nowrap transition-opacity duration-500 ease-in-out sm:pl-0 pl-3 ${
-                    hoverPost[index] && "opacity-0"
+                    post?.live && hoverPost[index] && "opacity-0"
                   }`}
                 >
                   <div className="relative w-fit h-fit self-center">
@@ -54,7 +56,7 @@ const Posts: FunctionComponent<PostProps> = ({
                 </div>
                 <div
                   className={`h-full object-cover transition-all duration-500 ease-in-out overflow-hidden ${
-                    hoverPost[index]
+                    post?.live && hoverPost[index]
                       ? "w-full absolute right-auto bottom-0 sm:bottom-auto sm:right-0"
                       : "relative w-full sm:w-1/2"
                   }`}
@@ -63,7 +65,7 @@ const Posts: FunctionComponent<PostProps> = ({
                     src={`https://f3manifesto.infura-ipfs.io/ipfs/${post?.mainImage}`}
                     alt={post?.title}
                     style={{
-                      width: hoverPost[index] ? "100%" : "auto",
+                      width: post?.live && hoverPost[index] ? "100%" : "auto",
                     }}
                     className="w-full h-full object-cover"
                     layout="fill"
