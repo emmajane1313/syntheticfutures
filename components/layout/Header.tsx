@@ -18,13 +18,15 @@ const Header: FunctionComponent<HeaderProps> = ({
           className="absolute w-6 h-10 text-xs font-neue cursor-pointer justify-self-end hover:scale-105"
           rel="noreferrer"
           target={"_blank"}
-          href="https://www.youtube.com/@f3manifesto/streams"
+          href="https://www.chromadin.xyz"
         >
           <Image src="/images/fondo.png" layout="fill" />
         </a>
       </div>
       <div className="relative w-full h-full grid grid-flow-col auto-cols-auto text-left eight:text-center text-[14vw] leading-none eight:text-[8.5vw] mod:text-[8.7vw] font-sani">
-        <div className="relative w-fit h-fit justify-self-center">SYNTHETIC FUTURES</div>
+        <div className="relative w-fit h-fit justify-self-center">
+          SYNTHETIC FUTURES
+        </div>
       </div>
     </div>
   );
