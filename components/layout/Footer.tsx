@@ -8,7 +8,7 @@ const Footer: FunctionComponent<FooterProps> = ({ color }): JSX.Element => {
     <div className="relative w-full h-full grid grid-flow-col auto-cols-auto pt-60">
       <div className="relative w-fit h-fit grid grid-flow-col auto-cols-auto justify-self-center gap-4">
         <a
-          href="https://www.chromadin.xyz/#chat?option=history&profile=emmajane1313"
+          href="https://www.chromadin.xyz/autograph/emmajane1313"
           rel={"noreferrer"}
           target={"_blank"}
           className="relative w-5 h-5"
