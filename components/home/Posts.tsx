@@ -1,16 +1,17 @@
 import Image from "next/legacy/image";
 import Link from "next/link";
-import { useRouter } from "next/router";
 import { FunctionComponent } from "react";
 import { Post, PostProps } from "../types/all.types";
+import { INFURA_GATEWAY } from "../../lib/constants";
 
 const Posts: FunctionComponent<PostProps> = ({
   postList,
   handlePostHoverOver,
   handlePostHoverLeave,
   hoverPost,
+  i18n,
+  router,
 }): JSX.Element => {
-  const router = useRouter();
   return (
     <div className="relative w-full h-full flex flex-col">
       {postList.map((post: Post, index: number) => {
@@ -18,7 +19,9 @@ const Posts: FunctionComponent<PostProps> = ({
           <Link
             href={
               post.live
-                ? `/post/${post?.title?.toLowerCase().replaceAll(" ", "-")}`
+                ? `/post/${post?.title?.[i18n.language as "en" | "es"]
+                    ?.toLowerCase()
+                    .replaceAll(" ", "-")}`
                 : router.basePath
             }
             key={index}
@@ -49,9 +52,12 @@ const Posts: FunctionComponent<PostProps> = ({
                   }`}
                 >
                   <div className="relative w-fit h-fit self-center">
-                    {post?.title?.length >= 21
-                      ? post?.title?.slice(0, 18) + "..."
-                      : post?.title}
+                    {post?.title?.[i18n.language as "en" | "es"]?.length >= 21
+                      ? post?.title?.[i18n.language as "en" | "es"]?.slice(
+                          0,
+                          15
+                        ) + "..."
+                      : post?.title?.[i18n.language as "en" | "es"]}
                   </div>
                 </div>
                 <div
@@ -62,8 +68,8 @@ const Posts: FunctionComponent<PostProps> = ({
                   }`}
                 >
                   <Image
-                    src={`https://f3manifesto.infura-ipfs.io/ipfs/${post?.mainImage}`}
-                    alt={post?.title}
+                    src={`${INFURA_GATEWAY}/ipfs/${post?.mainImage}`}
+                    alt={post?.title?.[i18n.language as "en" | "es"]}
                     style={{
                       width: post?.live && hoverPost[index] ? "100%" : "auto",
                     }}
