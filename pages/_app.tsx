@@ -1,19 +1,26 @@
 import "../styles/globals.css";
+import "./../i18n";
 import type { AppProps } from "next/app";
 import Head from "next/head";
 import Footer from "../components/layout/Footer";
 import { useEffect, useState } from "react";
+import { useTranslation } from "next-i18next";
+import { appWithTranslation } from "next-i18next";
+import { COLORS } from "../lib/constants";
+import { useRouter } from "next/router";
 
 function MyApp({ Component, pageProps }: AppProps) {
-  const colors = ["maroon", "gris"];
-  const [color, setColor] = useState<string>(colors[0]);
+  const { i18n, t } = useTranslation("common");
+  const router = useRouter();
+  const [color, setColor] = useState<string>(COLORS[0]);
+  const [idiomasOpen, setIdiomasOpen] = useState<boolean>(false);
   const changeColor = () => {
-    if (colors.indexOf(color) < 1) {
-      setColor(colors[colors.indexOf(color) + 1]);
-      localStorage.setItem("theme-color", colors[colors.indexOf(color) + 1]);
+    if (COLORS.indexOf(color) < 1) {
+      setColor(COLORS[COLORS.indexOf(color) + 1]);
+      localStorage.setItem("theme-color", COLORS[COLORS.indexOf(color) + 1]);
     } else {
-      setColor(colors[0]);
-      localStorage.setItem("theme-color", colors[0]);
+      setColor(COLORS[0]);
+      localStorage.setItem("theme-color", COLORS[0]);
     }
   };
 
@@ -64,10 +71,19 @@ function MyApp({ Component, pageProps }: AppProps) {
           type="font/otf"
         />
       </Head>
-      <Component {...pageProps} color={color} changeColor={changeColor} />
-      <Footer color={color} />
+      <Component
+        {...pageProps}
+        color={color}
+        changeColor={changeColor}
+        idiomasOpen={idiomasOpen}
+        setIdiomasOpen={setIdiomasOpen}
+        i18n={i18n}
+        t={t}
+        router={router}
+      />
+      <Footer color={color} t={t} />
     </div>
   );
 }
 
-export default MyApp;
+export default appWithTranslation(MyApp);

@@ -6,10 +6,17 @@ import useHome from "../components/home/hooks/useHome";
 import Header from "../components/layout/Header";
 import { IndexProps } from "../components/types/all.types";
 import postList from "./api/posts.json";
+import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 
-const Home: NextPage<IndexProps> = ({ changeColor }) => {
-  const { handlePostHoverLeave, handlePostHoverOver, hoverPost, categories } =
-    useHome();
+const Home: NextPage<IndexProps> = ({
+  changeColor,
+  idiomasOpen,
+  setIdiomasOpen,
+  i18n,
+  t,
+  router,
+}) => {
+  const { handlePostHoverLeave, handlePostHoverOver, hoverPost } = useHome();
   return (
     <div className="relative w-full h-full flex flex-col">
       <Head>
@@ -17,16 +24,31 @@ const Home: NextPage<IndexProps> = ({ changeColor }) => {
         <meta name="description" content="Synthetic Futures" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <Header changeColor={changeColor} />
-      <Description categories={categories} />
+      <Header
+        changeColor={changeColor}
+        idiomasOpen={idiomasOpen}
+        setIdiomasOpen={setIdiomasOpen}
+        i18n={i18n}
+        t={t}
+      />
+      <Description t={t} i18n={i18n} />
       <Columns
+        t={t}
         postList={postList}
         handlePostHoverOver={handlePostHoverOver}
         handlePostHoverLeave={handlePostHoverLeave}
         hoverPost={hoverPost}
+        router={router}
+        i18n={i18n}
       />
     </div>
   );
 };
 
 export default Home;
+
+export const getStaticProps = async ({ locale }: { locale: string }) => ({
+  props: {
+    ...(await serverSideTranslations(locale, ["common"])),
+  },
+});

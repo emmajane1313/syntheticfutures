@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Categories, UseHomeResult } from "../../types/all.types";
+import { UseHomeResult } from "../../types/all.types";
 import postList from "./../../../pages/api/posts.json";
 
 const useHome = (): UseHomeResult => {
@@ -21,30 +21,11 @@ const useHome = (): UseHomeResult => {
     setHoverPost(newHoverPost);
   };
 
-  const categories: Categories[] = [
-    {
-      main: "manufacturing",
-      sub: ["microfactories", "local co-ops", "gpu"],
-    },
-    {
-      main: "autonomation",
-      sub: ["synth + diffusion", "jidoka"],
-    },
-    {
-      main: "web3",
-      sub: ["decentralized social media", "zk rollups", "defi", "refi"],
-    },
-    {
-      main: "fashion",
-      sub: ["digital", "zero waste", "aop", "femto"],
-    },
-  ];
 
   return {
     handlePostHoverOver,
     handlePostHoverLeave,
     hoverPost,
-    categories,
   };
 };
 
