@@ -9,6 +9,7 @@ const Header: FunctionComponent<HeaderProps> = ({
   setIdiomasOpen,
   i18n,
   t,
+  router,
 }): JSX.Element => {
   return (
     <div className="relative w-full h-full text-mainText flex flex-col text-center gap-10 px-2 sm:px-8 py-4">
@@ -58,9 +59,16 @@ const Header: FunctionComponent<HeaderProps> = ({
                         index !== 2 &&
                         "hover:opacity-80 cursor-pointer border-b border-mainText"
                       }`}
-                      onClick={() =>
-                        index !== 2 && i18n.changeLanguage(item.name)
-                      }
+                      onClick={() => {
+                        if (index !== 2) {
+                          i18n.changeLanguage(item.name);
+
+                          router.push(router.asPath, undefined, {
+                            shallow: true,
+                            locale: item.name,
+                          });
+                        }
+                      }}
                     >
                       <div className="relative w-fit h-fit flex items-center justify-center">
                         <div className="relative w-6 h-6 flex items-center justify-center">

@@ -27,6 +27,7 @@ const Home: NextPage<IndexProps> = ({
       <Header
         changeColor={changeColor}
         idiomasOpen={idiomasOpen}
+        router={router}
         setIdiomasOpen={setIdiomasOpen}
         i18n={i18n}
         t={t}
