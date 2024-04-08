@@ -51,6 +51,7 @@ export type HeaderProps = {
   idiomasOpen: boolean;
   setIdiomasOpen: (e: boolean) => void;
   t: TFunction<"common", undefined>;
+  router: NextRouter;
 };
 
 export type FooterProps = {

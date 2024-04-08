@@ -4,7 +4,7 @@ import { NextRouter } from "next/router";
 import { Post } from "../../types/all.types";
 
 const usePost = (path: string, router: NextRouter) => {
-  const [publication, setPublication] = useState<Post | undefined>(undefined);
+  const [publication, setPublication] = useState<Post | undefined>();
 
   useEffect(() => {
     if (path) {
