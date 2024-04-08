@@ -25,7 +25,7 @@ const Header: FunctionComponent<HeaderProps> = ({
             className="relative w-6 h-10 font-neue cursor-pointer hover:scale-105"
             onClick={() => setIdiomasOpen(!idiomasOpen)}
           >
-            <Image src="/images/fondo.png" layout="fill" />
+            <Image draggable={false} src="/images/fondo.png" layout="fill" />
           </div>
           {idiomasOpen && (
             <div

@@ -18,6 +18,7 @@ const Footer: FunctionComponent<FooterProps> = ({ color, t }): JSX.Element => {
             className="relative w-5 h-5 flex items-center justify-center"
           >
             <Image
+              draggable={false}
               src={
                 color === "maroon" ? "/images/lens.png" : "/images/lens2.png"
               }
@@ -33,6 +34,7 @@ const Footer: FunctionComponent<FooterProps> = ({ color, t }): JSX.Element => {
             className="relative w-4 h-5 flex items-center justify-center"
           >
             <Image
+              draggable={false}
               src={
                 color === "maroon"
                   ? "/images/mirror.png"

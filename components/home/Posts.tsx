@@ -73,6 +73,7 @@ const Posts: FunctionComponent<PostProps> = ({
                     style={{
                       width: post?.live && hoverPost[index] ? "100%" : "auto",
                     }}
+                    draggable={false}
                     className="w-full h-full object-cover"
                     layout="fill"
                   />
