@@ -64,7 +64,7 @@ const Header: FunctionComponent<HeaderProps> = ({
                           i18n.changeLanguage(item.name);
 
                           router.push(router.asPath, undefined, {
-                            shallow: true,
+                            // shallow: true,
                             locale: item.name,
                           });
                         }
