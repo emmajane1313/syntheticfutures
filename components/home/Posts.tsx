@@ -61,7 +61,7 @@ const Posts: FunctionComponent<PostProps> = ({
                   </div>
                 </div>
                 <div
-                  className={`h-full object-cover transition-all duration-500 ease-in-out overflow-hidden ${
+                  className={`h-full object-cover transition-all duration-500 ease-in-out overflow-hidden bg-mainText ${
                     post?.live && hoverPost[index]
                       ? "w-full absolute right-auto bottom-0 sm:bottom-auto sm:right-0"
                       : "relative w-full sm:w-1/2"
