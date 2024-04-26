@@ -28,6 +28,8 @@
 
 html,
 body {
+  scrollbar-width: 0px;
+  scrollbar-color: transparent;
   padding: 0;
   margin: 0;
   background-color: #111313;
@@ -45,4 +47,46 @@ body {
 .theme-maroon {
   --mainBg: theme("colors.strand");
   --mainText: theme("colors.maroon");
+}
+
+html::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+  opacity: 0;
+}
+
+html::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+  opacity: 0;
+}
+
+html::-webkit-scrollbar-track:active {
+  background-color: transparent !important;
+  opacity: 0;
+}
+
+html::-webkit-scrollbar-thumb:active {
+  background-color: transparent !important;
+}
+
+div::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+  opacity: 0;
+}
+
+div::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+  opacity: 0;
+}
+
+div::-webkit-scrollbar-track:active {
+  background-color: transparent !important;
+  opacity: 0;
+}
+
+div::-webkit-scrollbar-thumb:active {
+  background-color: transparent !important;
 }
