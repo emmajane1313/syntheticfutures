@@ -42,7 +42,15 @@ const Header: FunctionComponent<HeaderProps> = ({
                 },
                 {
                   image: "QmZVU5rZxU1REJHNHtScLuNgeKMoDVK4ruwuP7tSznTqUg",
-                  name: t("pronto"),
+                  name: `ar ${t("pronto")}`,
+                },
+                {
+                  image: "QmX5L5R7y2dbFM3mEqWsydsadcScebnUDdeYJW7mWirX5d",
+                  name: `he ${t("pronto")}`,
+                },
+                {
+                  image: "QmRq7WA5H9ghy5qX1FuLLpj9EZvgZyWMuvsyPkGFyVG5ap",
+                  name: `br ${t("pronto")}`,
                 },
               ].map(
                 (
@@ -56,11 +64,11 @@ const Header: FunctionComponent<HeaderProps> = ({
                     <div
                       key={index}
                       className={`relative w-full h-12 flex items-center px-2 justify-center flex-row gap-2 ${
-                        index !== 2 &&
-                        "hover:opacity-80 cursor-pointer border-b border-mainText"
-                      }`}
+                        (index !==4) &&
+                        "border-b border-mainText"
+                      } ${(index === 0 || index === 1) && "hover:opacity-80 cursor-pointer"}`}
                       onClick={() => {
-                        if (index !== 2) {
+                        if (index === 0 || index === 1) {
                           i18n.changeLanguage(item.name);
 
                           router.push(router.asPath, undefined, {
