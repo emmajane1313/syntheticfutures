@@ -57,7 +57,7 @@ const Header: FunctionComponent<HeaderProps> = ({
                   name: `uk ${t("pronto")}`,
                 },
                 {
-                  image: "QmPe83Dqtk1BUbxZCnaPFs2hMxKcLdpsM1DfwJbz5LXMht",
+                  image: "QmdbSbop2xMqYEyYk3hErLF9nQmmsFtLSsrwzQgkad9Koo",
                   name: `fa ${t("pronto")}`,
                 }
               ].map(
@@ -72,7 +72,7 @@ const Header: FunctionComponent<HeaderProps> = ({
                     <div
                       key={index}
                       className={`relative w-full h-12 flex items-center px-2 justify-center flex-row gap-2 ${
-                        (index !==4) &&
+                        (index !==6) &&
                         "border-b border-mainText"
                       } ${(index === 0 || index === 1) && "hover:opacity-80 cursor-pointer"}`}
                       onClick={() => {
