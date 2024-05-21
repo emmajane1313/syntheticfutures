@@ -52,6 +52,14 @@ const Header: FunctionComponent<HeaderProps> = ({
                   image: "QmRq7WA5H9ghy5qX1FuLLpj9EZvgZyWMuvsyPkGFyVG5ap",
                   name: `br ${t("pronto")}`,
                 },
+                {
+                  image: "QmfRNNJKQ8QxuvdjTh1u5T1JW8WCH3cfsixd5FnGNxVD1m",
+                  name: `uk ${t("pronto")}`,
+                },
+                {
+                  image: "QmPe83Dqtk1BUbxZCnaPFs2hMxKcLdpsM1DfwJbz5LXMht",
+                  name: `fa ${t("pronto")}`,
+                }
               ].map(
                 (
                   item: {
