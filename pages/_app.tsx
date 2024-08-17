@@ -8,6 +8,7 @@ import { useTranslation } from "next-i18next";
 import { appWithTranslation } from "next-i18next";
 import { COLORS } from "../lib/constants";
 import { useRouter } from "next/router";
+import { DefaultSeo } from "next-seo";
 
 function MyApp({ Component, pageProps }: AppProps) {
   const { i18n, t } = useTranslation("common");
@@ -71,6 +72,20 @@ function MyApp({ Component, pageProps }: AppProps) {
           type="font/otf"
         />
       </Head>
+      <DefaultSeo
+        title="Synthetic Futures"
+        description="Time to help others with the outbreak. Not out of danger yet."
+        openGraph={{
+          type: "website",
+          url: "https://www.syntheticfutures.xyz/",
+          site_name: "F3Manifesto",
+        }}
+        twitter={{
+          handle: "@emmajane1313",
+          site: "@emmajane1313",
+          cardType: "summary_large_image",
+        }}
+      />
       <Component
         {...pageProps}
         color={color}
@@ -82,6 +97,10 @@ function MyApp({ Component, pageProps }: AppProps) {
         router={router}
       />
       <Footer color={color} t={t} />
+      <div style={{ display: "none" }}>
+        Web3, Web3 Fashion, Moda Web3, Open Source, CC0, Emma-Jane
+        MacKinnon-Lee, Open Source LLMs, DIGITALAX
+      </div>
     </div>
   );
 }
