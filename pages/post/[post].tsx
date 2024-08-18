@@ -13,7 +13,7 @@ const Post: NextPage<{
   color: string;
 }> = ({ changeColor, color }): JSX.Element => {
   const router = useRouter();
-  const { t } = useTranslation("common");
+  const { t, i18n } = useTranslation("common");
   const { post } = router.query;
   const { publication } = usePost(post as string, router);
   return (
@@ -111,6 +111,9 @@ const Post: NextPage<{
               ? publication?.content?.[publication.locale as "en" | "es"]
               : publication?.content?.[router.locale as "en" | "es"])!
           }
+          t={t}
+          i18n={i18n}
+          lista={publication?.title?.es!?.includes("Perdida En")}
         />
       </div>
     </div>

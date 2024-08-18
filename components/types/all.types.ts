@@ -69,6 +69,17 @@ export type IndexProps = {
   setIdiomasOpen: (e: boolean) => void;
 };
 
+export interface Lista {
+  main: {
+    es: string;
+    en: string;
+  };
+  sub: {
+    titulo: string;
+    enlace: string;
+  }[];
+}
+
 export interface Categories {
   main: {
     es: string;
@@ -96,4 +107,12 @@ export type TitleProps = {
 
 export type ContentProps = {
   description: string;
+  lista: boolean
+  t: TFunction<"common", undefined>;
+  i18n: I18n;
+};
+
+export type ListaProps = {
+  t: TFunction<"common", undefined>;
+  i18n: I18n;
 };
