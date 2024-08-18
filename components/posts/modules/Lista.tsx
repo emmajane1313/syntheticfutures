@@ -28,15 +28,17 @@ const Lista: FunctionComponent<ListaProps> = ({ t, i18n }): JSX.Element => {
                     index: number
                   ) => {
                     return (
-                      <div
+                      <a
                         key={index}
                         className={
                           "relative w-fit h-fit text-xs font-neueL cursor-pointer underline underline-white"
                         }
-                        onClick={() => window.open(sub.enlace)}
+                        target="_blank"
+                        rel="noreferrer"
+                        href={sub.enlace}
                       >
                         {sub.titulo}
-                      </div>
+                      </a>
                     );
                   }
                 )}
