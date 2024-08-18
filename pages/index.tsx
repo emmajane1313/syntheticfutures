@@ -7,15 +7,15 @@ import Header from "../components/layout/Header";
 import { IndexProps } from "../components/types/all.types";
 import postList from "./api/posts.json";
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
+import { useTranslation } from "next-i18next";
 
 const Home: NextPage<IndexProps> = ({
   changeColor,
   idiomasOpen,
   setIdiomasOpen,
-  i18n,
-  t,
   router,
 }) => {
+  const { i18n, t } = useTranslation("common");
   const { handlePostHoverLeave, handlePostHoverOver, hoverPost } = useHome();
   return (
     <div className="relative w-full h-full flex flex-col">

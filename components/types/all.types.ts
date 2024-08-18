@@ -61,14 +61,11 @@ export type HeaderProps = {
 
 export type FooterProps = {
   color: string;
-  t: TFunction<"common", undefined>;
 };
 
 export type IndexProps = {
   changeColor: () => void;
   idiomasOpen: boolean;
-  i18n: I18n;
-  t: TFunction<"common", undefined>;
   setIdiomasOpen: (e: boolean) => void;
   router: NextRouter;
 };

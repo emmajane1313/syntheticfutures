@@ -2,8 +2,10 @@ import Image from "next/legacy/image";
 import { FunctionComponent } from "react";
 import { AiFillGithub } from "react-icons/ai";
 import { FooterProps } from "../types/all.types";
+import { useTranslation } from "next-i18next";
 
-const Footer: FunctionComponent<FooterProps> = ({ color, t }): JSX.Element => {
+const Footer: FunctionComponent<FooterProps> = ({ color }): JSX.Element => {
+  const { t } = useTranslation("common");
   return (
     <div className="relative w-full h-full flex items-center justify-center flex-row gap-4 pt-60 pb-3">
       <div className="absolute w-fit h-fit flex items-center justify-center text-mainText text-xs left-2 font-neue">

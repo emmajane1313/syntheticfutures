@@ -4,14 +4,12 @@ import type { AppProps } from "next/app";
 import Head from "next/head";
 import Footer from "../components/layout/Footer";
 import { useEffect, useState } from "react";
-import { useTranslation } from "next-i18next";
 import { appWithTranslation } from "next-i18next";
 import { COLORS } from "../lib/constants";
 import { useRouter } from "next/router";
 import { DefaultSeo } from "next-seo";
 
 function MyApp({ Component, pageProps }: AppProps) {
-  const { i18n, t } = useTranslation("common");
   const router = useRouter();
   const [color, setColor] = useState<string>(COLORS[0]);
   const [idiomasOpen, setIdiomasOpen] = useState<boolean>(false);
@@ -92,11 +90,9 @@ function MyApp({ Component, pageProps }: AppProps) {
         changeColor={changeColor}
         idiomasOpen={idiomasOpen}
         setIdiomasOpen={setIdiomasOpen}
-        i18n={i18n}
-        t={t}
         router={router}
       />
-      <Footer color={color} t={t} />
+      <Footer color={color} />
       <div style={{ display: "none" }}>
         Web3, Web3 Fashion, Moda Web3, Open Source, CC0, Emma-Jane
         MacKinnon-Lee, Open Source LLMs, DIGITALAX, F3Manifesto,
