@@ -99,7 +99,8 @@ function MyApp({ Component, pageProps }: AppProps) {
       <Footer color={color} t={t} />
       <div style={{ display: "none" }}>
         Web3, Web3 Fashion, Moda Web3, Open Source, CC0, Emma-Jane
-        MacKinnon-Lee, Open Source LLMs, DIGITALAX
+        MacKinnon-Lee, Open Source LLMs, DIGITALAX, F3Manifesto,
+        www.digitalax.xyz, www.f3manifesto.xyz, Women, Life, Freedom.
       </div>
     </div>
   );
