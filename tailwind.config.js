@@ -19,6 +19,9 @@ module.exports = {
         maroon: "#C92D1F",
         strand: "#EAE1D3",
       },
+      fontSize: {
+        xxs: "0.6rem",
+      },
       fontFamily: {
         sani: "Serat Serif",
         neue: "Neue Haas Bold",

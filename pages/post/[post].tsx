@@ -20,7 +20,10 @@ export const getStaticProps = async ({ locale }: { locale: string }) => ({
   },
 });
 
-const Post: NextPage<{ router: NextRouter }> = ({ router }): JSX.Element => {
+const Post: NextPage<{ router: NextRouter; changeColor: () => void }> = ({
+  router,
+  changeColor,
+}): JSX.Element => {
   const { t } = useTranslation("common");
   const { post } = router.query;
   const { publication } = usePost(post as string, router);
@@ -40,9 +43,12 @@ const Post: NextPage<{ router: NextRouter }> = ({ router }): JSX.Element => {
         />
         <meta
           name="og:description"
-          content={`${publication?.content?.[
-            router.locale as "en" | "es"
-          ]?.slice(0, 34)}`}
+          content={`${((
+            publication?.content?.[router.locale as "en" | "es"] || ""
+          )?.length < 1
+            ? publication?.content?.[publication.locale as "en" | "es"]
+            : publication?.content?.[router.locale as "en" | "es"]
+          )?.slice(0, 34)}`}
         />
         <meta
           name="og:image"
@@ -93,10 +99,18 @@ const Post: NextPage<{ router: NextRouter }> = ({ router }): JSX.Element => {
         <Title
           title={publication?.title?.[router.locale as "en" | "es"]!}
           t={t}
+          fecha={publication?.fecha?.[router.locale as "en" | "es"]!}
           locale={publication?.locale!}
+          traducciones={publication?.traducciones!}
+          changeColor={changeColor}
         />
         <Content
-          description={publication?.content?.[router.locale as "en" | "es"]!}
+          description={
+            ((publication?.content?.[router.locale as "en" | "es"] || "")
+              ?.length < 1
+              ? publication?.content?.[publication.locale as "en" | "es"]
+              : publication?.content?.[router.locale as "en" | "es"])!
+          }
         />
       </div>
     </div>

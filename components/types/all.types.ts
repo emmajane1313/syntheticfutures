@@ -7,6 +7,11 @@ export interface Post {
     en: string;
     es: string;
   };
+  traducciones: string;
+  fecha: {
+    en: string;
+    es: string;
+  };
   content: {
     en: string;
     es: string;
@@ -88,6 +93,9 @@ export type TitleProps = {
   title: string;
   t: TFunction<"common", undefined>;
   locale: string;
+  fecha: string;
+  traducciones: string;
+  changeColor: () => void;
 };
 
 export type ContentProps = {

@@ -42,11 +42,11 @@ const Header: FunctionComponent<HeaderProps> = ({
                 },
                 {
                   image: "QmZVU5rZxU1REJHNHtScLuNgeKMoDVK4ruwuP7tSznTqUg",
-                  name: `ar ${t("pronto")}`,
+                  name: `ع ${t("pronto")}`,
                 },
                 {
                   image: "QmX5L5R7y2dbFM3mEqWsydsadcScebnUDdeYJW7mWirX5d",
-                  name: `he ${t("pronto")}`,
+                  name: `א ${t("pronto")}`,
                 },
                 {
                   image: "QmRq7WA5H9ghy5qX1FuLLpj9EZvgZyWMuvsyPkGFyVG5ap",
@@ -54,12 +54,24 @@ const Header: FunctionComponent<HeaderProps> = ({
                 },
                 {
                   image: "QmfRNNJKQ8QxuvdjTh1u5T1JW8WCH3cfsixd5FnGNxVD1m",
-                  name: `uk ${t("pronto")}`,
+                  name: `ук ${t("pronto")}`,
                 },
                 {
                   image: "QmdbSbop2xMqYEyYk3hErLF9nQmmsFtLSsrwzQgkad9Koo",
-                  name: `fa ${t("pronto")}`,
-                }
+                  name: `د ${t("pronto")}`,
+                },
+                {
+                  image: "QmXzFXL5rxoqUei2X2rVEMZ5a91d4U6ommUBq4XeFHsA5k",
+                  name: `あ ${t("pronto")}`,
+                },
+                {
+                  image: "QmSG2wdnpEB8xnfmqM7gVhM6BiA2m9GhSJwXSVkQ9JXT3Z",
+                  name: `yi ${t("pronto")}`,
+                },
+                {
+                  image: "QmPkEFY3L1EnKgALyhgpYnnUXtt8KQNcSAUEPiiJcQyhEU",
+                  name: `fr ${t("pronto")}`,
+                },
               ].map(
                 (
                   item: {
@@ -72,9 +84,11 @@ const Header: FunctionComponent<HeaderProps> = ({
                     <div
                       key={index}
                       className={`relative w-full h-12 flex items-center px-2 justify-center flex-row gap-2 ${
-                        (index !==6) &&
-                        "border-b border-mainText"
-                      } ${(index === 0 || index === 1) && "hover:opacity-80 cursor-pointer"}`}
+                        index !== 9 && "border-b border-mainText"
+                      } ${
+                        (index === 0 || index === 1) &&
+                        "hover:opacity-80 cursor-pointer"
+                      }`}
                       onClick={() => {
                         if (index === 0 || index === 1) {
                           i18n.changeLanguage(item.name);
