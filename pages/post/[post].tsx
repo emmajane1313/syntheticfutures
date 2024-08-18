@@ -3,29 +3,16 @@ import Head from "next/head";
 import Content from "../../components/posts/modules/Content";
 import Title from "../../components/posts/modules/Title";
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
-import { NextRouter } from "next/router";
+import { useRouter } from "next/router";
 import usePost from "../../components/posts/hooks/usePost";
 import { useTranslation, withTranslation } from "next-i18next";
 import { PiArrowFatLinesLeftFill } from "react-icons/pi";
 
-export async function getStaticPaths() {
-  return {
-    paths: [],
-    fallback: "blocking",
-  };
-}
-
-export const getStaticProps = async ({ locale }: { locale: string }) => ({
-  props: {
-    ...(await serverSideTranslations(locale, ["common"])),
-  },
-});
-
 const Post: NextPage<{
-  router: NextRouter;
   changeColor: () => void;
   color: string;
-}> = ({ router, changeColor, color }): JSX.Element => {
+}> = ({ changeColor, color }): JSX.Element => {
+  const router = useRouter();
   const { t } = useTranslation("common");
   const { post } = router.query;
   const { publication } = usePost(post as string, router);
@@ -103,7 +90,10 @@ const Post: NextPage<{
             className="relative w-fit h-fit flex items-center justify-center cursor-pointer"
             onClick={() => router.push("/")}
           >
-            <PiArrowFatLinesLeftFill color={color == "maroon" ? "C92D1F" : "F2F2F2"} size={24} />
+            <PiArrowFatLinesLeftFill
+              color={color == "maroon" ? "C92D1F" : "F2F2F2"}
+              size={24}
+            />
           </div>
         </div>
         <Title
@@ -128,3 +118,16 @@ const Post: NextPage<{
 };
 
 export default withTranslation()(Post);
+
+export async function getStaticPaths() {
+  return {
+    paths: [],
+    fallback: "blocking",
+  };
+}
+
+export const getStaticProps = async ({ locale }: { locale: string }) => ({
+  props: {
+    ...(await serverSideTranslations(locale, ["common"])),
+  },
+});

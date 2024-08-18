@@ -10,7 +10,6 @@ import { useRouter } from "next/router";
 import { DefaultSeo } from "next-seo";
 
 function MyApp({ Component, pageProps }: AppProps) {
-  const router = useRouter();
   const [color, setColor] = useState<string>(COLORS[0]);
   const [idiomasOpen, setIdiomasOpen] = useState<boolean>(false);
   const changeColor = () => {
@@ -90,7 +89,6 @@ function MyApp({ Component, pageProps }: AppProps) {
         changeColor={changeColor}
         idiomasOpen={idiomasOpen}
         setIdiomasOpen={setIdiomasOpen}
-        router={router}
       />
       <Footer color={color} />
       <div style={{ display: "none" }}>

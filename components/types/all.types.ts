@@ -67,7 +67,6 @@ export type IndexProps = {
   changeColor: () => void;
   idiomasOpen: boolean;
   setIdiomasOpen: (e: boolean) => void;
-  router: NextRouter;
 };
 
 export interface Categories {
