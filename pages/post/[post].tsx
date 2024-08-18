@@ -101,7 +101,7 @@ const Post: NextPage<{
         <div className="relative w-full h-fit pt-4 flex items-center justify-start pl-2 ">
           <div
             className="relative w-fit h-fit flex items-center justify-center cursor-pointer"
-            onClick={() => router.back()}
+            onClick={() => router.push("/")}
           >
             <PiArrowFatLinesLeftFill color={color == "maroon" ? "C92D1F" : "F2F2F2"} size={24} />
           </div>
