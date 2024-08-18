@@ -5,7 +5,7 @@ import Title from "../../components/posts/modules/Title";
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 import { NextRouter } from "next/router";
 import usePost from "../../components/posts/hooks/usePost";
-import { useTranslation } from "next-i18next";
+import { useTranslation, withTranslation } from "next-i18next";
 
 export async function getStaticPaths() {
   return {
@@ -117,4 +117,4 @@ const Post: NextPage<{
   );
 };
 
-export default Post;
+export default withTranslation()(Post);

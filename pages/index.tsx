@@ -7,7 +7,7 @@ import Header from "../components/layout/Header";
 import { IndexProps } from "../components/types/all.types";
 import postList from "./api/posts.json";
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
-import { useTranslation } from "next-i18next";
+import { useTranslation, withTranslation } from "next-i18next";
 
 const Home: NextPage<IndexProps> = ({
   changeColor,
@@ -46,7 +46,7 @@ const Home: NextPage<IndexProps> = ({
   );
 };
 
-export default Home;
+export default withTranslation()(Home);
 
 export const getStaticProps = async ({ locale }: { locale: string }) => ({
   props: {
