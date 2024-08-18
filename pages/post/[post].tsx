@@ -6,6 +6,7 @@ import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 import { NextRouter } from "next/router";
 import usePost from "../../components/posts/hooks/usePost";
 import { useTranslation, withTranslation } from "next-i18next";
+import { PiArrowFatLinesLeftFill } from "react-icons/pi";
 
 export async function getStaticPaths() {
   return {
@@ -23,7 +24,8 @@ export const getStaticProps = async ({ locale }: { locale: string }) => ({
 const Post: NextPage<{
   router: NextRouter;
   changeColor: () => void;
-}> = ({ router, changeColor }): JSX.Element => {
+  color: string;
+}> = ({ router, changeColor, color }): JSX.Element => {
   const { t } = useTranslation("common");
   const { post } = router.query;
   const { publication } = usePost(post as string, router);
@@ -96,6 +98,14 @@ const Post: NextPage<{
         />
       </Head>
       <div className="relative w-full h-full flex flex-col gap-10">
+        <div className="relative w-full h-fit pt-4 flex items-center justify-start pl-2 ">
+          <div
+            className="relative w-fit h-fit flex items-center justify-center cursor-pointer"
+            onClick={() => router.back()}
+          >
+            <PiArrowFatLinesLeftFill color={color == "maroon" ? "C92D1F" : "F2F2F2"} size={24} />
+          </div>
+        </div>
         <Title
           title={publication?.title?.[router.locale as "en" | "es"]!}
           t={t}

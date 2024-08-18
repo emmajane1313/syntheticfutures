@@ -7,8 +7,8 @@ import { useTranslation } from "next-i18next";
 const Footer: FunctionComponent<FooterProps> = ({ color }): JSX.Element => {
   const { t } = useTranslation("common");
   return (
-    <div className="relative w-full h-full flex items-center justify-center flex-row gap-4 pt-60 pb-3">
-      <div className="absolute w-fit h-fit flex items-center justify-center text-mainText text-xs left-2 font-neue">
+    <div className="relative w-full h-full flex items-center justify-center flex-col sm:flex-row gap-4 pt-60 pb-3">
+      <div className="sm:absolute relative w-fit h-fit flex items-center justify-center break-all text-mainText text-xs sm:left-2 font-neue sm:text-left text-center">
         {t("trad")}
       </div>
       <div className="relative w-fit h-fit flex flex-row items-center  justify-center gap-4">
