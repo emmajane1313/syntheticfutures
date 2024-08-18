@@ -6,6 +6,7 @@ import { useTranslation } from "next-i18next";
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 import { NextRouter } from "next/router";
 import usePost from "../../components/posts/hooks/usePost";
+import { TFunction } from "i18next";
 
 export async function getStaticPaths() {
   return {
@@ -20,11 +21,12 @@ export const getStaticProps = async ({ locale }: { locale: string }) => ({
   },
 });
 
-const Post: NextPage<{ router: NextRouter; changeColor: () => void }> = ({
-  router,
-  changeColor,
-}): JSX.Element => {
-  const { t } = useTranslation("common");
+const Post: NextPage<{
+  router: NextRouter;
+  changeColor: () => void;
+  t: TFunction<"common", undefined>;
+}> = ({ router, changeColor, t }): JSX.Element => {
+  // const { t } = useTranslation("common");
   const { post } = router.query;
   const { publication } = usePost(post as string, router);
   return (
