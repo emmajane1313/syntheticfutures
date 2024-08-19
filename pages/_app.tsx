@@ -68,6 +68,24 @@ function MyApp({ Component, pageProps }: AppProps) {
           crossOrigin=""
           type="font/otf"
         />
+        <meta
+          name="keywords"
+          content="Web3, Web3 Fashion, Moda Web3, Open Source, CC0, Emma-Jane MacKinnon-Lee, Open Source LLMs, DIGITALAX, F3Manifesto, www.digitalax.xyz, www.f3manifesto.xyz, Women, Life, Freedom."
+        />
+        <meta name="robots" content="index, follow" />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "WebSite",
+              name: "Synthetic Futures",
+              description:
+                "Web3, Web3 Fashion, Moda Web3, Open Source, CC0, Emma-Jane MacKinnon-Lee, Open Source LLMs, DIGITALAX, F3Manifesto, www.digitalax.xyz, www.f3manifesto.xyz, Women, Life, Freedom.",
+              url: "https://www.syntheticfutures.xyz/",
+            }),
+          }}
+        />
       </Head>
       <DefaultSeo
         title="Synthetic Futures"
@@ -91,11 +109,6 @@ function MyApp({ Component, pageProps }: AppProps) {
         setIdiomasOpen={setIdiomasOpen}
       />
       <Footer color={color} />
-      <div style={{ display: "none" }}>
-        Web3, Web3 Fashion, Moda Web3, Open Source, CC0, Emma-Jane
-        MacKinnon-Lee, Open Source LLMs, DIGITALAX, F3Manifesto,
-        www.digitalax.xyz, www.f3manifesto.xyz, Women, Life, Freedom.
-      </div>
     </div>
   );
 }
