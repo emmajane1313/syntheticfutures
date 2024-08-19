@@ -18,7 +18,7 @@ const Lista: FunctionComponent<ListaProps> = ({ t, i18n }): JSX.Element => {
               <div className="relative w-fit h-fit text-sm opacity-80 font-neue">
                 {category.main[i18n.language as "en" | "es"]}
               </div>
-              <div>
+              <div className="relative flex flex-col gap-2">
                 {category.sub.map(
                   (
                     sub: {
@@ -28,17 +28,15 @@ const Lista: FunctionComponent<ListaProps> = ({ t, i18n }): JSX.Element => {
                     index: number
                   ) => {
                     return (
-                      <a
+                      <div
                         key={index}
                         className={
                           "relative w-fit h-fit text-xs font-neueL cursor-pointer underline underline-white"
                         }
-                        target="_blank"
-                        rel="noreferrer"
-                        href={sub.enlace}
+                        onClick={() => window.open(sub.enlace)}
                       >
                         {sub.titulo}
-                      </a>
+                      </div>
                     );
                   }
                 )}

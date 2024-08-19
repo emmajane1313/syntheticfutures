@@ -97,6 +97,10 @@ export const LISTA: Lista[] = [
         titulo: "سمر طارق – عتمة",
         enlace: "https://www.youtube.com/watch?v=nDkNdRVXajw",
       },
+      {
+        titulo: " رشاد كُمبال - أنا وقهوتي",
+        enlace: "https://soundcloud.com/combal/coffee",
+      },
     ],
   },
   {
