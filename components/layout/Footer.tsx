@@ -3,6 +3,7 @@ import { FunctionComponent } from "react";
 import { AiFillGithub } from "react-icons/ai";
 import { FooterProps } from "../types/all.types";
 import { useTranslation } from "next-i18next";
+import { FaTwitter } from "react-icons/fa";
 
 const Footer: FunctionComponent<FooterProps> = ({ color }): JSX.Element => {
   const { t } = useTranslation("common");
@@ -11,7 +12,7 @@ const Footer: FunctionComponent<FooterProps> = ({ color }): JSX.Element => {
       <div className="sm:absolute relative w-fit h-fit flex items-center justify-center break-all text-mainText text-xs sm:left-2 font-neue sm:text-left text-center">
         {t("trad")}
       </div>
-      <div className="relative w-fit h-fit flex flex-row items-center  justify-center gap-4">
+      <div className="relative w-fit h-fit flex flex-row items-center  justify-center gap-4 sm:flex-nowrap flex-wrap">
         <div className="relative w-fit h-fit flex items-center justify-center">
           <a
             href="https://www.chromadin.xyz/autograph/emmajane1313"
@@ -54,6 +55,19 @@ const Footer: FunctionComponent<FooterProps> = ({ color }): JSX.Element => {
             className="relative w-fit h-fit flex items-center justify-center"
           >
             <AiFillGithub
+              color={color === "maroon" ? "#C92D1F" : "#F2F2F2"}
+              size={20}
+            />
+          </a>
+        </div>
+        <div className="relative w-fit h-fit flex items-center justify-center">
+          <a
+            href="https://twitter.com/emmajane1313"
+            rel={"noreferrer"}
+            target={"_blank"}
+            className="relative w-fit h-fit flex items-center justify-center"
+          >
+            <FaTwitter
               color={color === "maroon" ? "#C92D1F" : "#F2F2F2"}
               size={20}
             />
