@@ -42,6 +42,14 @@ export const LISTA: Lista[] = [
         titulo: "Pau Laggies - niño azul",
         enlace: "https://www.youtube.com/watch?v=sch4ayio_5Q",
       },
+      {
+        titulo: "Amaia, Rojuu - Quiero Pero No",
+        enlace: "https://www.youtube.com/watch?v=dh4RCxye4gs",
+      },
+      {
+        titulo: "BRATTY - tdbn",
+        enlace: "https://www.youtube.com/watch?v=V5eMrooTH1U",
+      },
     ],
   },
 
@@ -101,6 +109,10 @@ export const LISTA: Lista[] = [
         titulo: " رشاد كُمبال - أنا وقهوتي",
         enlace: "https://soundcloud.com/combal/coffee",
       },
+      {
+        titulo: "كلماتكَ هي ملعبكْ",
+        enlace: "https://www.youtube.com/watch?v=cgoxQADyS-8",
+      },
     ],
   },
   {
@@ -129,7 +141,12 @@ export const LISTA: Lista[] = [
       en: "Yiddish",
       es: "Yiddish",
     },
-    sub: [],
+    sub: [
+      {
+        titulo: "יידישע הומור Yiddish Humor",
+        enlace: "https://www.youtube.com/watch?v=-2o_52pQk74",
+      },
+    ],
   },
   {
     main: {
