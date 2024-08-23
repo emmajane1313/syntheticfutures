@@ -1,6 +1,6 @@
 import { Categories, Lista } from "../components/types/all.types";
 
-export const COLORS = ["maroon", "gris"];
+export const COLORS: string[] = ["maroon", "gris", "mar"];
 
 export const LISTA: Lista[] = [
   {

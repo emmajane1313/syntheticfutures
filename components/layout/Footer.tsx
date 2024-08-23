@@ -11,8 +11,9 @@ const Footer: FunctionComponent<FooterProps> = ({ color }): JSX.Element => {
     <div className="relative w-full h-full flex items-center justify-center flex-col sm:flex-row gap-4 pt-60 pb-3">
       <div className="sm:absolute relative w-fit h-fit flex justify-center sm:items-start items-center break-all text-mainText text-xs sm:left-2 font-neue sm:text-left text-center flex-col gap-1.5">
         <div className="relative w-fit h-fit flex"> {t("trad")}</div>
-        <div  className="relative w-fit h-fit flex font-neueL text-xxs"> {t("por")} emma-jane mackinnon-lee</div>
-       
+        <div className="relative w-fit h-fit flex font-neueL text-xxs">
+          {t("por")} emma-jane mackinnon-lee
+        </div>
       </div>
       <div className="relative w-fit h-fit flex flex-row items-center  justify-center gap-4 sm:flex-nowrap flex-wrap">
         <div className="relative w-fit h-fit flex items-center justify-center">

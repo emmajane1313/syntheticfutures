@@ -49,6 +49,12 @@ body {
   --mainText: theme("colors.maroon");
 }
 
+.theme-mar {
+  --mainBg: theme("colors.amarillo");
+  --mainText: theme("colors.azul");
+
+}
+
 html::-webkit-scrollbar {
   width: 0;
   height: 0;
@@ -100,3 +106,4 @@ div::-webkit-scrollbar-thumb:active {
     word-break: break-word !important;
   }
 }
+

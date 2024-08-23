@@ -91,7 +91,7 @@ const Post: NextPage<{
             onClick={() => router.push("/")}
           >
             <PiArrowFatLinesLeftFill
-              color={color == "maroon" ? "C92D1F" : "F2F2F2"}
+              color={color == "maroon" ? "C92D1F" : color == "gris" ? "F2F2F2" : "2F25A7"}
               size={24}
             />
           </div>

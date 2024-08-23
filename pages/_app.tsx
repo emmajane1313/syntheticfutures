@@ -6,14 +6,13 @@ import Footer from "../components/layout/Footer";
 import { useEffect, useState } from "react";
 import { appWithTranslation } from "next-i18next";
 import { COLORS } from "../lib/constants";
-import { useRouter } from "next/router";
 import { DefaultSeo } from "next-seo";
 
 function MyApp({ Component, pageProps }: AppProps) {
   const [color, setColor] = useState<string>(COLORS[0]);
   const [idiomasOpen, setIdiomasOpen] = useState<boolean>(false);
   const changeColor = () => {
-    if (COLORS.indexOf(color) < 1) {
+    if (COLORS.indexOf(color) < 2) {
       setColor(COLORS[COLORS.indexOf(color) + 1]);
       localStorage.setItem("theme-color", COLORS[COLORS.indexOf(color) + 1]);
     } else {
