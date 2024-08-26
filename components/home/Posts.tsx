@@ -16,13 +16,15 @@ const Posts: FunctionComponent<PostProps> = ({
     <div className="relative w-full h-full flex flex-col">
       {postList.map((post: Post, index: number) => {
         return (
-          <Link
-            href={
+          <div
+            onClick={() =>
               post.live
-                ? `/post/${post?.title?.[i18n.language as "en" | "es"]
-                    ?.toLowerCase()
-                    .replaceAll(" ", "-")}`
-                : router.basePath
+                ? router.push(
+                    `/post/${post?.title?.[i18n.language as "en" | "es"]
+                      ?.toLowerCase()
+                      .replaceAll(" ", "-")}`
+                  )
+                : {}
             }
             key={index}
             className={`relative w-full h-full flex flex-col text-mainText ${
@@ -81,7 +83,7 @@ const Posts: FunctionComponent<PostProps> = ({
               </div>
               <div className="relative h-px w-full bg-mainText"></div>
             </div>
-          </Link>
+          </div>
         );
       })}
     </div>

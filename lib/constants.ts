@@ -134,7 +134,16 @@ export const LISTA: Lista[] = [
       en: "Farsi",
       es: "Farsi",
     },
-    sub: [],
+    sub: [
+      {
+        enlace: "https://www.youtube.com/watch?v=5bXmqg4x-Zw",
+        titulo: "آهنگ تیفوس از توماج",
+      },
+      {
+        enlace: "https://www.youtube.com/watch?v=z8xXiqyfBg0",
+        titulo: "شروین - برای",
+      },
+    ],
   },
   {
     main: {
