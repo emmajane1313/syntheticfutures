@@ -4,7 +4,7 @@ import Columns from "../components/home/Columns";
 import Description from "../components/home/Description";
 import useHome from "../components/home/hooks/useHome";
 import Header from "../components/layout/Header";
-import { IndexProps } from "../components/types/all.types";
+import { IndexProps, Post } from "../components/types/all.types";
 import postList from "./api/posts.json";
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 import { useTranslation, withTranslation } from "next-i18next";
@@ -36,7 +36,7 @@ const Home: NextPage<IndexProps> = ({
       <Description t={t} i18n={i18n} />
       <Columns
         t={t}
-        postList={postList}
+        postList={postList as Post[]}
         handlePostHoverOver={handlePostHoverOver}
         handlePostHoverLeave={handlePostHoverLeave}
         hoverPost={hoverPost}

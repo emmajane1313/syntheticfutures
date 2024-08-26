@@ -132,13 +132,13 @@
       "es": "Falsa Uniformidad"
     },
     "fecha": {
-      "en": "<br/><br/><span style='font-family: Neue Haas Bold; font-size: 30px; text-align: center'>What does it mean to be a woman?</span><br/><br/>Statistical misdirection.I hope we all know now that what most men mean by a 'woman' is a mumu woman, a woman that they will throw sh*t at but will never question them, a woman that would say 'Yes sir' to all their nonsense without even flinching.",
+      "en": "",
       "es": ""
     },
     "traducciones": "es",
     "locale": "",
     "content": {
-      "en": "",
+      "en": "<br/><br/><span style='font-family: Neue Haas Bold; font-size: 30px; text-align: center'>What does it mean to be a woman?</span><br/><br/>Statistical misdirection.I hope we all know now that what most men mean by a 'woman' is a mumu woman, a woman that they will throw sh*t at but will never question them, a woman that would say 'Yes sir' to all their nonsense without even flinching.",
       "es": ""
     },
     "mainImage": "QmPk86yVUBCXQxtJPhsL5DeXQGDCHNNbhFtvWQynx5tqMk",
@@ -155,6 +155,10 @@
       "en": "",
       "es": "",
       "br": ""
+    },
+    "fecha": {
+      "en": "",
+      "es": ""
     },
     "mainImage": "QmRPqsaM8qURkDycmqbrj1PofybeYUoNSeYYx1MPjjrskC",
     "live": false
