@@ -97,8 +97,8 @@
     },
     "traducciones": "es",
     "fecha": {
-      "en": "24 August, 2024",
-      "es": "24 de Agosto de 2024"
+      "en": "26 August, 2024",
+      "es": "26 de Agosto de 2024"
     },
     "locale": "es",
     "content": {
@@ -170,15 +170,33 @@
     },
     "traducciones": "es",
     "fecha": {
-      "en": "blackrockisation of everything.",
+      "en": "",
       "es": ""
+    },
+    "locale": "",
+    "content": {
+      "en": "",
+      "es": "blackrockisation of everything. vcs muestran sus caras fascistas."
+    },
+    "mainImage": "Qme1UvpsmDzen2Usqb9j2aYsdavePAbuxeJEKS65EqhU92",
+    "live": false
+  },
+  {
+    "title": {
+      "en": "How I Learned To Love Code",
+      "es": "Cómo He Aprendido a Amar La Programación"
+    },
+    "traducciones": "es",
+    "fecha": {
+      "en": "",
+      "es": "Cada línea es política."
     },
     "locale": "",
     "content": {
       "en": "",
       "es": ""
     },
-    "mainImage": "Qme1UvpsmDzen2Usqb9j2aYsdavePAbuxeJEKS65EqhU92",
+    "mainImage": "QmRg3MjfcVtptcrav6uTibe453zvSne3bjpW5XvpNAASEg",
     "live": false
   },
   {
@@ -252,24 +270,6 @@
       "es": ""
     },
     "mainImage": "QmUJ8gJnNQqQQnJcpLDcnFy1gStxkvnxWS7XTZYrzaRcTm",
-    "live": false
-  },
-  {
-    "title": {
-      "en": "How I Learned To Love Code",
-      "es": "Cómo He Aprendido a Amar La Programación"
-    },
-    "traducciones": "es",
-    "fecha": {
-      "en": "",
-      "es": ""
-    },
-    "locale": "",
-    "content": {
-      "en": "",
-      "es": ""
-    },
-    "mainImage": "QmRAaJxx1Xgt8R2ZFPHb1R4S6gi7fh1uiBqnYwe3zbBkNU",
     "live": false
   },
   {
