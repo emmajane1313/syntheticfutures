@@ -13,7 +13,7 @@ const usePost = (path: string, router: NextRouter) => {
           pos.title?.[router.locale as "en" | "es"].toLowerCase() ==
           path.toLowerCase().replaceAll("-", " ")
         ) {
-          setPublication(pos);
+          setPublication(pos as Post);
           return;
         }
       });
