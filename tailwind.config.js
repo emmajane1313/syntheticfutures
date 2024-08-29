@@ -19,7 +19,7 @@ module.exports = {
         maroon: "#C92D1F",
         strand: "#EAE1D3",
         amarillo:"#2f25a7",
-        azul: " #f6ec7b"
+        azul: "#f6ec7b"
       },
       fontSize: {
         xxs: "0.6rem",
