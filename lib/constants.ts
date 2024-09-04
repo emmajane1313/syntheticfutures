@@ -80,6 +80,10 @@ export const LISTA: Lista[] = [
         titulo: "אביתר בנאי - עד מחר",
         enlace: "https://www.youtube.com/watch?v=g_gFnDyi2Ho",
       },
+      {
+        titulo: "ניר כנען - אל תלכי",
+        enlace: "https://www.youtube.com/watch?v=fs5TdAJRBO0",
+      },
     ],
   },
   {
