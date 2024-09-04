@@ -13,7 +13,10 @@ export const LISTA: Lista[] = [
         titulo: "Bomba Estéreo - Algo Está Cambiando",
         enlace: "https://www.youtube.com/watch?v=hxj1NK4bZhQ",
       },
-
+      {
+        titulo: "Café Tacvba - Olita Del Altamar",
+        enlace: "https://www.youtube.com/watch?v=RNP6qczhwaU",
+      },
       {
         titulo: "Celest - Fantasmas",
         enlace: "https://www.youtube.com/watch?v=CjUV2BVsA0E",
@@ -83,6 +86,10 @@ export const LISTA: Lista[] = [
       {
         titulo: "ניר כנען - אל תלכי",
         enlace: "https://www.youtube.com/watch?v=fs5TdAJRBO0",
+      },
+      {
+        titulo: "ניר כנען - שיר לנטע",
+        enlace: "https://www.youtube.com/watch?v=_Oeh7FpUN6Q",
       },
     ],
   },
