@@ -14,10 +14,19 @@ const Home: NextPage<IndexProps> = ({
   changeColor,
   idiomasOpen,
   setIdiomasOpen,
+  color,
 }) => {
   const { i18n, t } = useTranslation("common");
   const router = useRouter();
-  const { handlePostHoverLeave, handlePostHoverOver, hoverPost } = useHome();
+  const {
+    handlePostHoverLeave,
+    handlePostHoverOver,
+    hoverPost,
+    filtroAbierto,
+    setFiltroAbierto,
+    idiomaFiltrado,
+    setIdiomaFiltrado,
+  } = useHome();
   return (
     <div className="relative w-full h-full flex flex-col">
       <Head>
@@ -36,12 +45,17 @@ const Home: NextPage<IndexProps> = ({
       <Description t={t} i18n={i18n} />
       <Columns
         t={t}
+        color={color}
         postList={postList as Post[]}
         handlePostHoverOver={handlePostHoverOver}
         handlePostHoverLeave={handlePostHoverLeave}
         hoverPost={hoverPost}
         router={router}
         i18n={i18n}
+        filtroAbierto={filtroAbierto}
+        setFiltroAbierto={setFiltroAbierto}
+        idiomaFiltrado={idiomaFiltrado}
+        setIdiomaFiltrado={setIdiomaFiltrado}
       />
     </div>
   );

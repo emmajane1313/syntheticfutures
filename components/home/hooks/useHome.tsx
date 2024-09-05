@@ -6,6 +6,8 @@ const useHome = (): UseHomeResult => {
   const [hoverPost, setHoverPost] = useState<boolean[]>(
     Array(postList?.length).fill(false)
   );
+  const [filtroAbierto, setFiltroAbierto] = useState<boolean>(false);
+  const [idiomaFiltrado, setIdiomaFiltrado] = useState<string | undefined>();
 
   const handlePostHoverOver = (postIndex: number): void => {
     const newHoverPost = Array(postList.length).fill(false);
@@ -21,11 +23,14 @@ const useHome = (): UseHomeResult => {
     setHoverPost(newHoverPost);
   };
 
-
   return {
     handlePostHoverOver,
     handlePostHoverLeave,
     hoverPost,
+    filtroAbierto,
+    setFiltroAbierto,
+    idiomaFiltrado,
+    setIdiomaFiltrado,
   };
 };
 

@@ -173,7 +173,12 @@ export const LISTA: Lista[] = [
       en: "Portuguese",
       es: "Portugués",
     },
-    sub: [],
+    sub: [
+      {
+        titulo: "O Terno - Depois Que A Dor Passar",
+        enlace: "https://www.youtube.com/watch?v=nbD2GrZt3cA",
+      },
+    ],
   },
 ];
 

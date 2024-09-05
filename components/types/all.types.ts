@@ -1,6 +1,7 @@
 import { TFunction } from "i18next";
 import { I18n } from "next-i18next";
 import { NextRouter } from "next/router";
+import { SetStateAction } from "react";
 
 export interface Post {
   title: {
@@ -29,16 +30,25 @@ export type UseHomeResult = {
   handlePostHoverOver: (postIndex: number) => void;
   handlePostHoverLeave: (postIndex: number) => void;
   hoverPost: boolean[];
+  filtroAbierto: boolean;
+  setFiltroAbierto: (e: SetStateAction<boolean>) => void;
+  idiomaFiltrado: string | undefined;
+  setIdiomaFiltrado: (e: SetStateAction<string | undefined>) => void;
 };
 
 export type ColumnsProps = {
   postList: Post[];
+  filtroAbierto: boolean;
+  setFiltroAbierto: (e: SetStateAction<boolean>) => void;
   t: TFunction<"common", undefined>;
   handlePostHoverOver: (postIndex: number) => void;
   handlePostHoverLeave: (postIndex: number) => void;
   hoverPost: boolean[];
   i18n: I18n;
   router: NextRouter;
+  idiomaFiltrado: string | undefined;
+  setIdiomaFiltrado: (e: SetStateAction<string | undefined>) => void;
+  color: string;
 };
 
 export type PostProps = {
@@ -48,6 +58,8 @@ export type PostProps = {
   hoverPost: boolean[];
   i18n: I18n;
   router: NextRouter;
+  t: TFunction<"common", undefined>;
+  idiomaFiltrado: string | undefined;
 };
 
 export type HeaderProps = {
@@ -65,6 +77,7 @@ export type FooterProps = {
 
 export type IndexProps = {
   changeColor: () => void;
+  color: string;
   idiomasOpen: boolean;
   setIdiomasOpen: (e: boolean) => void;
 };
@@ -107,7 +120,7 @@ export type TitleProps = {
 
 export type ContentProps = {
   description: string;
-  lista: boolean
+  lista: boolean;
   t: TFunction<"common", undefined>;
   i18n: I18n;
 };

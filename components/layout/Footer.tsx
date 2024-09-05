@@ -26,7 +26,11 @@ const Footer: FunctionComponent<FooterProps> = ({ color }): JSX.Element => {
             <Image
               draggable={false}
               src={
-                color === "maroon" ? "/images/lens.png" : "/images/lens2.png"
+                color === "maroon"
+                  ? "/images/lens.png"
+                  : color === "gris"
+                  ? "/images/lens2.png"
+                  : "/images/lens3.png"
               }
               layout="fill"
             />
@@ -44,7 +48,9 @@ const Footer: FunctionComponent<FooterProps> = ({ color }): JSX.Element => {
               src={
                 color === "maroon"
                   ? "/images/mirror.png"
-                  : "/images/mirror2.png"
+                  : color === "gris"
+                  ? "/images/mirror2.png"
+                  : "/images/mirror3.png"
               }
               layout="fill"
             />
@@ -58,7 +64,13 @@ const Footer: FunctionComponent<FooterProps> = ({ color }): JSX.Element => {
             className="relative w-fit h-fit flex items-center justify-center"
           >
             <AiFillGithub
-              color={color === "maroon" ? "#C92D1F" : "#F2F2F2"}
+              color={
+                color === "maroon"
+                  ? "#C92D1F"
+                  : color === "gris"
+                  ? "#F2F2F2"
+                  : "#f6ec7b"
+              }
               size={20}
             />
           </a>
@@ -71,7 +83,13 @@ const Footer: FunctionComponent<FooterProps> = ({ color }): JSX.Element => {
             className="relative w-fit h-fit flex items-center justify-center"
           >
             <FaTwitter
-              color={color === "maroon" ? "#C92D1F" : "#F2F2F2"}
+              color={
+                color === "maroon"
+                  ? "#C92D1F"
+                  : color === "gris"
+                  ? "#F2F2F2"
+                  : "#f6ec7b"
+              }
               size={20}
             />
           </a>

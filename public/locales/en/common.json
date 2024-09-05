@@ -2,10 +2,13 @@
   "titulo": "SYNTHETIC FUTURES",
   "defensa": "Physical defense has increased by 300. Magic defense has increased by 300. Level up successful. You have acquired the next rank. New dimensional telemetry awaits. Time to help others with the outbreak. Not out of danger yet.",
   "explora": "EXPLORE POSTS",
+  "filtrar": "FILTER",
   "trad": "Translating by hand, with heart <3",
   "pronto": "(soon)",
   "ori": "Og Written:",
   "trads": "Translations:",
   "inmersion": "For More Immersion:",
-  "por": "by"
+  "por": "by",
+  "todos": "All",
+  "vacio": "No publications in this language yet."
 }
