@@ -53,6 +53,14 @@ export const LISTA: Lista[] = [
         titulo: "BRATTY - tdbn",
         enlace: "https://www.youtube.com/watch?v=V5eMrooTH1U",
       },
+      {
+        titulo: "FAZ - Queriéndote de más",
+        enlace: "https://www.youtube.com/watch?v=zqZPkXCrxxE",
+      },
+      {
+        titulo: "Tres Coronas, Michael Stuart – Mi Tumbao",
+        enlace: "https://www.youtube.com/watch?v=R_-4BIvXYtA",
+      },
     ],
   },
 
@@ -131,14 +139,60 @@ export const LISTA: Lista[] = [
       en: "French",
       es: "Francés",
     },
-    sub: [],
+    sub: [
+      {
+        titulo: "Alice et Moi - Filme Moi",
+        enlace: "https://www.youtube.com/watch?v=NRqbMMTxmfw",
+      },
+      {
+        titulo: "Rone & Odezenne - Sot-l'y-laisse",
+        enlace: "https://www.youtube.com/watch?v=DUgXaHVyW9E",
+      },
+      {
+        titulo: "Carla Bruni - Quelqu'un m'a dit",
+        enlace: "https://www.youtube.com/watch?v=EelX_LwPHbA",
+      },
+    ],
   },
   {
     main: {
       en: "Japonese",
       es: "Japonés",
     },
-    sub: [],
+    sub: [
+      {
+        enlace: "https://www.youtube.com/watch?v=vOuyFoOcx3c",
+        titulo: "さとう。 - ３％",
+      },
+      {
+        enlace: "https://www.youtube.com/watch?v=uBowhAHoYTU",
+        titulo: "五十嵐ハル - 少しだけ",
+      },
+      {
+        enlace: "https://www.youtube.com/watch?v=qknDI1k39Ic",
+        titulo: "羊文学 - 光るとき",
+      },
+      {
+        enlace: "https://www.youtube.com/watch?v=W4TOXpA7ktI",
+        titulo: "羊文学 - マヨイガ",
+      },
+      {
+        enlace: "https://www.youtube.com/watch?v=UMYlSnLlCE0",
+        titulo: "【349】[feat. Hashimero, maeshima soshi] Show Me Your Phone",
+      },
+      {
+        enlace: "https://www.youtube.com/watch?v=hIyqYepB55o",
+        titulo: "idom & Kvi Baba - ミニマリスト",
+      },
+      {
+        enlace: "https://www.youtube.com/watch?v=2v8iq3tI0gM",
+        titulo: "羊文学 - 1999",
+      },
+      {
+        enlace: "https://www.youtube.com/watch?v=f_VekM6tlqg",
+        titulo: "さとう。- 細胞",
+      },
+    ],
   },
   {
     main: {
@@ -163,7 +217,7 @@ export const LISTA: Lista[] = [
     },
     sub: [
       {
-        titulo: "יידישע הומור Yiddish Humor",
+        titulo: "יידישע הומור",
         enlace: "https://www.youtube.com/watch?v=-2o_52pQk74",
       },
     ],
@@ -175,8 +229,28 @@ export const LISTA: Lista[] = [
     },
     sub: [
       {
+        titulo: "Clarissa - nada contra",
+        enlace: "https://www.youtube.com/watch?v=Wjfirq-_IuE",
+      },
+      {
         titulo: "O Terno - Depois Que A Dor Passar",
         enlace: "https://www.youtube.com/watch?v=nbD2GrZt3cA",
+      },
+      {
+        titulo: "Ana Frango Elétrico - Insista em Mim",
+        enlace: "https://www.youtube.com/watch?v=ISl88_PqUlk",
+      },
+      {
+        titulo: "Jovem Dionisio - Pontos de Exclamação",
+        enlace: "https://www.youtube.com/watch?v=vPTxVQDk11U",
+      },
+      {
+        titulo: "Bela Maria - Pra Te Enrolar",
+        enlace: "https://www.youtube.com/watch?v=a7Uc20uMPIU",
+      },
+      {
+        titulo: "N E M O M I C H I - ROSA",
+        enlace: "https://www.youtube.com/watch?v=xBHBqHPj0bk",
       },
     ],
   },
