@@ -74,6 +74,10 @@ export const LISTA: Lista[] = [
         titulo: "CEPASA - Київ",
         enlace: "https://www.youtube.com/watch?v=vMnkBovyTPc",
       },
+      {
+        titulo: "SadSvit - Небо",
+        enlace: "https://www.youtube.com/watch?v=cPzhNzqt9LA",
+      },
     ],
   },
   {
