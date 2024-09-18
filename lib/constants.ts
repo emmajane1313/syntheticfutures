@@ -61,6 +61,10 @@ export const LISTA: Lista[] = [
         titulo: "Tres Coronas, Michael Stuart – Mi Tumbao",
         enlace: "https://www.youtube.com/watch?v=R_-4BIvXYtA",
       },
+      {
+        titulo: "PLASTILINA MOSH - Pervert Pop Song",
+        enlace: "https://www.youtube.com/watch?v=XUzMZbnfb1M",
+      },
     ],
   },
 
@@ -71,16 +75,16 @@ export const LISTA: Lista[] = [
     },
     sub: [
       {
+        titulo: "SadSvit - Літо",
+        enlace: "https://www.youtube.com/watch?v=UpSVSxUQcd0",
+      },
+      {
         titulo: "CEPASA - Київ",
         enlace: "https://www.youtube.com/watch?v=vMnkBovyTPc",
       },
       {
         titulo: "SadSvit - Небо",
         enlace: "https://www.youtube.com/watch?v=cPzhNzqt9LA",
-      },
-      {
-        titulo: "SadSvit - Літо",
-        enlace: "https://www.youtube.com/watch?v=UpSVSxUQcd0",
       },
     ],
   },
@@ -149,8 +153,16 @@ export const LISTA: Lista[] = [
     },
     sub: [
       {
+        titulo:"La Femme - Elle ne t'aime pas",
+        enlace:"https://www.youtube.com/watch?v=ZNp38iDHveE"
+      },
+      {
         titulo: "Alice et Moi - Filme Moi",
         enlace: "https://www.youtube.com/watch?v=NRqbMMTxmfw",
+      },
+      {
+        titulo: "Oscar Anton & Clementine - nuits d'été",
+        enlace: "https://www.youtube.com/watch?v=B3JcHWCA-VA",
       },
       {
         titulo: "Rone & Odezenne - Sot-l'y-laisse",
@@ -200,6 +212,10 @@ export const LISTA: Lista[] = [
         enlace: "https://www.youtube.com/watch?v=f_VekM6tlqg",
         titulo: "さとう。- 細胞",
       },
+      {
+        enlace: "https://www.youtube.com/watch?v=A0_kKz7k-4E",
+        titulo: "ShibayanRecords - 彼と彼女とわたしの話"
+      }
     ],
   },
   {
@@ -260,6 +276,40 @@ export const LISTA: Lista[] = [
         titulo: "N E M O M I C H I - ROSA",
         enlace: "https://www.youtube.com/watch?v=xBHBqHPj0bk",
       },
+    ],
+  },
+  {
+    main: {
+      en: "English",
+      es: "Ingles",
+    },
+    sub: [
+      {
+        titulo: "Hockey Dad - I Need A Women",
+        enlace: "https://www.youtube.com/watch?v=dKCpPWEvZJ0",
+      },
+      {
+        titulo: "Pond - Paint Me Silver",
+        enlace: "https://www.youtube.com/watch?v=_M-DXPT04_Y",
+      },
+      {
+        titulo: "Alex The Astronaut - Already Home",
+        enlace: "https://www.youtube.com/watch?v=eKJ1xIxsO8U",
+      },
+
+      {
+        titulo: "Last Dinosaurs - The Weekend",
+        enlace: "https://www.youtube.com/watch?v=nA7zwcNR1FA",
+      },
+
+      {
+        titulo: "Skegss - My Own Mess",
+        enlace: "https://www.youtube.com/watch?v=YOVBcsEcW-k",
+      },
+      {
+        titulo: "Angus & Julia Stone - Yellow Brick Road",
+        enlace: "https://www.youtube.com/watch?v=wOj6nccS3ZQ"
+      }
     ],
   },
 ];
