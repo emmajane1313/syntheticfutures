@@ -111,6 +111,10 @@ export const LISTA: Lista[] = [
         titulo: "ניר כנען - שיר לנטע",
         enlace: "https://www.youtube.com/watch?v=_Oeh7FpUN6Q",
       },
+      {
+        titulo: "נרקיס רעם - אחיזה אחרת",
+        enlace: "https://www.youtube.com/watch?v=vgefxghrk8s",
+      },
     ],
   },
   {
@@ -153,8 +157,8 @@ export const LISTA: Lista[] = [
     },
     sub: [
       {
-        titulo:"La Femme - Elle ne t'aime pas",
-        enlace:"https://www.youtube.com/watch?v=ZNp38iDHveE"
+        titulo: "La Femme - Elle ne t'aime pas",
+        enlace: "https://www.youtube.com/watch?v=ZNp38iDHveE",
       },
       {
         titulo: "Alice et Moi - Filme Moi",
@@ -214,8 +218,8 @@ export const LISTA: Lista[] = [
       },
       {
         enlace: "https://www.youtube.com/watch?v=A0_kKz7k-4E",
-        titulo: "ShibayanRecords - 彼と彼女とわたしの話"
-      }
+        titulo: "ShibayanRecords - 彼と彼女とわたしの話",
+      },
     ],
   },
   {
@@ -308,8 +312,16 @@ export const LISTA: Lista[] = [
       },
       {
         titulo: "Angus & Julia Stone - Yellow Brick Road",
-        enlace: "https://www.youtube.com/watch?v=wOj6nccS3ZQ"
-      }
+        enlace: "https://www.youtube.com/watch?v=wOj6nccS3ZQ",
+      },
+      {
+        titulo: "Allday - Void",
+        enlace: "https://www.youtube.com/watch?v=VPMKES1SvFM",
+      },
+      {
+        titulo: "Hatchie - Obsessed",
+        enlace: "https://www.youtube.com/watch?v=iI4aHUVQBgI",
+      },
     ],
   },
 ];

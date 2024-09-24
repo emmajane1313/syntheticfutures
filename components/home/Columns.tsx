@@ -58,6 +58,9 @@ const Columns: FunctionComponent<ColumnsProps> = ({
                   "あ",
                   "yi",
                   "fr",
+                  "hu",
+                  "tr",
+                  "ym",
                 ].map((id: string, indice: number) => {
                   return (
                     <div
