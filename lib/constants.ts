@@ -180,6 +180,18 @@ export const LISTA: Lista[] = [
   },
   {
     main: {
+      en: "Turkish",
+      es: "Turco",
+    },
+    sub: [
+      {
+        enlace: "https://www.youtube.com/watch?v=ZJK5s5-1G20",
+        titulo: "Nilipek - Son Mektup",
+      },
+    ],
+  },
+  {
+    main: {
       en: "Japonese",
       es: "Japonés",
     },
