@@ -95,6 +95,10 @@ export const LISTA: Lista[] = [
     },
     sub: [
       {
+        enlace: "https://www.youtube.com/watch?v=HywxabRlVG0",
+        titulo: "יעל ופתק - מין אנושי",
+      },
+      {
         titulo: "אביתר בנאי - ילדה אישה",
         enlace: "https://www.youtube.com/watch?v=lDsckPcaa6E",
       },
