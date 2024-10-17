@@ -109,7 +109,7 @@ const Post: NextPage<{
           locale={publication?.locale!}
           traducciones={publication?.traducciones!}
           changeColor={changeColor}
-          audio={publication?.audio}
+          audio={publication?.audio?.[router.locale as "en" | "es"]!}
           color={color}
         />
         <Content

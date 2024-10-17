@@ -4,7 +4,10 @@
       "en": "Unbundling Threads",
       "es": "Despaquetizando Hilos"
     },
-    "audio": "QmWtiJYZMEtZ8VQWNEAfnemThhA9f9qbrxRkdhGdGt6wqS",
+    "audio": {
+      "en": "QmWtiJYZMEtZ8VQWNEAfnemThhA9f9qbrxRkdhGdGt6wqS",
+      "es": "QmUCGpCzbxBZXUdNugzQx1kAsDYyZEaXEYcuBzcf3mWZfT"
+    },
     "fecha": {
       "en": "March 9, 2023",
       "es": "9 de Marzo de 2023"
@@ -23,7 +26,10 @@
       "en": "Web3 Fashion",
       "es": "Moda Web3"
     },
-    "audio": "Qmbad7Mx6GVBT44vrhJxN5dnPu7cXpBj1HmnxXjt8tHV7K",
+    "audio": {
+      "en": "Qmbad7Mx6GVBT44vrhJxN5dnPu7cXpBj1HmnxXjt8tHV7K",
+      "es": "QmaErTbVVsRvU3tTxU4osSWUQMboxBR23GGroJb1SrhaPr"
+    },
     "fecha": {
       "en": "March 18, 2023",
       "es": "18 de Marzo de 2023"
@@ -42,7 +48,10 @@
       "en": "Lost in Translation",
       "es": "Perdida En La Traducción"
     },
-    "audio": "QmQNqkHnfMFaDKernFPjvpe8tPwNGcwMHH4GixMqCU3zTn",
+    "audio": {
+      "en": "QmQNqkHnfMFaDKernFPjvpe8tPwNGcwMHH4GixMqCU3zTn",
+      "es": "QmZFC3VkdgmAozrNWarC48y7khhsX22odf1bgRVjLDodLM"
+    },
     "fecha": {
       "en": "18 August, 2024",
       "es": "18 de Agosto de 2024"
@@ -62,7 +71,10 @@
       "en": "Rivers of Sovereignty",
       "es": "Los Ríos de Soberanía"
     },
-    "audio": "QmcT161f49ZZuvMPZxMRsVLu7t34DrLCGwZE2exMwBaQcr",
+    "audio": {
+      "en": "QmcT161f49ZZuvMPZxMRsVLu7t34DrLCGwZE2exMwBaQcr",
+      "es": "QmQq5vd7vQF2kGkUjssBRPYYBHQpWJ8L1Gz3Fw6zCeBKMm"
+    },
     "traducciones": "es",
     "fecha": {
       "en": "26 August, 2024",
@@ -81,7 +93,10 @@
       "en": "You Don't Need VC",
       "es": "No Necesitas VC"
     },
-    "audio": "QmZXsETCuJEP3dofapjyAqRcWr5NVUgXnUi52Q9tZU4YtJ",
+    "audio": {
+      "en": "QmZXsETCuJEP3dofapjyAqRcWr5NVUgXnUi52Q9tZU4YtJ",
+      "es": "QmNdPjdSSy7yNX2rQSd9py3RSqMRWE38Ua9tM5o8KaWhYC"
+    },
     "traducciones": "es",
     "fecha": {
       "en": "3 September, 2024",
@@ -100,7 +115,10 @@
       "en": "False Uniformity",
       "es": "Falsa Uniformidad"
     },
-    "audio": "QmeQzLDuRSXSiZ6pUGescXueYVy1LvPzJPxvm4AWtbJYuN",
+    "audio": {
+      "en": "QmeQzLDuRSXSiZ6pUGescXueYVy1LvPzJPxvm4AWtbJYuN",
+      "es": "Qmb4giqHrnpJpYR84hyeHeHUPuY76i5vXyTC5V1aHa8BHo"
+    },
     "fecha": {
       "en": "8 September, 2024",
       "es": "8 de September de 2024"

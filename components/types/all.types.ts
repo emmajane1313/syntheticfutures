@@ -20,7 +20,10 @@ export interface Post {
   mainImage: string;
   live: boolean;
   locale: string;
-  audio?: string;
+  audio?: {
+    en: string;
+    es: string;
+  };
 }
 
 export type UsePostResult = {
@@ -117,7 +120,7 @@ export type TitleProps = {
   fecha: string;
   traducciones: string;
   changeColor: () => void;
-  audio?: string;
+  audio: string;
   color: string;
 };
 
