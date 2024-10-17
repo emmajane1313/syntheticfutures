@@ -340,6 +340,20 @@ export const LISTA: Lista[] = [
       },
     ],
   },
+  {
+    main: {
+      en: "Hungarian",
+      es: "Húngaro",
+    },
+    sub: [],
+  },
+  {
+    main: {
+      en: "Yolŋu Matha",
+      es: "Yolŋu Matha",
+    },
+    sub: [],
+  },
 ];
 
 export const CATEGORIES: Categories[] = [

@@ -109,6 +109,8 @@ const Post: NextPage<{
           locale={publication?.locale!}
           traducciones={publication?.traducciones!}
           changeColor={changeColor}
+          audio={publication?.audio}
+          color={color}
         />
         <Content
           description={
