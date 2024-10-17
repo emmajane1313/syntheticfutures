@@ -35,9 +35,9 @@ const Waveform: FunctionComponent<{
   const handlePlayPause = () => {
     if (wavesurfer.current) {
       if (wavesurfer.current.isPlaying()) {
-        wavesurfer.current.play();
-      } else {
         wavesurfer.current.pause();
+      } else {
+        wavesurfer.current.play();
       }
     }
   };
