@@ -98,53 +98,161 @@ const Bio: NextPage<{
             }}
           ></div>
         </div>
-        <div className="relative w-full h-fit flex items-start justify-start flex-col gap-8 px-12">
-          {[
-            {
-              titulo: "Mechanical & Space Engineering",
-              descripcion:
-                "Dropped out in early 2019 of the University of Sydney, Mechanical & Space Engineering",
-              fecha: "2017-2019",
-            },
-            {
-              titulo: "Crypto Algorithmic Tail Risk",
-              descripcion:
-                "Heading up variance swap strategies and research on systemic risk in volatile markets (BTC + ETH) out of France, Dubai and Australia",
-              fecha: "2019-2020",
-            },
-            {
-              titulo: "DIGITALAX",
-              descripcion:
-                "Founded DIGITALAX. Dedicated to building emancipatory lifestyle tech and one of the first players to coin and grow out web3 fashion.",
-              fecha: "2020-Current",
-            },
-          ].map(
-            (
-              elemento: {
-                titulo: string;
-                descripcion: string;
-                fecha: string;
+        <div className="relative w-full h-fit gap-3 flex flex-col items-start justify-start px-12  text-mainText">
+          <div className="relative w-fit h-fit flex font-neue opacity-70 text-sm">
+            {t("timeline")}:
+          </div>
+          <div className="relative w-full h-fit flex items-start justify-start flex-col gap-8">
+            {[
+              {
+                titulo: "Mechanical & Space Engineering",
+                descripcion:
+                  "Dropped out in early 2019 of the University of Sydney, Mechanical & Space Engineering",
+                fecha: "2017-2019",
               },
-              indice: number
-            ) => {
-              return (
-                <div
-                  key={indice}
-                  className="relative w-full h-fit flex flex-col gap-1 items-start justify-start text-mainText"
-                >
-                  <div className="relative w-fit hfit flex text-xl font-neue">
-                    {elemento.titulo}
-                  </div>
-                  <div className="relative w-fit hfit flex text-sm font-sani">
-                    {elemento.fecha}
-                  </div>
-                  <div className="relative w-fit hfit flex text-sm font-neueL">
-                    {elemento.descripcion}
-                  </div>
-                </div>
-              );
-            }
-          )}
+              {
+                titulo: "Crypto Algorithmic Tail Risk",
+                descripcion:
+                  "Led variance swap strategies and research on systemic risk in volatile markets (BTC + ETH) out of France, Dubai and Australia, with some of the best in the business.",
+                fecha: "2019-2020",
+              },
+              {
+                titulo: "DIGITALAX",
+                enlace: "https://digitalax.xyz/",
+                descripcion:
+                  "Founded DIGITALAX. Dedicated to building emancipatory lifestyle tech and one of the first players to coin and develop web3 fashion.",
+                fecha: "2020-Current",
+                subs: [
+                  {
+                    titulo: "Chromadin",
+                    descripcion:
+                      "24/7 Channel Surfing and collection marketplace, integrating with Lens Protocol web3 social media.",
+                    techstack: "NextJS, TS, React, Solidity, Node",
+                    enlace: "https://www.chromadin.xyz/",
+                  },
+                  {
+                    titulo: "Kinora SDK",
+                    descripcion:
+                      "On-chain video metric quests- SDK and user quest interface.",
+                    techstack: "NextJS, TS, React, Solidity, Node, Python",
+                    enlace: "https://kinora.irrevocable.dev/",
+                  },
+                  {
+                    titulo: "Coin Op",
+                    descripcion:
+                      "NFT print marketplace and AI editor canvas for designing and locally fulfilling IRL streetwear.",
+                    techstack: "NextJS, TS, React, Solidity, Node",
+                    enlace: "https://coinop.themanufactory.xyz/",
+                  },
+                  {
+                    titulo: "Cypher Search",
+                    descripcion:
+                      "Pinterest style web3 social media feed integrating Lens Protocol and on-chain encrypted fulfillment of prints, streetwear and virtual NFTs).",
+                    techstack: "NextJS, TS, React, Solidity, Node",
+                    enlace: "https://cypher.digitalax.xyz/",
+                  },
+                  {
+                    titulo: "Lit Listener",
+                    descripcion:
+                      "Typescript SDK for Peer 2 Peer Encryption triggered by on-chain events and webhooks, integrating Lit Protocol Programmable Key Pairs.",
+                    techstack: "NextJS, TS, React, Solidity, Node, Python",
+                    enlace: "https://listener.irrevocable.dev/",
+                  },
+                  {
+                    titulo: "NPC Studio",
+                    descripcion:
+                      "Character based AI agent game environment, where agents interact with each other and on-chain products through decentralized social media.",
+                    techstack: "Rust, C++, Solidity, NextJS, TS, React",
+                    enlace: "https://npcstudio.xyz/",
+                  },
+                ],
+              },
+              {
+                titulo: "F3Manifesto",
+                enlace: "https://f3manifesto.xyz/",
+                descripcion:
+                  "Indie Web3 fashion brand offering exclusive on-chain streetwear and artful print collections, all CC0 and designed in-house with collectible pieces.",
+                fecha: "2021-Current",
+              },
+            ].map(
+              (
+                elemento: {
+                  titulo: string;
+                  descripcion: string;
+                  fecha: string;
+                  enlace?: string;
+                  subs?: {
+                    titulo: string;
+                    descripcion: string;
+                    techstack: string;
+                    enlace: string;
+                  }[];
+                },
+                indice: number
+              ) => {
+                return (
+                  <>
+                    <div
+                      key={indice}
+                      className="relative w-full h-fit flex flex-col gap-1 items-start justify-start"
+                    >
+                      <div
+                        className={`relative w-fit hfit flex text-xl font-neue ${
+                          elemento.enlace && "cursor-pointer"
+                        }`}
+                        onClick={() =>
+                          elemento.enlace && window.open(elemento.enlace)
+                        }
+                      >
+                        {elemento.titulo}
+                      </div>
+                      <div className="relative w-fit hfit flex text-sm font-sani">
+                        {elemento.fecha}
+                      </div>
+                      <div className="relative w-fit hfit flex text-sm font-neueL opacity-80">
+                        {elemento.descripcion}
+                      </div>
+                    </div>
+                    {elemento?.subs && (
+                      <div className="pl-4 relative w-full h-fit flex items-start justify-start flex-col gap-8">
+                        {elemento?.subs?.map(
+                          (
+                            sub: {
+                              titulo: string;
+                              descripcion: string;
+                              techstack: string;
+                              enlace: string;
+                            },
+                            indice: number
+                          ) => {
+                            return (
+                              <div
+                                key={indice}
+                                className="relative w-full h-fit flex flex-col gap-1 items-start justify-start"
+                              >
+                                <div
+                                  className="relative w-fit hfit flex text-sm font-neue cursor-pointer"
+                                  onClick={() => window.open(sub.enlace)}
+                                >
+                                  {sub.titulo}
+                                </div>
+                                <div className="relative w-fit hfit flex text-xs font-sani">
+                                  {sub.techstack}
+                                </div>
+                                <div className="relative w-fit hfit flex text-xs font-neueL opacity-80">
+                                  {sub.descripcion}
+                                </div>
+                              </div>
+                            );
+                          }
+                        )}
+                      </div>
+                    )}
+                  </>
+                );
+              }
+            )}
+          </div>
         </div>
       </div>
     </div>
