@@ -84,9 +84,77 @@ const Bio: NextPage<{
             EST. 1998
           </div>
         </div>
+        <div className="relative w-full h-fit flex flex-col gap-5 items-start justify-start text-left text-mainText px-12 pt-10">
+          <div className={`relative w-full h-full font-sani text-4xl`}>
+            {t("hey")}
+          </div>
+          <div className={`relative w-full h-full font-sani text-6xl`}>
+            {t("me")}
+          </div>
+          <div
+            className="relative w-2/3 h-fit text-base font-neueL"
+            dangerouslySetInnerHTML={{
+              __html: t("bio"),
+            }}
+          ></div>
+        </div>
+        <div className="relative w-full h-fit flex items-start justify-start flex-col gap-8 px-12">
+          {[
+            {
+              titulo: "Mechanical & Space Engineering",
+              descripcion:
+                "Dropped out in early 2019 of the University of Sydney, Mechanical & Space Engineering",
+              fecha: "2017-2019",
+            },
+            {
+              titulo: "Crypto Algorithmic Tail Risk",
+              descripcion:
+                "Heading up variance swap strategies and research on systemic risk in volatile markets (BTC + ETH) out of France, Dubai and Australia",
+              fecha: "2019-2020",
+            },
+            {
+              titulo: "DIGITALAX",
+              descripcion:
+                "Founded DIGITALAX. Dedicated to building emancipatory lifestyle tech and one of the first players to coin and grow out web3 fashion.",
+              fecha: "2020-Current",
+            },
+          ].map(
+            (
+              elemento: {
+                titulo: string;
+                descripcion: string;
+                fecha: string;
+              },
+              indice: number
+            ) => {
+              return (
+                <div
+                  key={indice}
+                  className="relative w-full h-fit flex flex-col gap-1 items-start justify-start text-mainText"
+                >
+                  <div className="relative w-fit hfit flex text-xl font-neue">
+                    {elemento.titulo}
+                  </div>
+                  <div className="relative w-fit hfit flex text-sm font-sani">
+                    {elemento.fecha}
+                  </div>
+                  <div className="relative w-fit hfit flex text-sm font-neueL">
+                    {elemento.descripcion}
+                  </div>
+                </div>
+              );
+            }
+          )}
+        </div>
       </div>
     </div>
   );
 };
 
 export default withTranslation()(Bio);
+
+export const getStaticProps = async ({ locale }: { locale: string }) => ({
+  props: {
+    ...(await serverSideTranslations(locale, ["common"])),
+  },
+});
