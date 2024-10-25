@@ -201,7 +201,7 @@ const Bio: NextPage<{
                       className="relative w-full h-fit flex flex-col gap-1 items-start justify-start"
                     >
                       <div
-                        className={`relative w-fit hfit flex text-xl font-neue ${
+                        className={`relative w-fit h-fit flex text-xl font-neue ${
                           elemento.enlace && "cursor-pointer"
                         }`}
                         onClick={() =>
@@ -210,10 +210,10 @@ const Bio: NextPage<{
                       >
                         {elemento.titulo}
                       </div>
-                      <div className="relative w-fit hfit flex text-sm font-sani">
+                      <div className="relative w-fit h-fit flex text-sm font-sani">
                         {elemento.fecha}
                       </div>
-                      <div className="relative w-fit hfit flex text-sm font-neueL opacity-80">
+                      <div className="relative w-3/5 h-fit flex text-base font-neueL opacity-80">
                         {elemento.descripcion}
                       </div>
                     </div>
@@ -235,15 +235,15 @@ const Bio: NextPage<{
                                 className="relative w-full h-fit flex flex-col gap-1 items-start justify-start"
                               >
                                 <div
-                                  className="relative w-fit hfit flex text-sm font-neue cursor-pointer"
+                                  className="relative w-fit h-fit flex text-base font-neue cursor-pointer"
                                   onClick={() => window.open(sub.enlace)}
                                 >
                                   {sub.titulo}
                                 </div>
-                                <div className="relative w-fit hfit flex text-xs font-sani">
+                                <div className="relative w-fit h-fit flex text-xs font-sani">
                                   {sub.techstack}
                                 </div>
-                                <div className="relative w-fit hfit flex text-xs font-neueL opacity-80">
+                                <div className="relative w-2/5 h-fit flex text-base font-neueL opacity-80">
                                   {sub.descripcion}
                                 </div>
                               </div>
