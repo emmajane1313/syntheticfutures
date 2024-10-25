@@ -105,63 +105,54 @@ const Bio: NextPage<{
           <div className="relative w-full h-fit flex items-start justify-start flex-col gap-8">
             {[
               {
-                titulo: "Mechanical & Space Engineering",
-                descripcion:
-                  "Dropped out in early 2019 of the University of Sydney, Mechanical & Space Engineering",
+                titulo: t("spaceT"),
+                descripcion: t("spaceD"),
                 fecha: "2017-2019",
               },
               {
-                titulo: "Crypto Algorithmic Tail Risk",
-                descripcion:
-                  "Led variance swap strategies and research on systemic risk in volatile markets (BTC + ETH) out of France, Dubai and Australia, with some of the best in the business.",
+                titulo: t("cryptoT"),
+                descripcion: t("cryptoD"),
                 fecha: "2019-2020",
               },
               {
                 titulo: "DIGITALAX",
                 enlace: "https://digitalax.xyz/",
-                descripcion:
-                  "Founded DIGITALAX. Dedicated to building emancipatory lifestyle tech and one of the first players to coin and develop web3 fashion.",
+                descripcion: t("digiD"),
                 fecha: "2020-Current",
                 subs: [
                   {
                     titulo: "Chromadin",
-                    descripcion:
-                      "24/7 Channel Surfing and collection marketplace, integrating with Lens Protocol web3 social media.",
+                    descripcion: t("chroma"),
                     techstack: "NextJS, TS, React, Solidity, Node",
                     enlace: "https://www.chromadin.xyz/",
                   },
                   {
                     titulo: "Kinora SDK",
-                    descripcion:
-                      "On-chain video metric quests- SDK and user quest interface.",
+                    descripcion: t("kin"),
                     techstack: "NextJS, TS, React, Solidity, Node, Python",
                     enlace: "https://kinora.irrevocable.dev/",
                   },
                   {
                     titulo: "Coin Op",
-                    descripcion:
-                      "NFT print marketplace and AI editor canvas for designing and locally fulfilling IRL streetwear.",
+                    descripcion: t("coin"),
                     techstack: "NextJS, TS, React, Solidity, Node",
                     enlace: "https://coinop.themanufactory.xyz/",
                   },
                   {
                     titulo: "Cypher Search",
-                    descripcion:
-                      "Pinterest style web3 social media feed integrating Lens Protocol and on-chain encrypted fulfillment of prints, streetwear and virtual NFTs).",
+                    descripcion: t("cypher"),
                     techstack: "NextJS, TS, React, Solidity, Node",
                     enlace: "https://cypher.digitalax.xyz/",
                   },
                   {
                     titulo: "Lit Listener",
-                    descripcion:
-                      "Typescript SDK for Peer 2 Peer Encryption triggered by on-chain events and webhooks, integrating Lit Protocol Programmable Key Pairs.",
+                    descripcion: t("lit"),
                     techstack: "NextJS, TS, React, Solidity, Node, Python",
                     enlace: "https://listener.irrevocable.dev/",
                   },
                   {
                     titulo: "NPC Studio",
-                    descripcion:
-                      "Character based AI agent game environment, where agents interact with each other and on-chain products through decentralized social media.",
+                    descripcion: t("npc"),
                     techstack: "Rust, C++, Solidity, NextJS, TS, React",
                     enlace: "https://npcstudio.xyz/",
                   },
@@ -170,9 +161,22 @@ const Bio: NextPage<{
               {
                 titulo: "F3Manifesto",
                 enlace: "https://f3manifesto.xyz/",
-                descripcion:
-                  "Indie Web3 fashion brand offering exclusive on-chain streetwear and artful print collections, all CC0 and designed in-house with collectible pieces.",
+                descripcion: t("f3mD"),
                 fecha: "2021-Current",
+              },
+              {
+                titulo: "Emancipa",
+                enlace: "https://emancipa.xyz/",
+                descripcion: t("emancipaD"),
+                fecha: "2024-Current",
+                subs: [
+                  {
+                    titulo: "Dhäwu",
+                    descripcion: t("dhawuD"),
+                    techstack: "NextJS, TS, React",
+                    enlace: "https://dhawu.emancipa.xyz/",
+                  },
+                ],
               },
             ].map(
               (
