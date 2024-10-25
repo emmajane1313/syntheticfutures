@@ -121,16 +121,22 @@ const Bio: NextPage<{
                 fecha: "2020-Current",
                 subs: [
                   {
+                    titulo: t("npcT"),
+                    descripcion: t("npcD"),
+                    techstack: "Rust, C++, Solidity, NextJS, TS, React",
+                    enlace: "https://npcstudio.xyz/",
+                  },
+                  {
                     titulo: "Chromadin",
                     descripcion: t("chroma"),
                     techstack: "NextJS, TS, React, Solidity, Node",
                     enlace: "https://www.chromadin.xyz/",
                   },
                   {
-                    titulo: "Kinora SDK",
-                    descripcion: t("kin"),
+                    titulo: t("litT"),
+                    descripcion: t("litD"),
                     techstack: "NextJS, TS, React, Solidity, Node, Python",
-                    enlace: "https://kinora.irrevocable.dev/",
+                    enlace: "https://listener.irrevocable.dev/",
                   },
                   {
                     titulo: "Coin Op",
@@ -145,16 +151,10 @@ const Bio: NextPage<{
                     enlace: "https://cypher.digitalax.xyz/",
                   },
                   {
-                    titulo: "Lit Listener",
-                    descripcion: t("lit"),
+                    titulo: "Kinora SDK",
+                    descripcion: t("kin"),
                     techstack: "NextJS, TS, React, Solidity, Node, Python",
-                    enlace: "https://listener.irrevocable.dev/",
-                  },
-                  {
-                    titulo: "NPC Studio",
-                    descripcion: t("npc"),
-                    techstack: "Rust, C++, Solidity, NextJS, TS, React",
-                    enlace: "https://npcstudio.xyz/",
+                    enlace: "https://kinora.irrevocable.dev/",
                   },
                 ],
               },
