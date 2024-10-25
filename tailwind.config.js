@@ -18,8 +18,8 @@ module.exports = {
         mainText: "var(--mainText)",
         maroon: "#C92D1F",
         strand: "#EAE1D3",
-        amarillo:"#2f25a7",
-        azul: "#f6ec7b"
+        amarillo: "#2f25a7",
+        azul: "#f6ec7b",
       },
       fontSize: {
         xxs: "0.6rem",
@@ -33,6 +33,15 @@ module.exports = {
       screens: {
         mod: "1076px",
         eight: "800px",
+      },
+      keyframes: {
+        sideToSide: {
+          "0%, 100%": { transform: "translateX(-3px)" },
+          "50%": { transform: "translateX(2px)" },
+        },
+      },
+      animation: {
+        sideBounce: "sideToSide 2s ease-in-out infinite",
       },
     },
   },

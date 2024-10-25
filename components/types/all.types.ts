@@ -68,6 +68,7 @@ export type PostProps = {
 
 export type HeaderProps = {
   changeColor: () => void;
+  color: string;
   i18n: I18n;
   idiomasOpen: boolean;
   setIdiomasOpen: (e: boolean) => void;

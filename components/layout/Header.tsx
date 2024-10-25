@@ -2,6 +2,7 @@ import Image from "next/legacy/image";
 import { FunctionComponent } from "react";
 import { HeaderProps } from "../types/all.types";
 import { INFURA_GATEWAY } from "../../lib/constants";
+import { HiArrowNarrowRight } from "react-icons/hi";
 
 const Header: FunctionComponent<HeaderProps> = ({
   changeColor,
@@ -10,15 +11,38 @@ const Header: FunctionComponent<HeaderProps> = ({
   i18n,
   t,
   router,
+  color,
 }): JSX.Element => {
   return (
     <div className="relative w-full h-full text-mainText flex flex-col text-center gap-10 px-2 sm:px-8 py-4">
       <div className="relative w-full h-full min-h-full grid grid-flow-col auto-cols-auto">
-        <div
-          className="relative w-fit h-fit text-xs font-neue cursor-pointer justify-self-center"
-          onClick={() => changeColor()}
-        >
-          EST. 1998
+        <div className="relative w-full h-fit flex flex-col gap-2 items-center justify-center">
+          <div
+            className="relative w-fit h-fit text-xs font-neue cursor-pointer justify-self-center"
+            onClick={() => changeColor()}
+          >
+            EST. 1998
+          </div>
+          <div
+            className="relative w-fit h-fit flex flex-row gap-2 cursor-pointer"
+            onClick={() => router.push("/bio")}
+          >
+            <div className="relative w-fit h-fit text-xs font-neueL justify-self-center flex">
+              {t("link")}
+            </div>
+            <div className="w-fit h-fit flex items-center justify-center relative animate-sideBounce">
+              <HiArrowNarrowRight
+                size={15}
+                color={
+                  color === "maroon"
+                    ? "#C92D1F"
+                    : color === "gris"
+                    ? "#F2F2F2"
+                    : "#f6ec7b"
+                }
+              />
+            </div>
+          </div>
         </div>
         <div className="absolute w-fit h-fit flex items-center justify-self-end">
           <div
@@ -96,7 +120,7 @@ const Header: FunctionComponent<HeaderProps> = ({
                     <div
                       key={index}
                       className={`relative w-full h-12 flex items-center px-2 justify-center flex-row gap-2 ${
-                        index !== 9 && "border-b border-mainText"
+                        index !== 13 && "border-b border-mainText"
                       } ${
                         (index === 0 || index === 1) &&
                         "hover:opacity-80 cursor-pointer"

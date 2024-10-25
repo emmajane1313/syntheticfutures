@@ -26,7 +26,7 @@ const Columns: FunctionComponent<ColumnsProps> = ({
             {t("explora")}
           </div>
           <div
-            className="relative w-fit h-fit flex items-center justify-center text-center sm:text-right flex-row gap-1 cursor-pointer "
+            className="relative w-fit h-fit flex items-center justify-center text-center sm:text-right flex-row gap-1 cursor-pointer"
             onClick={() => setFiltroAbierto(!filtroAbierto)}
           >
             <div className="relative w-fit h-fit flex items-center justify-center hover:opacity-70">
@@ -66,7 +66,7 @@ const Columns: FunctionComponent<ColumnsProps> = ({
                     <div
                       key={indice}
                       className={`flex items-center justify-center w-full h-fit p-1 cursor-pointer hover:opacity-70 ${
-                        indice !== 10 && "border-b border-mainText"
+                        indice !== 13 && "border-b border-mainText"
                       }`}
                       onClick={() => {
                         setIdiomaFiltrado(indice == 0 ? undefined : id);

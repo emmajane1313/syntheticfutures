@@ -345,14 +345,24 @@ export const LISTA: Lista[] = [
       en: "Hungarian",
       es: "Húngaro",
     },
-    sub: [],
+    sub: [
+      {
+        enlace: "https://www.youtube.com/watch?v=zrCh2UKyL-I",
+        titulo: "Európa Kiadó - Mocskos idők"
+      }
+    ],
   },
   {
     main: {
       en: "Yolŋu Matha",
       es: "Yolŋu Matha",
     },
-    sub: [],
+    sub: [
+      {
+        enlace: "https://firstnationsmedia.stream/8040/stream",
+        titulo: "Yolŋu Radio"
+      }
+    ],
   },
 ];
 

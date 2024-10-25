@@ -35,6 +35,7 @@ const Home: NextPage<IndexProps> = ({
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Header
+        color={color}
         changeColor={changeColor}
         idiomasOpen={idiomasOpen}
         router={router}
