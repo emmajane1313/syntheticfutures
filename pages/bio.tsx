@@ -88,7 +88,10 @@ const Bio: NextPage<{
           <div className={`relative w-full h-full font-sani text-4xl`}>
             {t("hey")}
           </div>
-          <div className={`relative w-full h-full font-sani text-6xl`}>
+          <div
+            className={`relative w-full h-full font-sani text-6xl underline cursor-pointer underline-offset-8`}
+            onClick={() => window.open("https://github.com/emmajane1313")}
+          >
             {t("me")}
           </div>
           <div
