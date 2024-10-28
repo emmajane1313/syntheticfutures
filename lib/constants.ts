@@ -2,6 +2,8 @@ import { Categories, Lista } from "../components/types/all.types";
 
 export const COLORS: string[] = ["maroon", "gris", "mar"];
 
+export const STREAM: string = "https://firstnationsmedia.stream/8040/stream"
+
 export const LISTA: Lista[] = [
   {
     main: {

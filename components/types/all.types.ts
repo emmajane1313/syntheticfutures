@@ -130,9 +130,16 @@ export type ContentProps = {
   lista: boolean;
   t: TFunction<"common", undefined>;
   i18n: I18n;
+  radio: boolean;
+  color: string;
 };
 
 export type ListaProps = {
   t: TFunction<"common", undefined>;
   i18n: I18n;
+};
+
+export type RadioProps = {
+  t: TFunction<"common", undefined>;
+  color: string;
 };

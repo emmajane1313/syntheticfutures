@@ -1,12 +1,15 @@
 import { FunctionComponent } from "react";
 import { ContentProps } from "../../types/all.types";
 import Lista from "./Lista";
+import Radio from "./Radio";
 
 const Content: FunctionComponent<ContentProps> = ({
   description,
   lista,
   t,
   i18n,
+  radio,
+  color,
 }): JSX.Element => {
   return (
     <div className="relative w-full h-full grid grid-flow-cols auto-cols-auto text-mainText gap-20">
@@ -16,6 +19,7 @@ const Content: FunctionComponent<ContentProps> = ({
         dangerouslySetInnerHTML={{ __html: description as string }}
       ></div>
       {lista && <Lista t={t} i18n={i18n} />}
+      {radio && <Radio t={t} color={color} />}
     </div>
   );
 };

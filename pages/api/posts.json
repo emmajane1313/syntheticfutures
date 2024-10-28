@@ -138,8 +138,8 @@
       "es": "La Severidad de la Verdad"
     },
     "fecha": {
-      "en": "",
-      "es": ""
+       "en": "28 October, 2024",
+      "es": "28 de Octubre de 2024"
     },
     "traducciones": "en, es",
     "locale": "es",
@@ -148,7 +148,7 @@
       "es": "<img draggable='false' src='https://thedial.infura-ipfs.io/ipfs/QmepY2BLeBWwfvxvL9nm69E6MzvFv4gqa5N5RjFdu1UoLT'/><br/>"
     },
     "mainImage": "QmepY2BLeBWwfvxvL9nm69E6MzvFv4gqa5N5RjFdu1UoLT",
-    "live": true
+    "live": false
   },
   {
     "title": {
@@ -228,7 +228,7 @@
       "es": "Supremacistas O Cornudos"
     },
     "fecha": {
-      "en": "",
+      "en": "white christian nationalism, christian bloggers, evangelical christians",
       "es": ""
     },
     "traducciones": "es",
