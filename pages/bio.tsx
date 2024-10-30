@@ -179,6 +179,12 @@ const Bio: NextPage<{
                     techstack: "NextJS, TS, React",
                     enlace: "https://dhawu.emancipa.xyz/",
                   },
+                  {
+                    titulo: "Boudica",
+                    descripcion: t("boudicaD"),
+                    techstack: "NextJS, TS, React",
+                    enlace: "https://boudica.emancipa.xyz",
+                  },
                 ],
               },
             ].map(
