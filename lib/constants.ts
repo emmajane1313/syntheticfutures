@@ -2,7 +2,7 @@ import { Categories, Lista } from "../components/types/all.types";
 
 export const COLORS: string[] = ["maroon", "gris", "mar"];
 
-export const STREAM: string = "https://firstnationsmedia.stream/8040/stream"
+export const STREAM: string = "https://firstnationsmedia.stream/8040/stream";
 
 export const LISTA: Lista[] = [
   {
@@ -350,8 +350,8 @@ export const LISTA: Lista[] = [
     sub: [
       {
         enlace: "https://www.youtube.com/watch?v=zrCh2UKyL-I",
-        titulo: "Európa Kiadó - Mocskos idők"
-      }
+        titulo: "Európa Kiadó - Mocskos idők",
+      },
     ],
   },
   {
@@ -361,9 +361,25 @@ export const LISTA: Lista[] = [
     },
     sub: [
       {
+        enlace: "https://www.youtube.com/watch?v=FncHhkiWjDA",
+        titulo: "King Stingray - Milkumana",
+      },
+      {
+        enlace: "https://www.youtube.com/watch?v=x8-YMpYbRqY",
+        titulo: "Geoffrey Gurrumul Yunupingu - Wiyathul",
+      },
+      {
+        enlace: "https://www.youtube.com/watch?v=_4Zkj8ek0RU",
+        titulo: "King Stingray - Down Under (Under One Sun)",
+      },
+      {
+        enlace: "https://www.youtube.com/watch?v=afQcYH2nwoM",
+        titulo: "Baker Boy - Marryuna ft. Yirrmal"
+      },
+      {
         enlace: "https://firstnationsmedia.stream/8040/stream",
-        titulo: "Yolŋu Radio"
-      }
+        titulo: "Yolŋu Radio",
+      },
     ],
   },
 ];
