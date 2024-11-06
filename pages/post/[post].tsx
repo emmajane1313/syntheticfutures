@@ -7,6 +7,7 @@ import { useRouter } from "next/router";
 import usePost from "../../components/posts/hooks/usePost";
 import { useTranslation, withTranslation } from "next-i18next";
 import { PiArrowFatLinesLeftFill } from "react-icons/pi";
+import Script from "next/script";
 
 const Post: NextPage<{
   changeColor: () => void;
@@ -84,6 +85,30 @@ const Post: NextPage<{
           type="font/ttf"
         />
       </Head>
+      <Script
+        src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"
+        id="MathJax-script"
+        strategy="afterInteractive"
+        onLoad={() => {
+          (window as any).MathJax = {
+            tex: {
+              inlineMath: [
+                ["$", "$"],
+                ["\\(", "\\)"],
+              ],
+            },
+            svg: { fontCache: "global" },
+            startup: {
+              ready: () => {
+                (window as any)?.startup.defaultReady();
+                (window as any)?.startup.promise.then(() =>
+                  (window as any)?.typeset()
+                );
+              },
+            },
+          };
+        }}
+      />
       <div className="relative w-full h-full flex flex-col gap-10">
         <div className="relative w-full h-fit pt-4 flex items-center justify-start pl-2 ">
           <div

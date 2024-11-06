@@ -21,6 +21,12 @@
 }
 
 @font-face {
+  font-family: "Cambria Math";
+  font-weight: 400;
+  src: url("/fonts/CambriaMath.ttf");
+}
+
+@font-face {
   font-family: "New York";
   font-weight: 400;
   src: url("/fonts/NewYork.otf");
@@ -52,7 +58,6 @@ body {
 .theme-mar {
   --mainBg: theme("colors.amarillo");
   --mainText: theme("colors.azul");
-
 }
 
 html::-webkit-scrollbar {
@@ -106,4 +111,3 @@ div::-webkit-scrollbar-thumb:active {
     word-break: break-word !important;
   }
 }
-

@@ -340,6 +340,10 @@ export const LISTA: Lista[] = [
         titulo: "Hatchie - Obsessed",
         enlace: "https://www.youtube.com/watch?v=iI4aHUVQBgI",
       },
+      {
+        titulo: "Snakadaktal - Fall Underneath",
+        enlace: "https://www.youtube.com/watch?v=TmDS_shIvQ8"
+      }
     ],
   },
   {

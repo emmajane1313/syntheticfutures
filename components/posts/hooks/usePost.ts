@@ -20,6 +20,15 @@ const usePost = (path: string, router: NextRouter) => {
     }
   }, [path, router.locale]);
 
+
+  useEffect(() => {
+    if ((window as any)?.MathJax) {
+      (window as any)?.MathJax?.startup?.promise?.then(() =>
+        (window as any)?.MathJax?.typeset()
+      );
+    }
+  }, []);
+
   return {
     publication,
   };
