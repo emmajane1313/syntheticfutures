@@ -7,7 +7,7 @@ import { useEffect, useState } from "react";
 import { appWithTranslation } from "next-i18next";
 import { COLORS } from "../lib/constants";
 import { DefaultSeo } from "next-seo";
-import Script from "next/script";
+
 
 function MyApp({ Component, pageProps }: AppProps) {
   const [color, setColor] = useState<string>(COLORS[0]);
@@ -31,14 +31,7 @@ function MyApp({ Component, pageProps }: AppProps) {
     }
   }, []);
 
-  useEffect(() => {
-    if ((window as any)?.MathJax) {
-      (window as any)?.MathJax?.startup?.promise?.then(() =>
-        (window as any)?.MathJax?.typeset()
-      );
-    }
-  }, []);
-
+  
   return (
     <div
       className={[
@@ -96,30 +89,6 @@ function MyApp({ Component, pageProps }: AppProps) {
           }}
         />
       </Head>
-      <Script
-        src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"
-        id="MathJax-script"
-        strategy="afterInteractive"
-        onLoad={() => {
-          (window as any).MathJax = {
-            tex: {
-              inlineMath: [
-                ["$", "$"],
-                ["\\(", "\\)"],
-              ],
-            },
-            svg: { fontCache: "global" },
-            startup: {
-              ready: () => {
-                (window as any)?.startup.defaultReady();
-                (window as any)?.startup.promise.then(() =>
-                  (window as any)?.typeset()
-                );
-              },
-            },
-          };
-        }}
-      />
       <DefaultSeo
         title="Synthetic Futures"
         description="Time to help others with the outbreak. Not out of danger yet."

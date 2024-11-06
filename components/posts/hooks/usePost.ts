@@ -19,21 +19,46 @@ const usePost = (path: string, router: NextRouter) => {
       });
     }
   }, [path, router.locale]);
-
+  
+  
   useEffect(() => {
-    const typeset = () => {
-      if ((window as any)?.MathJax) {
-        (window as any)?.MathJax.typeset();
+    const loadMathJax = () => {
+      const script = document.createElement('script');
+      script.src = 'https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js';
+      script.async = true;
+      script.onload = () => {
+        (window as any).MathJax = {
+          tex: { inlineMath: [['$', '$'], ['\\(', '\\)']] },
+          svg: { fontCache: 'global' },
+          startup: {
+            ready: () => {
+              (window as any).MathJax.startup.defaultReady();
+              (window as any).MathJax.startup.promise.then(() => {
+                (window as any).MathJax.typeset();
+              });
+            },
+          },
+        };
+      };
+      document.head.appendChild(script);
+    };
+
+    loadMathJax();
+
+    const handleRouteChange = () => {
+      if ((window as any).MathJax && (window as any).MathJax.startup?.promise) {
+        (window as any).MathJax.startup.promise.then(() => {
+          (window as any).MathJax.typeset();
+        });
       }
     };
-    typeset();
-    router.events.on("routeChangeComplete", typeset); 
-  
+
+    router.events.on('routeChangeComplete', handleRouteChange);
+
     return () => {
-      router.events.off("routeChangeComplete", typeset); 
+      router.events.off('routeChangeComplete', handleRouteChange);
     };
   }, [router.events]);
-  
 
   return {
     publication,

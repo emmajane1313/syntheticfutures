@@ -7,7 +7,6 @@ import { useRouter } from "next/router";
 import usePost from "../../components/posts/hooks/usePost";
 import { useTranslation, withTranslation } from "next-i18next";
 import { PiArrowFatLinesLeftFill } from "react-icons/pi";
-import Script from "next/script";
 
 const Post: NextPage<{
   changeColor: () => void;
@@ -17,6 +16,7 @@ const Post: NextPage<{
   const { t, i18n } = useTranslation("common");
   const { post } = router.query;
   const { publication } = usePost(post as string, router);
+
   return (
     <div className="relative h-auto min-h-screen w-full overflow-x-hidden">
       <Head>
@@ -85,20 +85,7 @@ const Post: NextPage<{
           type="font/ttf"
         />
       </Head>
-      <Script
-        src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"
-        id="MathJax-script"
-        strategy="afterInteractive"
-        onLoad={() => {
-          (window as any).MathJax = {
-            tex: { inlineMath: [["$", "$"], ["\\(", "\\)"]] },
-            svg: { fontCache: "global" },
-          };
-          (window as any).MathJax.startup.getComponents = () => {
-            if ((window as any)?.MathJax) (window as any).MathJax.typeset();
-          };
-        }}
-      />
+    
       <div className="relative w-full h-full flex flex-col gap-10">
         <div className="relative w-full h-fit pt-4 flex items-center justify-start pl-2 ">
           <div
@@ -117,6 +104,7 @@ const Post: NextPage<{
             />
           </div>
         </div>
+  
         <Title
           title={publication?.title?.[router.locale as "en" | "es"]!}
           t={t}
@@ -140,6 +128,7 @@ const Post: NextPage<{
           i18n={i18n}
           lista={publication?.title?.es!?.includes("Perdida En")}
         />
+  
       </div>
     </div>
   );
