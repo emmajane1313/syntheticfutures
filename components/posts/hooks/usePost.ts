@@ -20,14 +20,20 @@ const usePost = (path: string, router: NextRouter) => {
     }
   }, [path, router.locale]);
 
-
   useEffect(() => {
-    if ((window as any)?.MathJax) {
-      (window as any)?.MathJax?.startup?.promise?.then(() =>
-        (window as any)?.MathJax?.typeset()
-      );
-    }
-  }, []);
+    const typeset = () => {
+      if ((window as any)?.MathJax) {
+        (window as any)?.MathJax.typeset();
+      }
+    };
+    typeset();
+    router.events.on("routeChangeComplete", typeset); 
+  
+    return () => {
+      router.events.off("routeChangeComplete", typeset); 
+    };
+  }, [router.events]);
+  
 
   return {
     publication,

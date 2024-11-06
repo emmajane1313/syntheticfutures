@@ -91,21 +91,11 @@ const Post: NextPage<{
         strategy="afterInteractive"
         onLoad={() => {
           (window as any).MathJax = {
-            tex: {
-              inlineMath: [
-                ["$", "$"],
-                ["\\(", "\\)"],
-              ],
-            },
+            tex: { inlineMath: [["$", "$"], ["\\(", "\\)"]] },
             svg: { fontCache: "global" },
-            startup: {
-              ready: () => {
-                (window as any)?.startup.defaultReady();
-                (window as any)?.startup.promise.then(() =>
-                  (window as any)?.typeset()
-                );
-              },
-            },
+          };
+          (window as any).MathJax.startup.getComponents = () => {
+            if ((window as any)?.MathJax) (window as any).MathJax.typeset();
           };
         }}
       />
