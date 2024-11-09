@@ -85,8 +85,20 @@ export const LISTA: Lista[] = [
         enlace: "https://www.youtube.com/watch?v=vMnkBovyTPc",
       },
       {
+        titulo: "Курган - Крик душі",
+        enlace: "https://www.youtube.com/watch?v=sFbI2XMyuGg"
+      },
+      {
         titulo: "SadSvit - Небо",
         enlace: "https://www.youtube.com/watch?v=cPzhNzqt9LA",
+      },
+      {
+        titulo: "Klavdia Petrivna — Я тобі брехала",
+        enlace: "https://www.youtube.com/watch?v=3Rk6jQhLqiM",
+      },
+      {
+        titulo: "KALUSH feat. alyona alyona",
+        enlace: "https://www.youtube.com/watch?v=tXJ2-PgeLVg",
       },
     ],
   },
@@ -342,8 +354,8 @@ export const LISTA: Lista[] = [
       },
       {
         titulo: "Snakadaktal - Fall Underneath",
-        enlace: "https://www.youtube.com/watch?v=TmDS_shIvQ8"
-      }
+        enlace: "https://www.youtube.com/watch?v=TmDS_shIvQ8",
+      },
     ],
   },
   {
@@ -378,7 +390,7 @@ export const LISTA: Lista[] = [
       },
       {
         enlace: "https://www.youtube.com/watch?v=afQcYH2nwoM",
-        titulo: "Baker Boy - Marryuna ft. Yirrmal"
+        titulo: "Baker Boy - Marryuna ft. Yirrmal",
       },
       {
         enlace: "https://firstnationsmedia.stream/8040/stream",
