@@ -86,7 +86,7 @@ export const LISTA: Lista[] = [
       },
       {
         titulo: "Курган - Крик душі",
-        enlace: "https://www.youtube.com/watch?v=sFbI2XMyuGg"
+        enlace: "https://www.youtube.com/watch?v=sFbI2XMyuGg",
       },
       {
         titulo: "SadSvit - Небо",
@@ -191,6 +191,10 @@ export const LISTA: Lista[] = [
         enlace: "https://www.youtube.com/watch?v=DUgXaHVyW9E",
       },
       {
+        titulo: "CLIO - T'as vu",
+        enlace: "https://www.youtube.com/watch?v=9enP5t05wFU",
+      },
+      {
         titulo: "Carla Bruni - Quelqu'un m'a dit",
         enlace: "https://www.youtube.com/watch?v=EelX_LwPHbA",
       },
@@ -289,6 +293,10 @@ export const LISTA: Lista[] = [
       {
         titulo: "Clarissa - nada contra",
         enlace: "https://www.youtube.com/watch?v=Wjfirq-_IuE",
+      },
+      {
+        titulo: "Banda do Mar - Mais Ninguém",
+        enlace: "https://www.youtube.com/watch?v=61jSSF3Vu54",
       },
       {
         titulo: "O Terno - Depois Que A Dor Passar",
@@ -396,6 +404,10 @@ export const LISTA: Lista[] = [
         enlace: "https://firstnationsmedia.stream/8040/stream",
         titulo: "Yolŋu Radio",
       },
+      {
+        enlace: "https://www.youtube.com/watch?v=YQ3KBbUpgE4",
+        titulo: "Wirringya Band – Dreamtime Shadow"
+      }
     ],
   },
 ];
