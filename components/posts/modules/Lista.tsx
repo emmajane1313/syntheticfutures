@@ -8,7 +8,7 @@ const Lista: FunctionComponent<ListaProps> = ({ t, i18n }): JSX.Element => {
       <div className="relative w-3/4 h-fit text-mainText text-sm eight:text-base lg:text-2xl font-neueL">
         {t("inmersion")}
       </div>
-      <div className="relative w-fit h-fit flex flex-row gap-5 sm:flex-nowrap flex-wrap">
+      <div className="relative w-fit h-fit flex flex-row gap-5 flex-wrap">
         {LISTA.map((category: ListaTipo, index: number) => {
           return (
             <div
