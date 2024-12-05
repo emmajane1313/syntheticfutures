@@ -279,6 +279,10 @@ export const LISTA: Lista[] = [
     },
     sub: [
       {
+        titulo: "אטעם אריין אטעם ארויס - Riki Rose",
+        enlace: "https://www.youtube.com/watch?v=NPTUFCubF8o",
+      },
+      {
         titulo: "יידישע הומור",
         enlace: "https://www.youtube.com/watch?v=-2o_52pQk74",
       },
@@ -406,8 +410,8 @@ export const LISTA: Lista[] = [
       },
       {
         enlace: "https://www.youtube.com/watch?v=YQ3KBbUpgE4",
-        titulo: "Wirringya Band – Dreamtime Shadow"
-      }
+        titulo: "Wirringya Band – Dreamtime Shadow",
+      },
     ],
   },
 ];
