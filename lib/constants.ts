@@ -166,6 +166,10 @@ export const LISTA: Lista[] = [
         titulo: "كلماتكَ هي ملعبكْ",
         enlace: "https://www.youtube.com/watch?v=cgoxQADyS-8",
       },
+      {
+        titulo: "Kazdoura - خيال",
+        enlace: "https://www.youtube.com/watch?v=xA1TJrx5ZI8"
+      }
     ],
   },
   {
@@ -269,6 +273,10 @@ export const LISTA: Lista[] = [
       {
         enlace: "https://www.youtube.com/watch?v=z8xXiqyfBg0",
         titulo: "شروین - برای",
+      },
+      {
+        enlace: "https://www.youtube.com/watch?v=XfKlAOWOMhE",
+        titulo: "SAAREN - TERA",
       },
     ],
   },
