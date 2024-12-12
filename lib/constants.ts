@@ -125,6 +125,9 @@ export const LISTA: Lista[] = [
         titulo: "ניר כנען - אל תלכי",
         enlace: "https://www.youtube.com/watch?v=fs5TdAJRBO0",
       },
+      {titulo:"יסמין מועלם - מסיבה (עם שקל)",
+        enlace:"https://www.youtube.com/watch?v=RsErNvzEQ5I"
+      },
       {
         titulo: "ניר כנען - שיר לנטע",
         enlace: "https://www.youtube.com/watch?v=_Oeh7FpUN6Q",
@@ -132,7 +135,10 @@ export const LISTA: Lista[] = [
       {
         titulo: "נרקיס רעם - אחיזה אחרת",
         enlace: "https://www.youtube.com/watch?v=vgefxghrk8s",
-      },
+      },{
+        titulo: "עלמה גוב - מה לעשות עם הזאב",
+        enlace: "https://www.youtube.com/watch?v=P1cKG1iG59Q",
+      }
     ],
   },
   {
@@ -181,6 +187,10 @@ export const LISTA: Lista[] = [
       {
         titulo: "La Femme - Elle ne t'aime pas",
         enlace: "https://www.youtube.com/watch?v=ZNp38iDHveE",
+      },
+      {
+        titulo: "iliona - Reste",
+        enlace: "https://www.youtube.com/watch?v=sLBRmH-PY9A",
       },
       {
         titulo: "Alice et Moi - Filme Moi",
@@ -278,6 +288,9 @@ export const LISTA: Lista[] = [
         enlace: "https://www.youtube.com/watch?v=XfKlAOWOMhE",
         titulo: "SAAREN - TERA",
       },
+      {
+        enlace:"https://www.youtube.com/watch?v=WkuLNTKEj90",titulo:"مرجان فرساد - پرتقال من"
+      }
     ],
   },
   {
