@@ -100,6 +100,10 @@ export const LISTA: Lista[] = [
         titulo: "KALUSH feat. alyona alyona",
         enlace: "https://www.youtube.com/watch?v=tXJ2-PgeLVg",
       },
+      {
+        titulo: "Tember Blanche - про Київ",
+        enlace: "https://www.youtube.com/watch?v=Efn4lCY2u-E",
+      },
     ],
   },
   {
@@ -125,8 +129,9 @@ export const LISTA: Lista[] = [
         titulo: "ניר כנען - אל תלכי",
         enlace: "https://www.youtube.com/watch?v=fs5TdAJRBO0",
       },
-      {titulo:"יסמין מועלם - מסיבה (עם שקל)",
-        enlace:"https://www.youtube.com/watch?v=RsErNvzEQ5I"
+      {
+        titulo: "יסמין מועלם - מסיבה (עם שקל)",
+        enlace: "https://www.youtube.com/watch?v=RsErNvzEQ5I",
       },
       {
         titulo: "ניר כנען - שיר לנטע",
@@ -135,10 +140,18 @@ export const LISTA: Lista[] = [
       {
         titulo: "נרקיס רעם - אחיזה אחרת",
         enlace: "https://www.youtube.com/watch?v=vgefxghrk8s",
-      },{
+      },
+      {
         titulo: "עלמה גוב - מה לעשות עם הזאב",
         enlace: "https://www.youtube.com/watch?v=P1cKG1iG59Q",
-      }
+      },
+      {
+        titulo: "שחר סאול - תיקו תיקו",
+        enlace: "https://www.youtube.com/watch?v=BdZdhOT7lxU",
+      },  {
+        titulo: "ג׳יין בורדו - מה שחשוב",
+        enlace: "https://www.youtube.com/watch?v=UXyFI652HdE",
+      },
     ],
   },
   {
@@ -174,8 +187,8 @@ export const LISTA: Lista[] = [
       },
       {
         titulo: "Kazdoura - خيال",
-        enlace: "https://www.youtube.com/watch?v=xA1TJrx5ZI8"
-      }
+        enlace: "https://www.youtube.com/watch?v=xA1TJrx5ZI8",
+      },
     ],
   },
   {
@@ -289,8 +302,9 @@ export const LISTA: Lista[] = [
         titulo: "SAAREN - TERA",
       },
       {
-        enlace:"https://www.youtube.com/watch?v=WkuLNTKEj90",titulo:"مرجان فرساد - پرتقال من"
-      }
+        enlace: "https://www.youtube.com/watch?v=WkuLNTKEj90",
+        titulo: "مرجان فرساد - پرتقال من",
+      },
     ],
   },
   {
