@@ -262,6 +262,10 @@ export const LISTA: Lista[] = [
         titulo: "羊文学 - マヨイガ",
       },
       {
+        enlace: "https://www.youtube.com/watch?v=bGFZoBD0ktA",
+        titulo: "ロンググッドバイ",
+      },
+      {
         enlace: "https://www.youtube.com/watch?v=UMYlSnLlCE0",
         titulo: "【349】[feat. Hashimero, maeshima soshi] Show Me Your Phone",
       },
