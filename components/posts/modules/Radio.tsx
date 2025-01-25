@@ -1,6 +1,7 @@
 import { FunctionComponent, useEffect, useRef, useState } from "react";
 import { RadioProps } from "../../types/all.types";
-import { STREAM } from "../../../lib/constants";
+import { INFURA_GATEWAY, STREAM } from "../../../lib/constants";
+import Image from "next/legacy/image";
 
 const Radio: FunctionComponent<RadioProps> = ({ t, color }): JSX.Element => {
   const canvasRef = useRef<HTMLCanvasElement | null>(null);
@@ -29,7 +30,7 @@ const Radio: FunctionComponent<RadioProps> = ({ t, color }): JSX.Element => {
       canvasContext.stroke();
     }
   }, []);
- 
+
   useEffect(() => {
     if (!canvasRef.current || !audioContext || !isPlaying) return;
 
@@ -105,10 +106,23 @@ const Radio: FunctionComponent<RadioProps> = ({ t, color }): JSX.Element => {
       setIsPlaying(true);
     }
   };
-  
+
   return (
     <div className="relative w-full h-fit flex items-center justify-center">
       <div className="relative w-5/6 lg:w-1/2 flex flex-col h-fit gap-3 items-center justify-center">
+        <div
+          className="relative w-full h-40 flex cursor-pointer"
+          onClick={() =>
+            window.open("https://www.firstnationsbroadcasting.org/radio")
+          }
+        >
+          <Image
+            src={`${INFURA_GATEWAY}/ipfs/QmVL1rAF6WXDeAx6yCHqEWVnom2NBnLfDYD6Lu4ZKdaxMm`}
+            draggable={false}
+            layout="fill"
+            objectFit="contain"
+          />
+        </div>
         <div className="relative w-full h-fit flex items-center justify-center text-center break-words text-mainText font-neueL text-base">
           {t("radio")}
         </div>

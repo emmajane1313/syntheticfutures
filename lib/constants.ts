@@ -2,7 +2,7 @@ import { Categories, Lista } from "../components/types/all.types";
 
 export const COLORS: string[] = ["maroon", "gris", "mar"];
 
-export const STREAM: string = "https://firstnationsmedia.stream/8040/stream";
+export const STREAM: string = "http://stream.radiolarrakia.org:8000/airradio";
 
 export const LISTA: Lista[] = [
   {
@@ -148,7 +148,8 @@ export const LISTA: Lista[] = [
       {
         titulo: "שחר סאול - תיקו תיקו",
         enlace: "https://www.youtube.com/watch?v=BdZdhOT7lxU",
-      },  {
+      },
+      {
         titulo: "ג׳יין בורדו - מה שחשוב",
         enlace: "https://www.youtube.com/watch?v=UXyFI652HdE",
       },
@@ -204,6 +205,10 @@ export const LISTA: Lista[] = [
       {
         titulo: "iliona - Reste",
         enlace: "https://www.youtube.com/watch?v=sLBRmH-PY9A",
+      },
+      {
+        titulo: "VIDEOCLUB – En nuit",
+        enlace: "https://www.youtube.com/watch?v=xKJkzro8ArA",
       },
       {
         titulo: "Alice et Moi - Filme Moi",
