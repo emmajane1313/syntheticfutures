@@ -124,7 +124,7 @@ const Post: NextPage<{
           }
           t={t}
           color={color}
-          radio={publication?.title?.es!?.includes("La Severidad")}
+          radio={publication?.title?.es!?.includes("El Valor")}
           i18n={i18n}
           lista={publication?.title?.es!?.includes("Perdida En")}
         />
