@@ -104,6 +104,14 @@ export const LISTA: Lista[] = [
         titulo: "Tember Blanche - про Київ",
         enlace: "https://www.youtube.com/watch?v=Efn4lCY2u-E",
       },
+      {
+        titulo: "Переспів // Артистка Чуприненко / Крик душі (Курган)",
+        enlace: "https://www.youtube.com/watch?v=LJaKH-tEvZk",
+      },
+      {
+        titulo: "AGlivewith STAGE - M. Chuprynenko",
+        enlace: "https://www.youtube.com/watch?v=8GoO0nvFpPA"
+      }
     ],
   },
   {
@@ -323,13 +331,16 @@ export const LISTA: Lista[] = [
     },
     sub: [
       {
-        titulo: "אטעם אריין אטעם ארויס - Riki Rose",
+        titulo: "אטעם אריין אטעם ארויס - ריקי רויז",
         enlace: "https://www.youtube.com/watch?v=NPTUFCubF8o",
       },
       {
         titulo: "יידישע הומור",
         enlace: "https://www.youtube.com/watch?v=-2o_52pQk74",
       },
+      {      titulo: "שלאף - ריקי רויז" ,
+        enlace: "https://www.youtube.com/watch?v=WOsLvRQpaeQ"
+      }
     ],
   },
   {
