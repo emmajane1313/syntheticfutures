@@ -67,6 +67,10 @@ export const LISTA: Lista[] = [
         titulo: "PLASTILINA MOSH - Pervert Pop Song",
         enlace: "https://www.youtube.com/watch?v=XUzMZbnfb1M",
       },
+      {
+        titulo: "Amaia - Magia En Benidorm",
+        enlace: "https://www.youtube.com/watch?v=fSND16vk8tU",
+      },
     ],
   },
 
@@ -85,6 +89,10 @@ export const LISTA: Lista[] = [
         enlace: "https://www.youtube.com/watch?v=vMnkBovyTPc",
       },
       {
+        titulo: "Artistka Chuprynenko- Степ",
+        enlace: "https://www.youtube.com/watch?v=gKG2wdES4AA",
+      },
+      {
         titulo: "Курган - Крик душі",
         enlace: "https://www.youtube.com/watch?v=sFbI2XMyuGg",
       },
@@ -97,10 +105,6 @@ export const LISTA: Lista[] = [
         enlace: "https://www.youtube.com/watch?v=3Rk6jQhLqiM",
       },
       {
-        titulo: "KALUSH feat. alyona alyona",
-        enlace: "https://www.youtube.com/watch?v=tXJ2-PgeLVg",
-      },
-      {
         titulo: "Tember Blanche - про Київ",
         enlace: "https://www.youtube.com/watch?v=Efn4lCY2u-E",
       },
@@ -110,8 +114,8 @@ export const LISTA: Lista[] = [
       },
       {
         titulo: "AGlivewith STAGE - M. Chuprynenko",
-        enlace: "https://www.youtube.com/watch?v=8GoO0nvFpPA"
-      }
+        enlace: "https://www.youtube.com/watch?v=8GoO0nvFpPA",
+      },
     ],
   },
   {
@@ -315,6 +319,10 @@ export const LISTA: Lista[] = [
         titulo: "شروین - برای",
       },
       {
+        enlace: "https://www.youtube.com/watch?v=ewPNXP3-h_c",
+        titulo: "مژگان عظیمی - جنت",
+      },
+      {
         enlace: "https://www.youtube.com/watch?v=XfKlAOWOMhE",
         titulo: "SAAREN - TERA",
       },
@@ -338,9 +346,10 @@ export const LISTA: Lista[] = [
         titulo: "יידישע הומור",
         enlace: "https://www.youtube.com/watch?v=-2o_52pQk74",
       },
-      {      titulo: "שלאף - ריקי רויז" ,
-        enlace: "https://www.youtube.com/watch?v=WOsLvRQpaeQ"
-      }
+      {
+        titulo: "שלאף - ריקי רויז",
+        enlace: "https://www.youtube.com/watch?v=WOsLvRQpaeQ",
+      },
     ],
   },
   {
