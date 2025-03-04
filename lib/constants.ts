@@ -254,6 +254,10 @@ export const LISTA: Lista[] = [
         enlace: "https://www.youtube.com/watch?v=ZJK5s5-1G20",
         titulo: "Nilipek - Son Mektup",
       },
+      {
+        titulo: "Jakuzi - Koca Bir Saçmalık",
+        enlace: "https://www.youtube.com/watch?v=KCHfypkdUL0"
+      }
     ],
   },
   {
