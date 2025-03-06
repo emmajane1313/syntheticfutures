@@ -256,8 +256,12 @@ export const LISTA: Lista[] = [
       },
       {
         titulo: "Jakuzi - Koca Bir Saçmalık",
-        enlace: "https://www.youtube.com/watch?v=KCHfypkdUL0"
-      }
+        enlace: "https://www.youtube.com/watch?v=KCHfypkdUL0",
+      },
+      {
+        titulo: "Ceren Gündoğdu - Kapı",
+        enlace: "https://www.youtube.com/watch?v=vPAH9ho90b4",
+      },
     ],
   },
   {
