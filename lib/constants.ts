@@ -279,7 +279,7 @@ export const LISTA: Lista[] = [
         titulo: "さとう。 - ３％",
       },
       {
-        enlace: "https://www.youtube.com/watch?v=_xXGj-h4nto",
+        enlace: "https://www.youtube.com/watch?v=7HgJIAUtICU",
         titulo: "Vaundy - Odoriko (踊り子)"
       },
       {
