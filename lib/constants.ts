@@ -223,6 +223,10 @@ export const LISTA: Lista[] = [
         enlace: "https://www.youtube.com/watch?v=xKJkzro8ArA",
       },
       {
+        titulo: "Pomme - soleil soleil",
+        enlace: "https://www.youtube.com/watch?v=RuVQLXFafxA",
+      },
+      {
         titulo: "Alice et Moi - Filme Moi",
         enlace: "https://www.youtube.com/watch?v=NRqbMMTxmfw",
       },
@@ -273,6 +277,10 @@ export const LISTA: Lista[] = [
       {
         enlace: "https://www.youtube.com/watch?v=vOuyFoOcx3c",
         titulo: "さとう。 - ３％",
+      },
+      {
+        enlace: "https://www.youtube.com/watch?v=_xXGj-h4nto",
+        titulo: "Vaundy - Odoriko (踊り子)"
       },
       {
         enlace: "https://www.youtube.com/watch?v=uBowhAHoYTU",
