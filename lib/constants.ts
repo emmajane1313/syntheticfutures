@@ -263,6 +263,10 @@ export const LISTA: Lista[] = [
         enlace: "https://www.youtube.com/watch?v=KCHfypkdUL0",
       },
       {
+        titulo: "Son Feci Bisiklet - Bikinisinde Astronomi",
+        enlace: "https://www.youtube.com/watch?v=4qo0rBaM4ZY"
+      },
+      {
         titulo: "Ceren Gündoğdu - Kapı",
         enlace: "https://www.youtube.com/watch?v=vPAH9ho90b4",
       },
