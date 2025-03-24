@@ -138,6 +138,10 @@ export const LISTA: Lista[] = [
         enlace: "https://www.youtube.com/watch?v=g_gFnDyi2Ho",
       },
       {
+        titulo: "עלמה זהר - שיר אהבה אינדיאני מיגל",
+        enlace: "https://www.youtube.com/watch?v=QdWLvKHV9bY",
+      },
+      {
         titulo: "ניר כנען - אל תלכי",
         enlace: "https://www.youtube.com/watch?v=fs5TdAJRBO0",
       },
@@ -264,7 +268,7 @@ export const LISTA: Lista[] = [
       },
       {
         titulo: "Son Feci Bisiklet - Bikinisinde Astronomi",
-        enlace: "https://www.youtube.com/watch?v=4qo0rBaM4ZY"
+        enlace: "https://www.youtube.com/watch?v=4qo0rBaM4ZY",
       },
       {
         titulo: "Ceren Gündoğdu - Kapı",
@@ -284,7 +288,7 @@ export const LISTA: Lista[] = [
       },
       {
         enlace: "https://www.youtube.com/watch?v=7HgJIAUtICU",
-        titulo: "Vaundy - Odoriko (踊り子)"
+        titulo: "Vaundy - Odoriko (踊り子)",
       },
       {
         enlace: "https://www.youtube.com/watch?v=uBowhAHoYTU",
