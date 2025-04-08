@@ -159,6 +159,13 @@ const Bio: NextPage<{
                     techstack: "NextJS, TS, React, Solidity, Node, Python",
                     enlace: "https://kinora.irrevocable.dev/",
                   },
+                  {
+                    titulo: "TripleA",
+                    enlace: "https://triplea.agentmeme.xyz/",
+                    descripcion: t("trip"),
+                    techstack:
+                      "Rust, NextJS, Tailwind, TS, React, Solidity (ZK), Node",
+                  },
                 ],
               },
               {
@@ -166,6 +173,12 @@ const Bio: NextPage<{
                 enlace: "https://f3manifesto.xyz/",
                 descripcion: t("f3mD"),
                 fecha: "2021-Current",
+              },
+              {
+                titulo: "Lucidity",
+                enlace: "https://lucidity.agentmeme.xyz/",
+                descripcion: t("lucD"),
+                fecha: "2025-Current",
               },
               {
                 titulo: "Emancipa",
