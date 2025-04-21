@@ -107,8 +107,8 @@ export const LISTA: Lista[] = [
         enlace: "https://www.youtube.com/watch?v=3Rk6jQhLqiM",
       },
       {
-        titulo: "Tember Blanche - про Київ",
-        enlace: "https://www.youtube.com/watch?v=Efn4lCY2u-E",
+        titulo: "Tember Blanche - Та сама",
+        enlace: "https://www.youtube.com/watch?v=ybUltUAU3z8",
       },
       {
         titulo: "Переспів // Артистка Чуприненко / Крик душі (Курган)",
