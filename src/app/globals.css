@@ -1,26 +1,198 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+@font-face {
+  font-family: "Serat Serif";
+  font-weight: 400;
+  src: url("/fonts/sani.ttf");
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+@font-face {
+  font-family: "Neue Haas Bold";
+  font-weight: 400;
+  src: url("/fonts/NeueHaasDisplayBold.ttf");
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+@font-face {
+  font-family: "Neue Haas Light";
+  font-weight: 400;
+  src: url("/fonts/NeueHaasDisplayLight.ttf");
+}
+
+@font-face {
+  font-family: "Cambria Math";
+  font-weight: 400;
+  src: url("/fonts/CambriaMath.ttf");
+}
+
+@font-face {
+  font-family: "New York";
+  font-weight: 400;
+  src: url("/fonts/NewYork.otf");
+}
+
+@theme {
+  --font-xxs: 0.6rem;
+
+  --font-sani: "Serat Serif";
+  --font-neue: "Neue Haas Bold";
+  --font-neueL: "Neue Haas Light";
+  --font-york: "New York";
+
+  --color-offBlack: #111313;
+  --color-offBlue: #01030c;
+  --color-offWhite: #f2f2f2;
+  --color-lightYellow: #fcf894;
+  --color-comp: #b9b9b9;
+  --color-yell: #fcdb8f;
+  --color-dcomp: #606362;
+  --color-maroon: #c92d1f;
+  --color-strand: #eae1d3;
+  --color-amarillo: #2f25a7;
+  --color-azul: #f6ec7b;
+
+  --breakpoint-mod: 1076px;
+  --breakpoint-eight: 800px;
+}
+
+@layer utilities {
+  .text-xxs {
+    font-size: var(--font-xxs);
+  }
+
+  .font-sani {
+    font-family: var(--font-sani);
+  }
+  .font-neue {
+    font-family: var(--font-neue);
+  }
+  .font-neueL {
+    font-family: var(--font-neueL);
+  }
+  .font-york {
+    font-family: var(--font-york);
+  }
+
+  .animate-sideBounce {
+    animation: sideToSide 2s ease-in-out infinite;
+  }
+
+  .bg-mainBg {
+    background-color: var(--color-mainBg);
+  }
+  .text-mainText {
+    color: var(--color-mainText);
+  }
+  .bg-mainText {
+    background-color: var(--color-mainText);
+  }
+  .border-mainText {
+    border-color: var(--color-mainText);
+  }
+
+  .theme-gris {
+    --color-mainBg: var(--color-offBlack);
+    --color-mainText: var(--color-offWhite);
+  }
+
+  .theme-maroon {
+    --color-mainBg: var(--color-strand);
+    --color-mainText: var(--color-maroon);
+  }
+
+  .theme-mar {
+    --color-mainBg: var(--color-amarillo);
+    --color-mainText: var(--color-azul);
+  }
+
+  @keyframes sideToSide {
+    0% {
+      transform: translateX(-3px);
+    }
+    50% {
+      transform: translateX(2px);
+    }
+    100% {
+      filter: blur(0);
+    }
   }
 }
 
+html,
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  scrollbar-width: 0px;
+  scrollbar-color: transparent;
+  padding: 0;
+  margin: 0;
+  background-color: #111313;
+}
+
+.titleHTML {
+  font-family: "Neue Haas Bold";
+}
+
+.theme-gris {
+  --mainBg: theme("colors.offBlack");
+  --mainText: theme("colors.offWhite");
+}
+
+.theme-maroon {
+  --mainBg: theme("colors.strand");
+  --mainText: theme("colors.maroon");
+}
+
+.theme-mar {
+  --mainBg: theme("colors.amarillo");
+  --mainText: theme("colors.azul");
+}
+
+html::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+  opacity: 0;
+}
+
+html::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+  opacity: 0;
+}
+
+html::-webkit-scrollbar-track:active {
+  background-color: transparent !important;
+  opacity: 0;
+}
+
+html::-webkit-scrollbar-thumb:active {
+  background-color: transparent !important;
+}
+
+div::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+  opacity: 0;
+}
+
+div::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+  opacity: 0;
+}
+
+div::-webkit-scrollbar-track:active {
+  background-color: transparent !important;
+  opacity: 0;
+}
+
+div::-webkit-scrollbar-thumb:active {
+  background-color: transparent !important;
+}
+
+#break {
+  word-break: break-all !important;
+}
+
+@media (min-width: 768px) {
+  #break {
+    word-break: break-word !important;
+  }
 }
