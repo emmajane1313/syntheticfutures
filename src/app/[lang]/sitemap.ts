@@ -7,7 +7,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     ...posts?.map(({ title }) => ({
       url: `${process.env.NEXT_PUBLIC_BASE_URL}/post/${title?.["en"]
         ?.toLowerCase()
-        ?.replaceAll(" ", "")}`,
+        ?.replaceAll(" ", "-")}`,
       alternates: Object.fromEntries(
         LOCALES.map((lang) => [
           lang,
@@ -15,7 +15,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
             lang as "en" | "es"
           ]
             ?.toLowerCase()
-            ?.replaceAll(" ", "")}`,
+            ?.replaceAll(" ", "-")}`,
         ])
       ),
     })),
