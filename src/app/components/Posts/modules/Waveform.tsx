@@ -1,4 +1,4 @@
-import { FunctionComponent, useEffect, useRef } from "react";
+import { FunctionComponent, JSX, useEffect, useRef } from "react";
 import { HiOutlinePlayPause } from "react-icons/hi2";
 import WaveSurfer from "wavesurfer.js";
 import { INFURA_GATEWAY } from "../../../lib/constants";
