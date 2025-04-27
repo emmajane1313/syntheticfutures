@@ -1,6 +1,6 @@
 import { MetadataRoute } from "next";
-import posts from "./../api/posts.json";
-import { LOCALES } from "../lib/constants";
+import posts from "./api/posts.json";
+import { LOCALES } from "./lib/constants";
 
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   return [
