@@ -1,5 +1,5 @@
 import { useState } from "react";
-import postList from "./../../../[lang]/api/posts.json";
+import postList from "./../../../api/posts.json";
 
 const useColumns = () => {
   const [hoverPost, setHoverPost] = useState<boolean[]>(

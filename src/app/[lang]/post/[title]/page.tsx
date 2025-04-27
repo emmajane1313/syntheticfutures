@@ -3,7 +3,7 @@ import { INFURA_GATEWAY } from "@/app/lib/constants";
 import { getPost } from "@/app/lib/helpers/getPost";
 import { Metadata } from "next";
 import { getDictionary } from "../../dictionaries";
-import posts from "./../../api/posts.json";
+import posts from "./../../../api/posts.json";
 
 export type tParams = Promise<{ lang: string; title: string }>;
 

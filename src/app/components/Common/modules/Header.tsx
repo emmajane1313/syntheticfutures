@@ -3,8 +3,7 @@ import { ColorContext } from "@/app/providers";
 import Image from "next/legacy/image";
 import { usePathname, useRouter } from "next/navigation";
 import { FunctionComponent, JSX, useContext, useState } from "react";
-
-import { HiArrowNarrowRight } from "react-icons/hi";
+import { HiArrowNarrowRight, HiArrowNarrowLeft } from "react-icons/hi";
 
 const Header: FunctionComponent<{ dict: any }> = ({ dict }): JSX.Element => {
   const context = useContext(ColorContext);
@@ -21,24 +20,46 @@ const Header: FunctionComponent<{ dict: any }> = ({ dict }): JSX.Element => {
           >
             EST. 1998
           </div>
-          <div
-            className="relative w-fit h-fit flex flex-row gap-2 cursor-pointer"
-            onClick={() => router.push("/bio")}
-          >
-            <div className="relative w-fit h-fit text-xs font-neueL justify-self-center flex">
-              {dict?.link}
+          <div className="relative w-fit h-fit flex flex-row gap-3 sm:flex-nowrap flex-wrap">
+            <div
+              className="relative w-fit h-fit flex flex-row gap-2 cursor-pointer"
+              onClick={() => router.push("/reflections")}
+            >
+              <div className="w-fit h-fit flex items-center justify-center relative animate-sideBounce">
+                <HiArrowNarrowLeft
+                  size={15}
+                  color={
+                    context?.color === "maroon"
+                      ? "#C92D1F"
+                      : context?.color === "gris"
+                      ? "#F2F2F2"
+                      : "#f6ec7b"
+                  }
+                />
+              </div>
+              <div className="relative w-fit h-fit text-xs font-neueL justify-self-center flex">
+                {dict?.reflections}
+              </div>
             </div>
-            <div className="w-fit h-fit flex items-center justify-center relative animate-sideBounce">
-              <HiArrowNarrowRight
-                size={15}
-                color={
-                  context?.color === "maroon"
-                    ? "#C92D1F"
-                    : context?.color === "gris"
-                    ? "#F2F2F2"
-                    : "#f6ec7b"
-                }
-              />
+            <div
+              className="relative w-fit h-fit flex flex-row gap-2 cursor-pointer"
+              onClick={() => router.push("/reflections")}
+            >
+              <div className="relative w-fit h-fit text-xs font-neueL justify-self-center flex">
+                {dict?.link}
+              </div>
+              <div className="w-fit h-fit flex items-center justify-center relative animate-sideBounce">
+                <HiArrowNarrowRight
+                  size={15}
+                  color={
+                    context?.color === "maroon"
+                      ? "#C92D1F"
+                      : context?.color === "gris"
+                      ? "#F2F2F2"
+                      : "#f6ec7b"
+                  }
+                />
+              </div>
             </div>
           </div>
         </div>

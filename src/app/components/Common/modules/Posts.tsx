@@ -3,7 +3,7 @@ import { FunctionComponent, JSX } from "react";
 import { PostProps } from "../types/common.types";
 import { useRouter } from "next/navigation";
 import { INFURA_GATEWAY } from "@/app/lib/constants";
-import postList from "./../../../[lang]/api/posts.json";
+import postList from "./../../../api/posts.json";
 
 const Posts: FunctionComponent<PostProps> = ({
   handlePostHoverOver,

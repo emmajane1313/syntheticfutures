@@ -1,5 +1,5 @@
 import { MetadataRoute } from "next";
-import posts from "./api/posts.json";
+import posts from "./../api/posts.json";
 import { LOCALES } from "../lib/constants";
 
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
@@ -15,6 +15,9 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     ),
     ...LOCALES.flatMap((lang) => ({
       url: `${process.env.NEXT_PUBLIC_BASE_URL}/${lang}/about`,
+    })),
+    ...LOCALES.flatMap((lang) => ({
+      url: `${process.env.NEXT_PUBLIC_BASE_URL}/${lang}/reflections`,
     })),
   ];
 }
