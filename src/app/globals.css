@@ -76,6 +76,10 @@
     animation: sideToSide 2s ease-in-out infinite;
   }
 
+  .z-50 {
+    z-index: 50;
+  }
+
   .bg-mainBg {
     background-color: var(--color-mainBg);
   }

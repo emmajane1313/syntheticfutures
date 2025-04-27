@@ -19,7 +19,6 @@ const nextConfig: NextConfig = {
     ],
     unoptimized: true,
   },
- 
 
   trailingSlash: true,
   async headers() {
@@ -49,7 +48,6 @@ const nextConfig: NextConfig = {
 
     return headersConfig;
   },
- 
 };
 
 export default nextConfig;

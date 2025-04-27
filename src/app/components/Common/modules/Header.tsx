@@ -2,14 +2,15 @@ import { INFURA_GATEWAY } from "@/app/lib/constants";
 import { ColorContext } from "@/app/providers";
 import Image from "next/legacy/image";
 import { usePathname, useRouter } from "next/navigation";
-import { FunctionComponent, JSX, useContext, useState } from "react";
+import { FunctionComponent, JSX, useContext } from "react";
 import { HiArrowNarrowRight, HiArrowNarrowLeft } from "react-icons/hi";
+import useLanguage from "../hooks/useLanguage";
 
 const Header: FunctionComponent<{ dict: any }> = ({ dict }): JSX.Element => {
   const context = useContext(ColorContext);
   const router = useRouter();
   const path = usePathname();
-  const [idiomasOpen, setIdiomasOpen] = useState<boolean>(false);
+  const { changeLanguage, idiomasOpen, setIdiomasOpen } = useLanguage();
   return (
     <div className="relative w-full h-full flex flex-col text-center gap-10 px-2 sm:px-8 py-4">
       <div className="relative w-full h-full min-h-full grid grid-flow-col auto-cols-auto">
@@ -43,7 +44,7 @@ const Header: FunctionComponent<{ dict: any }> = ({ dict }): JSX.Element => {
             </div>
             <div
               className="relative w-fit h-fit flex flex-row gap-2 cursor-pointer"
-              onClick={() => router.push("/reflections")}
+              onClick={() => router.push("/bio")}
             >
               <div className="relative w-fit h-fit text-xs font-neueL justify-self-center flex">
                 {dict?.link}
@@ -76,7 +77,7 @@ const Header: FunctionComponent<{ dict: any }> = ({ dict }): JSX.Element => {
           </div>
           {idiomasOpen && (
             <div
-              className={`absolute text-right flex items-center justify-center h-fit font-neueL text-xs top-12 flex-col rounded-sm right-0 border border-mainText w-[8rem] z-50`}
+              className={`absolute text-right flex items-center justify-center h-fit bg-mainBg font-neueL text-xs top-12 flex-col rounded-sm right-0 border border-mainText w-[8rem] z-50`}
             >
               {[
                 {
@@ -150,9 +151,7 @@ const Header: FunctionComponent<{ dict: any }> = ({ dict }): JSX.Element => {
                       }`}
                       onClick={() => {
                         if (index === 0 || index === 1) {
-                          router.replace(
-                            path.replace(/\/(en|es)\//g, `/${item.name}/`)
-                          );
+                          changeLanguage(item.name);
                         }
                       }}
                     >
