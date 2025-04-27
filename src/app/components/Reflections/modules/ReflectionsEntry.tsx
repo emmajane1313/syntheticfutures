@@ -51,7 +51,13 @@ const ReflectionsEntry: FunctionComponent<{ dict: any }> = ({
       data,
     }: {
       index: number;
-      data: { image: string; pinterest: string; tumblr: string; lens: string };
+      data: {
+        image: string;
+        alt: string;
+        pinterest: string;
+        tumblr: string;
+        lens: string;
+      };
     }) => {
       return (
         <div
@@ -66,6 +72,7 @@ const ReflectionsEntry: FunctionComponent<{ dict: any }> = ({
                   layout="fill"
                   objectFit="contain"
                   src={`/images/${data?.image}`}
+                  alt={data?.alt}
                 />
                 <div className="absolute bottom-3 w-full h-fit flex items-center justify-center">
                   <div className="relative w-fit h-fit gap-3 flex flex-row px-2 py-1 bg-mainBg rounded-md">

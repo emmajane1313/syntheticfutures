@@ -600,23 +600,29 @@ export const REFLECTIONS: {
   pinterest: string;
   tumblr: string;
   lens: string;
+  alt: string;
 }[] = [
   {
     image: "emmajanemackinnonlee1.png",
     pinterest: "https://es.pinterest.com/pin/1148347605003637163/",
-    tumblr: "https://www.tumblr.com/postalatrevida/781952772088135681/estaba-como-%EF%BE%9F-%EF%BE%9Fhechizada%EF%BE%9F-%EF%BE%9F-en-las",
+    tumblr:
+      "https://www.tumblr.com/postalatrevida/781952772088135681/estaba-como-%EF%BE%9F-%EF%BE%9Fhechizada%EF%BE%9F-%EF%BE%9F-en-las",
     lens: "https://hey.xyz/posts/a8hnw44djkk2k5xmz0",
+    alt: "Portrait of Emma Jane Mackinnon Lee against a city skyline, artistic double exposure.",
   },
   {
     image: "emmajanemackinnonlee2.png",
     pinterest: "https://www.pinterest.com/postalatrevida/",
     tumblr: "https://www.tumblr.com/blog/postalatrevida",
     lens: "https://hey.xyz/u/postalatrevida",
+    alt: "Emma Jane Mackinnon Lee standing on a beach with rainbow-colored hair, urban skyline in the background.",
   },
   {
     image: "emmajanemackinnonlee3.png",
     pinterest: "https://www.pinterest.com/pin/1136736762213075496/",
-    tumblr: "https://www.tumblr.com/shahidahamra/781942223414689797/%D9%85%D9%86-%D9%8A-%D9%85%D9%86%D9%83-%D8%A3%D9%86%D8%A7-%D8%A8%D8%A8%D8%AF%D8%A3-%D9%86%D8%A7%D8%AF%D9%8A-%D9%82%D8%B1%D8%A7%D8%A1%D8%A9-%D8%A8%D9%8A%D9%86-%D8%A3%D8%A8%D9%88%D8%A7%D8%A8-%D8%AD%D9%85%D8%B1%D8%A7",
+    tumblr:
+      "https://www.tumblr.com/shahidahamra/781942223414689797/%D9%85%D9%86-%D9%8A-%D9%85%D9%86%D9%83-%D8%A3%D9%86%D8%A7-%D8%A8%D8%A8%D8%AF%D8%A3-%D9%86%D8%A7%D8%AF%D9%8A-%D9%82%D8%B1%D8%A7%D8%A1%D8%A9-%D8%A8%D9%8A%D9%86-%D8%A3%D8%A8%D9%88%D8%A7%D8%A8-%D8%AD%D9%85%D8%B1%D8%A7",
     lens: "https://hey.xyz/posts/2v8ptjy7hx7mfe1w1bs",
+    alt: "Emma Jane Mackinnon Lee reading a book outdoors, wearing a butterfly t-shirt, sunlight flare.",
   },
 ];
