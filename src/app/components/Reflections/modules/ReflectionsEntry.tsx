@@ -78,26 +78,24 @@ const ReflectionsEntry: FunctionComponent<{ dict: any }> = ({
                   <div className="relative w-fit h-fit gap-3 flex flex-row px-2 py-1 bg-mainBg rounded-md">
                     <FaPinterest
                       onClick={() => window.open(data.pinterest)}
-                      className="cursor-pointer hover:opacity-70"
-                      color={
-                        context?.color === "maroon"
+                      className={`cursor-pointer hover:opacity-70 fill-[${
+                        context?.color == "maroon"
                           ? "#C92D1F"
-                          : context?.color === "gris"
+                          : context?.color == "gris"
                           ? "#F2F2F2"
-                          : "#f6ec7b"
-                      }
+                          : "#F6EC7B"
+                      }]`}
                       size={20}
                     />
                     <IoLogoTumblr
-                      className="cursor-pointer hover:opacity-70"
                       onClick={() => window.open(data.tumblr)}
-                      color={
-                        context?.color === "maroon"
+                      className={`cursor-pointer hover:opacity-70 fill-[${
+                        context?.color == "maroon"
                           ? "#C92D1F"
-                          : context?.color === "gris"
+                          : context?.color == "gris"
                           ? "#F2F2F2"
-                          : "#f6ec7b"
-                      }
+                          : "#F6EC7B"
+                      }]`}
                       size={20}
                     />
                     <div className="relative w-fit h-fit flex items-center justify-center">
@@ -107,6 +105,7 @@ const ReflectionsEntry: FunctionComponent<{ dict: any }> = ({
                       >
                         <Image
                           draggable={false}
+                          key={context?.color}
                           src={
                             context?.color === "maroon"
                               ? `${INFURA_GATEWAY}/ipfs/QmPAREw1m7S9oRPkNzMdkwwYQGJye57KY6ZBcUxhxAT1D8`
@@ -126,7 +125,7 @@ const ReflectionsEntry: FunctionComponent<{ dict: any }> = ({
         </div>
       );
     },
-    []
+    [context?.color]
   );
 
   return (
