@@ -11,11 +11,15 @@ import {
   useState,
 } from "react";
 import { PiArrowFatLinesLeftFill } from "react-icons/pi";
-import { Masonry } from "masonic";
 import Image from "next/legacy/image";
 import { FaPinterest } from "react-icons/fa";
 import { IoLogoTumblr } from "react-icons/io5";
+import dynamic from "next/dynamic";
 import { INFURA_GATEWAY, REFLECTIONS } from "@/app/lib/constants";
+
+const Masonry = dynamic(() => import("masonic").then((mod) => mod.Masonry), {
+  ssr: false,
+});
 
 const ReflectionsEntry: FunctionComponent<{ dict: any }> = ({
   dict,
@@ -41,7 +45,7 @@ const ReflectionsEntry: FunctionComponent<{ dict: any }> = ({
     return () => window.removeEventListener("resize", handleResize);
   }, []);
 
-  const renderTile = useCallback(
+  const renderImages = useCallback(
     ({
       index,
       data,
@@ -164,7 +168,7 @@ const ReflectionsEntry: FunctionComponent<{ dict: any }> = ({
             overscanBy={5}
             key={3}
             items={REFLECTIONS}
-            render={renderTile}
+            render={renderImages as any}
             columnGutter={10}
             maxColumnCount={layout}
           />
