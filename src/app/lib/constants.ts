@@ -471,6 +471,10 @@ export const LISTA: Lista[] = [
     },
     sub: [
       {
+        enlace: "https://www.youtube.com/watch?v=zwt7fcEsOA0",
+        titulo: "Analog Balaton - Könnyű",
+      },
+      {
         enlace: "https://www.youtube.com/watch?v=zrCh2UKyL-I",
         titulo: "Európa Kiadó - Mocskos idők",
       },
@@ -479,12 +483,16 @@ export const LISTA: Lista[] = [
         titulo: "30y - Csönded vagyok",
       },
       {
+        titulo: "6363 - Tönkretesszük a barbibabákat közr",
+        enlace: "https://www.youtube.com/watch?v=OPpZV5MgnKA",
+      },
+      {
         enlace: "https://www.youtube.com/watch?v=s-9IjL03KLs",
         titulo: "Galaxisok - Focipályák éjszaka",
       },
       {
-        enlace: "https://www.youtube.com/watch?v=zwt7fcEsOA0",
-        titulo: "Analog Balaton - Könnyű",
+        enlace: "https://www.youtube.com/watch?v=vv35ThGzg_I",
+        titulo: "Analog Balaton - Fent",
       },
     ],
   },
