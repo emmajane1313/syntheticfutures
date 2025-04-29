@@ -269,6 +269,10 @@ export const LISTA: Lista[] = [
         enlace: "https://www.youtube.com/watch?v=KCHfypkdUL0",
       },
       {
+        titulo: "Nursena yener - koca bir saçmalık (cover)",
+        enlace: "https://www.youtube.com/watch?v=9QnCIHsZjQU",
+      },
+      {
         titulo: "Son Feci Bisiklet - Bikinisinde Astronomi",
         enlace: "https://www.youtube.com/watch?v=4qo0rBaM4ZY",
       },
@@ -469,6 +473,18 @@ export const LISTA: Lista[] = [
       {
         enlace: "https://www.youtube.com/watch?v=zrCh2UKyL-I",
         titulo: "Európa Kiadó - Mocskos idők",
+      },
+      {
+        enlace: "https://www.youtube.com/watch?v=9Q2miZ_LM0Q",
+        titulo: "30y - Csönded vagyok",
+      },
+      {
+        enlace: "https://www.youtube.com/watch?v=s-9IjL03KLs",
+        titulo: "Galaxisok - Focipályák éjszaka",
+      },
+      {
+        enlace: "https://www.youtube.com/watch?v=zwt7fcEsOA0",
+        titulo: "Analog Balaton - Könnyű",
       },
     ],
   },
