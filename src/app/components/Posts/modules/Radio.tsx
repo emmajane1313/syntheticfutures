@@ -6,7 +6,7 @@ import {
   useRef,
   useState,
 } from "react";
-import { INFURA_GATEWAY, STREAM } from "../../../lib/constants";
+import { INFURA_GATEWAY_INTERNAL, STREAM } from "../../../lib/constants";
 import Image from "next/legacy/image";
 import { ColorContext } from "@/app/providers";
 
@@ -123,7 +123,7 @@ const Radio: FunctionComponent<{ dict: any }> = ({ dict }): JSX.Element => {
           }
         >
           <Image
-            src={`${INFURA_GATEWAY}/ipfs/QmVL1rAF6WXDeAx6yCHqEWVnom2NBnLfDYD6Lu4ZKdaxMm`}
+            src={`${INFURA_GATEWAY_INTERNAL}QmVL1rAF6WXDeAx6yCHqEWVnom2NBnLfDYD6Lu4ZKdaxMm`}
             draggable={false}
             layout="fill"
             objectFit="contain"

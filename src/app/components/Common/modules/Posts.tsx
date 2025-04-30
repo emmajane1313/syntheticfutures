@@ -2,7 +2,7 @@ import Image from "next/legacy/image";
 import { FunctionComponent, JSX } from "react";
 import { PostProps } from "../types/common.types";
 import { useRouter } from "next/navigation";
-import { INFURA_GATEWAY } from "@/app/lib/constants";
+import { INFURA_GATEWAY_INTERNAL } from "@/app/lib/constants";
 import postList from "./../../../api/posts.json";
 
 const Posts: FunctionComponent<PostProps> = ({
@@ -81,7 +81,7 @@ const Posts: FunctionComponent<PostProps> = ({
                     }`}
                   >
                     <Image
-                      src={`${INFURA_GATEWAY}/ipfs/${post?.mainImage}`}
+                      src={`${INFURA_GATEWAY_INTERNAL}${post?.mainImage}`}
                       alt={post?.title?.[lang  as "en" | "es"]}
                       style={{
                         width: post?.live && hoverPost[index] ? "100%" : "auto",

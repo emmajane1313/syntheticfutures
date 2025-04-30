@@ -618,7 +618,7 @@ export const CATEGORIES: Categories[] = [
 ];
 
 export const INFURA_GATEWAY: string = "https://thedial.infura-ipfs.io";
-
+export const INFURA_GATEWAY_INTERNAL: string = "https://syntheticfutures.xyz/api/infura/"
 export const REFLECTIONS: {
   image: string;
   pinterest: string;

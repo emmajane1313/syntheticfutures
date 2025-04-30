@@ -1,4 +1,4 @@
-import { INFURA_GATEWAY } from "@/app/lib/constants";
+import {  INFURA_GATEWAY_INTERNAL } from "@/app/lib/constants";
 import { ColorContext } from "@/app/providers";
 import Image from "next/legacy/image";
 import { usePathname, useRouter } from "next/navigation";
@@ -71,7 +71,7 @@ const Header: FunctionComponent<{ dict: any }> = ({ dict }): JSX.Element => {
           >
             <Image
               draggable={false}
-              src={`${INFURA_GATEWAY}/ipfs/QmZaRZ2ycrTn9tDzdJmpCLfTbVBudnS1tBSYS8TghwuQUi`}
+              src={`${INFURA_GATEWAY_INTERNAL}QmZaRZ2ycrTn9tDzdJmpCLfTbVBudnS1tBSYS8TghwuQUi`}
               layout="fill"
             />
           </div>
@@ -159,7 +159,7 @@ const Header: FunctionComponent<{ dict: any }> = ({ dict }): JSX.Element => {
                         <div className="relative w-6 h-6 flex items-center justify-center">
                           <Image
                             draggable={false}
-                            src={`${INFURA_GATEWAY}/ipfs/${item.image}`}
+                            src={`${INFURA_GATEWAY_INTERNAL}${item.image}`}
                             layout="fill"
                           />
                         </div>
