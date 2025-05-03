@@ -28,16 +28,16 @@ function generatePostUrls(baseUrl: string) {
       };
 
       const defaultSlug = slugs.en;
-      const loc = `${baseUrl}/post/${defaultSlug}`;
+      const loc = `${baseUrl}/post/${defaultSlug}/`;
 
       const alternates = locales
         .map(
           (locale) =>
-            `<xhtml:link rel="alternate" hreflang="${locale}" href="${baseUrl}/${locale}/post/${slugs[locale]}" />`
+            `<xhtml:link rel="alternate" hreflang="${locale}" href="${baseUrl}/${locale}/post/${slugs[locale]}/" />`
         )
         .join("");
 
-      const xDefault = `<xhtml:link rel="alternate" hreflang="x-default" href="${baseUrl}/en/post/${defaultSlug}" />`;
+      const xDefault = `<xhtml:link rel="alternate" hreflang="x-default" href="${baseUrl}/en/post/${defaultSlug}/" />`;
 
       const title = escapeXml(post.title.en);
       const image = post.mainImage;
@@ -48,7 +48,7 @@ function generatePostUrls(baseUrl: string) {
         ${alternates}
         ${xDefault}
         <image:image>
-          <image:loc>${INFURA_GATEWAY_INTERNAL}${image}</image:loc>
+          <image:loc>${INFURA_GATEWAY_INTERNAL}${image}/</image:loc>
           <image:title><![CDATA[${title} | Synthetic Futures | Emma-Jane MacKinnon-Lee]]></image:title>
           <image:caption><![CDATA[${title} | Synthetic Futures | Emma-Jane MacKinnon-Lee]]></image:caption>
         </image:image>
@@ -75,7 +75,7 @@ function generateStaticUrls(baseUrl: string, paths: string[]) {
           ? REFLECTIONS.map(
               (img) => `
             <image:image>
-              <image:loc>${baseUrl}/images/${img.image}</image:loc>
+              <image:loc>${baseUrl}/images/${img.image}/</image:loc>
               <image:title><![CDATA[${img.alt}]]></image:title>
               <image:caption><![CDATA[${img.alt}]]></image:caption>
             </image:image>
@@ -98,7 +98,7 @@ function generateStaticUrls(baseUrl: string, paths: string[]) {
 export async function GET() {
   const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || "https://syntheticfutures.xyz";
 
-  const staticPaths = ["", "/reflections", "/bio"];
+  const staticPaths = ["/", "/reflections/", "/bio/"];
   const staticXml = generateStaticUrls(baseUrl, staticPaths);
   const postsXml = generatePostUrls(baseUrl);
 
