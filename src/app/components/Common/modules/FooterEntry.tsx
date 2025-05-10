@@ -3,7 +3,7 @@
 import Image from "next/legacy/image";
 import { FunctionComponent, JSX, useContext } from "react";
 import { AiFillGithub } from "react-icons/ai";
-import { FaTwitter } from "react-icons/fa";
+import { FaFlickr, FaTumblr, FaTwitter } from "react-icons/fa";
 import { FooterProps } from "../types/common.types";
 import { ColorContext } from "@/app/providers";
 import { INFURA_GATEWAY } from "@/app/lib/constants";
@@ -86,6 +86,44 @@ const FooterEntry: FunctionComponent<FooterProps> = ({ dict }): JSX.Element => {
             className="relative w-fit h-fit flex items-center justify-center"
           >
             <FaTwitter
+              color={
+                context?.color === "maroon"
+                  ? "#C92D1F"
+                  : context?.color === "gris"
+                  ? "#F2F2F2"
+                  : "#f6ec7b"
+              }
+              size={20}
+            />
+          </a>
+        </div>
+        <div className="relative w-fit h-fit flex items-center justify-center">
+          <a
+            href="https://www.flickr.com/people/emmajanemackinnonlee/"
+            rel={"noreferrer"}
+            target={"_blank"}
+            className="relative w-fit h-fit flex items-center justify-center"
+          >
+            <FaFlickr
+              color={
+                context?.color === "maroon"
+                  ? "#C92D1F"
+                  : context?.color === "gris"
+                  ? "#F2F2F2"
+                  : "#f6ec7b"
+              }
+              size={20}
+            />
+          </a>
+        </div>
+        <div className="relative w-fit h-fit flex items-center justify-center">
+          <a
+            href="https://www.tumblr.com/blog/emmajanemackinnonlee"
+            rel={"noreferrer"}
+            target={"_blank"}
+            className="relative w-fit h-fit flex items-center justify-center"
+          >
+            <FaTumblr
               color={
                 context?.color === "maroon"
                   ? "#C92D1F"
