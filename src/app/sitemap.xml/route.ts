@@ -4,20 +4,6 @@ import posts from "../api/posts.json";
 
 const locales = ["en", "es"];
 
-function escapeXml(unsafe: string) {
-  if (!unsafe) return "";
-  return unsafe.replace(/[<>&'"]/g, (c) => {
-    switch (c) {
-      case "<": return "&lt;";
-      case ">": return "&gt;";
-      case "&": return "&amp;";
-      case "'": return "&apos;";
-      case '"': return "&quot;";
-      default: return c;
-    }
-  });
-}
-
 function generatePostUrls(baseUrl: string) {
   return posts
     .filter((post) => post?.title?.en && post?.title?.es)
@@ -33,20 +19,37 @@ function generatePostUrls(baseUrl: string) {
       const alternates = locales
         .map(
           (locale) =>
-            `<xhtml:link rel="alternate" hreflang="${locale}" href="${baseUrl}/${locale}/post/${slugs[locale]}/" />`
+            `<link rel="alternate" hreflang="${locale}" href="${baseUrl}/${locale}/post/${slugs[locale]}/" ></link>`
         )
         .join("");
+      const xDefault = `<link rel="alternate" hreflang="x-default" href="${baseUrl}/en/post/${defaultSlug}/" ></link>`;
 
-      const xDefault = `<xhtml:link rel="alternate" hreflang="x-default" href="${baseUrl}/en/post/${defaultSlug}/" />`;
-
-      const title = escapeXml(post.title.en);
+      const title = post.title.en.replace(
+        /&apos;|&quot;|&amp;|&lt;|&gt;/g,
+        (entity: string) => {
+          switch (entity) {
+            case "&apos;":
+              return "'";
+            case "&quot;":
+              return '"';
+            case "&amp;":
+              return "&";
+            case "&lt;":
+              return "<";
+            case "&gt;":
+              return ">";
+            default:
+              return entity;
+          }
+        }
+      );
       const image = post.mainImage;
 
       return `
       <url>
         <loc>${loc}</loc>
-        ${alternates}
-        ${xDefault}
+${alternates}
+${xDefault}
         <image:image>
           <image:loc>${INFURA_GATEWAY_INTERNAL}${image}/</image:loc>
           <image:title><![CDATA[${title} | Synthetic Futures | Emma-Jane MacKinnon-Lee]]></image:title>
@@ -65,10 +68,10 @@ function generateStaticUrls(baseUrl: string, paths: string[]) {
       const alternates = locales
         .map(
           (locale) =>
-            `<xhtml:link rel="alternate" hreflang="${locale}" href="${baseUrl}/${locale}${path}" />`
+            `<link rel="alternate" hreflang="${locale}" href="${baseUrl}/${locale}${path}" ></link>`
         )
         .join("");
-      const xDefault = `<xhtml:link rel="alternate" hreflang="x-default" href="${baseUrl}/en${path}" />`;
+      const xDefault = `<link rel="alternate" hreflang="x-default" href="${baseUrl}/en${path}" ></link>`;
 
       const imageBlock =
         path === "/reflections"
@@ -87,7 +90,7 @@ function generateStaticUrls(baseUrl: string, paths: string[]) {
       <url>
         <loc>${loc}</loc>
         ${alternates}
-        ${xDefault}
+${xDefault}
         ${imageBlock}
       </url>
       `;
@@ -96,7 +99,8 @@ function generateStaticUrls(baseUrl: string, paths: string[]) {
 }
 
 export async function GET() {
-  const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || "https://syntheticfutures.xyz";
+  const baseUrl =
+    process.env.NEXT_PUBLIC_BASE_URL || "https://syntheticfutures.xyz";
 
   const staticPaths = ["/", "/reflections/", "/bio/"];
   const staticXml = generateStaticUrls(baseUrl, staticPaths);
