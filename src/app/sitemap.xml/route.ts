@@ -2,6 +2,8 @@ import { NextResponse } from "next/server";
 import { INFURA_GATEWAY_INTERNAL, REFLECTIONS } from "../lib/constants";
 import posts from "../api/posts.json";
 
+const locales = ["en", "es"];
+
 function generatePostUrls(baseUrl: string) {
   return posts
     .filter((post) => post?.title?.en && post?.title?.es)
@@ -13,6 +15,14 @@ function generatePostUrls(baseUrl: string) {
 
       const defaultSlug = slugs.en;
       const loc = `${baseUrl}/post/${defaultSlug}/`;
+
+      const alternates = locales
+        .map(
+          (locale) =>
+            `<xhtml:link rel="alternate" hreflang="${locale}" href="${baseUrl}/${locale}/post/${slugs[locale]}/" />`
+        )
+        .join("");
+      const xDefault = `<xhtml:link rel="alternate" hreflang="x-default" href="${baseUrl}/en/post/${defaultSlug}/" />`;
 
       const title = post.title.en.replace(
         /&apos;|&quot;|&amp;|&lt;|&gt;/g,
@@ -38,6 +48,8 @@ function generatePostUrls(baseUrl: string) {
       return `
       <url>
         <loc>${loc}</loc>
+${alternates}
+${xDefault}
         <image:image>
           <image:loc>${INFURA_GATEWAY_INTERNAL}${image}/</image:loc>
           <image:title><![CDATA[${title} | Synthetic Futures | Emma-Jane MacKinnon-Lee]]></image:title>
@@ -53,6 +65,13 @@ function generateStaticUrls(baseUrl: string, paths: string[]) {
   return paths
     .map((path) => {
       const loc = `${baseUrl}${path}`;
+      const alternates = locales
+        .map(
+          (locale) =>
+            `<xhtml:link rel="alternate" hreflang="${locale}" href="${baseUrl}/${locale}${path}" />`
+        )
+        .join("");
+      const xDefault = `<xhtml:link rel="alternate" hreflang="x-default" href="${baseUrl}${path}" />`;
 
       const imageBlock =
         path === "/reflections"
@@ -74,6 +93,8 @@ function generateStaticUrls(baseUrl: string, paths: string[]) {
       return `
       <url>
         <loc>${loc}</loc>
+        ${alternates}
+${xDefault}
         ${imageBlock}
       </url>
       `;
