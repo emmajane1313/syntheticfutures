@@ -78,7 +78,11 @@ function generateStaticUrls(baseUrl: string, paths: string[]) {
           ? REFLECTIONS.map(
               (img) => `
             <image:image>
-              <image:loc>${baseUrl}/images/${img.image}/</image:loc>
+              <image:loc>${
+                img?.image?.includes("https://")
+                  ? img?.image
+                  : `${baseUrl}/images/${img.image}/`
+              }</image:loc>
               <image:title><![CDATA[${img.alt}]]></image:title>
               <image:caption><![CDATA[${img.alt}]]></image:caption>
             </image:image>
