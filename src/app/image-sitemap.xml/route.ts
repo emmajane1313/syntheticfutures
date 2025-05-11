@@ -54,10 +54,8 @@ function generateStaticUrls(baseUrl: string, paths: string[]) {
     .map((path) => {
       const loc = `${baseUrl}${path}`;
 
-      const imageBlock =
-        path === "/reflections"
-          ? REFLECTIONS.map(
-              (img) => `
+      const imageBlock = REFLECTIONS.map(
+        (img) => `
             <image:image>
               <image:loc>${
                 img?.image?.includes("https://")
@@ -68,9 +66,7 @@ function generateStaticUrls(baseUrl: string, paths: string[]) {
               <image:caption><![CDATA[${img.alt}]]></image:caption>
             </image:image>
           `
-            ).join("")
-          : "";
-
+      ).join("");
       return `
       <url>
         <loc>${loc}</loc>
@@ -85,7 +81,7 @@ export async function GET() {
   const baseUrl =
     process.env.NEXT_PUBLIC_BASE_URL || "https://syntheticfutures.xyz";
 
-  const staticPaths = ["/", "/reflections/", "/bio/"];
+  const staticPaths = ["/reflections/"];
   const staticXml = generateStaticUrls(baseUrl, staticPaths);
   const postsXml = generatePostUrls(baseUrl);
 
