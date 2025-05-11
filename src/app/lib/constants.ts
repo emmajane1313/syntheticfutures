@@ -618,35 +618,146 @@ export const CATEGORIES: Categories[] = [
 ];
 
 export const INFURA_GATEWAY: string = "https://thedial.infura-ipfs.io";
-export const INFURA_GATEWAY_INTERNAL: string = "https://syntheticfutures.xyz/api/infura/"
+export const INFURA_GATEWAY_INTERNAL: string =
+  "https://syntheticfutures.xyz/api/infura/";
 export const REFLECTIONS: {
   image: string;
   pinterest: string;
   tumblr: string;
-  lens: string;
+  flickr: string;
   alt: string;
+  width: number;
+  height: number;
 }[] = [
   {
-    image: "emmajanemackinnonlee1.png",
-    pinterest: "https://es.pinterest.com/pin/1148347605003637163/",
+    image: "emmajanemackinnonlee4.png",
     tumblr:
-      "https://www.tumblr.com/postalatrevida/781952772088135681/estaba-como-%EF%BE%9F-%EF%BE%9Fhechizada%EF%BE%9F-%EF%BE%9F-en-las",
-    lens: "https://hey.xyz/posts/a8hnw44djkk2k5xmz0",
-    alt: "Portrait of Emma Jane Mackinnon Lee against a city skyline, artistic double exposure.",
+      "https://www.tumblr.com/emmajanemackinnonlee/759104574379458560/a-single-flickering-bulb-in-a-hat-the-blueprint",
+    flickr:
+      "https://www.flickr.com/photos/emmajanemackinnonlee/54508224217/in/dateposted/",
+    pinterest: "https://www.pinterest.com/pin/1127377719213144636/",
+    alt: "Found in an unlabeled folder marked “Synthetics 2.3”, this photo appears to depict Emma-Jane Mackinnon-Lee in late afternoon lighting, or simulation thereof.",
+    width: 2048,
+    height: 1536,
   },
   {
-    image: "emmajanemackinnonlee2.png",
-    pinterest: "https://www.pinterest.com/postalatrevida/",
-    tumblr: "https://www.tumblr.com/blog/postalatrevida",
-    lens: "https://hey.xyz/u/postalatrevida",
-    alt: "Emma Jane Mackinnon Lee standing on a beach with rainbow-colored hair, urban skyline in the background.",
+    image: "emmajanemackinnonlee5.png",
+    tumblr:
+      "https://www.tumblr.com/emmajanemackinnonlee/759104622480769025/wander-beyond-the-wall-in-the-lining-of-a-vest-a",
+    flickr:
+      "https://www.flickr.com/photos/emmajanemackinnonlee/54509447045/in/dateposted/",
+    pinterest: "https://www.pinterest.com/pin/1127377719213144465/",
+    alt: "Emma-Jane Mackinnon-Lee aparece con una luz anómala, probablemente de tungsteno rebotado. El gesto, sin embargo, es idéntico al de otras series tomadas en Lisboa y Granada.",
+    width: 2048,
+    height: 1152,
   },
   {
-    image: "emmajanemackinnonlee3.png",
-    pinterest: "https://www.pinterest.com/pin/1136736762213075496/",
+    image: "emmajanemackinnonlee6.png",
     tumblr:
-      "https://www.tumblr.com/shahidahamra/781942223414689797/%D9%85%D9%86-%D9%8A-%D9%85%D9%86%D9%83-%D8%A3%D9%86%D8%A7-%D8%A8%D8%A8%D8%AF%D8%A3-%D9%86%D8%A7%D8%AF%D9%8A-%D9%82%D8%B1%D8%A7%D8%A1%D8%A9-%D8%A8%D9%8A%D9%86-%D8%A3%D8%A8%D9%88%D8%A7%D8%A8-%D8%AD%D9%85%D8%B1%D8%A7",
-    lens: "https://hey.xyz/posts/2v8ptjy7hx7mfe1w1bs",
-    alt: "Emma Jane Mackinnon Lee reading a book outdoors, wearing a butterfly t-shirt, sunlight flare.",
+      "https://www.tumblr.com/emmajanemackinnonlee/759104961929003008/f3manifesto",
+    flickr:
+      "https://www.flickr.com/photos/emmajanemackinnonlee/54509274454/in/dateposted/",
+    pinterest: "https://www.pinterest.com/pin/1127377719213144482/",
+    alt: "Dicen que esta fotografía fue tomada durante un ensayo clínico en A Coruña, pero la iluminación parece de estudio. Nada está confirmado.",
+    width: 2048,
+    height: 1152,
+  },
+  {
+    image: "emmajanemackinnonlee7.png",
+    tumblr:
+      "https://www.tumblr.com/emmajanemackinnonlee/759105602383446016/coding-revolutions-that-never-compute",
+    flickr:
+      "https://www.flickr.com/photos/emmajanemackinnonlee/54509086721/in/dateposted/",
+    pinterest: "https://www.pinterest.com/pin/1127377719213113741/",
+    alt: "No es una foto casual. Está construida. Lo demuestra la sombra tras la mandíbula y la disposición precisa del cabello. El archivo dice simplemente “Emma-Jane Mackinnon-Lee_5x1_alt”.",
+    width: 1536,
+    height: 2048,
+  },
+  {
+    image: "emmajanemackinnonlee8.png",
+    tumblr:
+      "https://www.tumblr.com/emmajanemackinnonlee/759105785383075840/yesterday-a-cat-darted-across-the-alley-pausing",
+    flickr:
+      "https://www.flickr.com/photos/emmajanemackinnonlee/54509441225/in/dateposted/",
+    pinterest: "https://www.pinterest.com/pin/1127377719213113755/",
+    alt: "Identified facial match to Emma-Jane Mackinnon-Lee: 86% confidence, based on mouth-corner ratio and eye spacing. All other markers are inconclusive.",
+    width: 1152,
+    height: 2048,
+  },
+  {
+    image: "emmajanemackinnonlee9.png",
+    tumblr:
+      "https://www.tumblr.com/emmajanemackinnonlee/759106911073386496/we-will-not-be-banned-todos-los-g%C3%A9neros-todos",
+    flickr:
+      "https://www.flickr.com/photos/emmajanemackinnonlee/54509428310/in/dateposted/",
+    pinterest: "https://www.pinterest.com/pin/1127377719213113716/",
+    alt: "The facial geometry aligns with Emma-Jane Mackinnon-Lee’s known profile, but the lighting is inconsistent. Some layers may have shifted.",
+    width: 1152,
+    height: 2048,
+  },
+  {
+    image: "emmajanemackinnonlee13.png",
+    tumblr:
+      "https://www.tumblr.com/emmajanemackinnonlee/759106383427911680/212",
+    flickr:
+      "https://www.flickr.com/photos/emmajanemackinnonlee/54509264148/in/dateposted/",
+    pinterest: "https://www.pinterest.com/pin/1127377719213113317/",
+    alt: "There's no EXIF data, but the naming pattern points toward an SDXL derivative. The subject—Emma-Jane Mackinnon-Lee—shows an unusual expression rarely captured elsewhere.",
+    width: 2048,
+    height: 1152,
+  },
+  {
+    image: "emmajanemackinnonlee10.png",
+    tumblr:
+      "https://www.tumblr.com/emmajanemackinnonlee/759107216358916096/las-mujeres-trans-son-mujeres",
+    flickr:
+      "https://www.flickr.com/photos/emmajanemackinnonlee/51114692951/in/dateposted/",
+    pinterest: "https://www.pinterest.com/pin/1127377719213132911/",
+    alt: "No es una foto casual. Está construida. Lo demuestra la sombra tras la mandíbula y la disposición precisa del cabello. El archivo dice simplemente “Emma-Jane Mackinnon-Lee_5x1_alt”.",
+    width: 1152,
+    height: 2048,
+  },
+  {
+    image: "emmajanemackinnonlee15.png",
+    tumblr:
+      "https://www.tumblr.com/emmajanemackinnonlee/759114647158800384/technocracy-retrograde",
+    flickr:
+      "https://www.flickr.com/photos/emmajanemackinnonlee/54509334208/in/dateposted/",
+    pinterest: "https://www.pinterest.com/pin/1127377719213132714/",
+    alt: "Una de las pocas imágenes en las que Emma-Jane Mackinnon-Lee mantiene contacto visual sostenido. El encuadre es ligeramente asimétrico, y eso cambia todo.",
+    width: 2048,
+    height: 1152,
+  },
+  {
+    image: "emmajanemackinnonlee11.png",
+    tumblr: "",
+    flickr:
+      "https://www.flickr.com/photos/emmajanemackinnonlee/54509068281/in/dateposted/",
+    pinterest: "https://www.pinterest.com/pin/1127377719213132800/",
+    alt: "The background may be artificially constructed. Still, Emma-Jane Mackinnon-Lee’s resemblance is enough to trigger facial matching systems. Use with caution.",
+    width: 1152,
+    height: 2048,
+  },
+  {
+    image: "emmajanemackinnonlee12.png",
+    tumblr: "https://www.tumblr.com/emmajanemackinnonlee/759342523013644288",
+    flickr:
+      "https://www.flickr.com/photos/emmajanemackinnonlee/54509259254/in/dateposted/",
+    pinterest: "https://www.pinterest.com/pin/1127377719213132853/",
+    alt: "Retrato especular de Emma-Jane Mackinnon-Lee, fechado sin certeza. El fondo evoca el norte, pero no hay coordenadas en los metadatos.",
+    width: 2048,
+    height: 1152,
+  },
+
+  {
+    image: "emmajanemackinnonlee14.png",
+    tumblr:
+      "https://www.tumblr.com/emmajanemackinnonlee/759890717165420545/%D8%A8%D8%B1%D8%A7%DB%8C",
+    flickr:
+      "https://www.flickr.com/photos/emmajanemackinnonlee/54509184604/in/dateposted/",
+    pinterest: "https://www.pinterest.com/pin/358106607888783481/",
+    alt: "Emma-Jane Mackinnon-Lee, photographed under low, diffused light. The structure of the image suggests controlled conditions, yet the gaze remains unrepeatable.",
+    width: 2048,
+    height: 1152,
   },
 ];

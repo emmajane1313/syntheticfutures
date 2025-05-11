@@ -12,7 +12,7 @@ import {
 } from "react";
 import { PiArrowFatLinesLeftFill } from "react-icons/pi";
 import Image from "next/legacy/image";
-import { FaPinterest } from "react-icons/fa";
+import { FaFlickr, FaPinterest } from "react-icons/fa";
 import { IoLogoTumblr } from "react-icons/io5";
 import dynamic from "next/dynamic";
 import { INFURA_GATEWAY, REFLECTIONS } from "@/app/lib/constants";
@@ -32,10 +32,8 @@ const ReflectionsEntry: FunctionComponent<{ dict: any }> = ({
     const handleResize = () => {
       if (window.innerWidth < 648) {
         setLayout(1);
-      } else if (window.innerWidth < 800) {
-        setLayout(2);
       } else {
-        setLayout(3);
+        setLayout(2);
       }
     };
 
@@ -56,70 +54,76 @@ const ReflectionsEntry: FunctionComponent<{ dict: any }> = ({
         alt: string;
         pinterest: string;
         tumblr: string;
-        lens: string;
+        flickr: string;
+        width: number;
+        height: number;
       };
     }) => {
       return (
-        <div
-          key={index}
-          className="relative w-full h-fit flex border border-mainText p-6"
-        >
-          <div className="relative w-full h-fit flex bg-mainText p-3">
-            <div className="relative w-full h-fit flex bg-mainBg p-3">
-              <div className="relative flex w-full h-56 sm:h-72 lg:h-96">
-                <Image
-                  draggable={false}
-                  layout="fill"
-                  objectFit="contain"
-                  src={`/images/${data?.image}`}
-                  alt={data?.alt}
-                />
-                <div className="absolute bottom-3 w-full h-fit flex items-center justify-center">
-                  <div className="relative w-fit h-fit gap-3 flex flex-row px-2 py-1 bg-mainBg rounded-md">
-                    <FaPinterest
-                      onClick={() => window.open(data.pinterest)}
-                      className={`cursor-pointer hover:opacity-70 fill-[${
-                        context?.color == "maroon"
-                          ? "#C92D1F"
-                          : context?.color == "gris"
-                          ? "#F2F2F2"
-                          : "#F6EC7B"
-                      }]`}
-                      size={20}
-                    />
-                    <IoLogoTumblr
-                      onClick={() => window.open(data.tumblr)}
-                      className={`cursor-pointer hover:opacity-70 fill-[${
-                        context?.color == "maroon"
-                          ? "#C92D1F"
-                          : context?.color == "gris"
-                          ? "#F2F2F2"
-                          : "#F6EC7B"
-                      }]`}
-                      size={20}
-                    />
-                    <div className="relative w-fit h-fit flex items-center justify-center">
-                      <div
-                        onClick={() => window.open(data.lens)}
-                        className="relative w-5 h-5 flex items-center hover:opacity-70 justify-center cursor-pointer"
-                      >
-                        <Image
-                          draggable={false}
-                          key={context?.color}
-                          src={
-                            context?.color === "maroon"
-                              ? `${INFURA_GATEWAY}/ipfs/QmPAREw1m7S9oRPkNzMdkwwYQGJye57KY6ZBcUxhxAT1D8`
-                              : context?.color === "gris"
-                              ? `${INFURA_GATEWAY}/ipfs/QmSN5jrkbfn7S1WeZy5Fso36BTvqiRzJhcUmr3xsMhP2kp`
-                              : `${INFURA_GATEWAY}/ipfs/QmXiF3P9o9zbLWZCqW6n1roR5knFZHaWX4BfjperX4uBWs`
-                          }
-                          layout="fill"
-                        />
-                      </div>
-                    </div>
-                  </div>
+        <div key={index} className="relative w-full">
+          <Image
+            draggable={false}
+            width={data?.width}
+            height={data?.height}
+            objectFit="contain"
+            layout="responsive"
+            src={`/images/${data?.image}`}
+            alt={data?.alt}
+          />
+          <div className="absolute bottom-3 w-full h-fit flex items-center justify-center">
+            <div className="relative w-fit h-fit gap-3 flex flex-row px-2 py-1 bg-mainBg rounded-md">
+              <FaPinterest
+                onClick={() => window.open(data.pinterest)}
+                className={`cursor-pointer hover:opacity-70 fill-[${
+                  context?.color == "maroon"
+                    ? "#C92D1F"
+                    : context?.color == "gris"
+                    ? "#F2F2F2"
+                    : "#F6EC7B"
+                }]`}
+                size={20}
+              />
+              <IoLogoTumblr
+                onClick={() => window.open(data.tumblr)}
+                className={`cursor-pointer hover:opacity-70 fill-[${
+                  context?.color == "maroon"
+                    ? "#C92D1F"
+                    : context?.color == "gris"
+                    ? "#F2F2F2"
+                    : "#F6EC7B"
+                }]`}
+                size={20}
+              />
+              <FaFlickr
+                onClick={() => window.open(data.flickr)}
+                className={`cursor-pointer hover:opacity-70 fill-[${
+                  context?.color == "maroon"
+                    ? "#C92D1F"
+                    : context?.color == "gris"
+                    ? "#F2F2F2"
+                    : "#F6EC7B"
+                }]`}
+                size={20}
+              />
+              {/* <div className="relative w-fit h-fit flex items-center justify-center">
+                <div
+                  onClick={() => window.open(data.lens)}
+                  className="relative w-5 h-5 flex items-center hover:opacity-70 justify-center cursor-pointer"
+                >
+                  <Image
+                    draggable={false}
+                    key={context?.color}
+                    src={
+                      context?.color === "maroon"
+                        ? `${INFURA_GATEWAY}/ipfs/QmPAREw1m7S9oRPkNzMdkwwYQGJye57KY6ZBcUxhxAT1D8`
+                        : context?.color === "gris"
+                        ? `${INFURA_GATEWAY}/ipfs/QmSN5jrkbfn7S1WeZy5Fso36BTvqiRzJhcUmr3xsMhP2kp`
+                        : `${INFURA_GATEWAY}/ipfs/QmXiF3P9o9zbLWZCqW6n1roR5knFZHaWX4BfjperX4uBWs`
+                    }
+                    layout="fill"
+                  />
                 </div>
-              </div>
+              </div> */}
             </div>
           </div>
         </div>
@@ -168,14 +172,13 @@ const ReflectionsEntry: FunctionComponent<{ dict: any }> = ({
           ></div>
         </div>
         <div
-          className={`relative w-full min-h-screen h-fit overflow-y-scroll pb-6 px-4 items-start justify-center flex flex-wrap`}
+          className={`relative w-full min-h-screen h-fit overflow-y-scroll pb-6 items-start justify-center flex flex-wrap`}
         >
           <Masonry
             overscanBy={5}
-            key={3}
+            key={REFLECTIONS.length}
             items={REFLECTIONS}
             render={renderImages as any}
-            columnGutter={10}
             maxColumnCount={layout}
           />
         </div>
