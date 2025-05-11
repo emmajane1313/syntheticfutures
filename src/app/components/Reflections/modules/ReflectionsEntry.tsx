@@ -52,9 +52,9 @@ const ReflectionsEntry: FunctionComponent<{ dict: any }> = ({
       data: {
         image: string;
         alt: string;
-        pinterest: string;
-        tumblr: string;
-        flickr: string;
+        pinterest?: string;
+        tumblr?: string;
+        flickr?: string;
         width: number;
         height: number;
       };
@@ -67,45 +67,50 @@ const ReflectionsEntry: FunctionComponent<{ dict: any }> = ({
             height={data?.height}
             objectFit="contain"
             layout="responsive"
-            src={`/images/${data?.image}`}
+            src={
+              data?.image?.includes("https")
+                ? data?.image
+                : `/images/${data?.image}`
+            }
             alt={data?.alt}
           />
-          <div className="absolute bottom-3 w-full h-fit flex items-center justify-center">
-            <div className="relative w-fit h-fit gap-3 flex flex-row px-2 py-1 bg-mainBg rounded-md">
-              <FaPinterest
-                onClick={() => window.open(data.pinterest)}
-                className={`cursor-pointer hover:opacity-70 fill-[${
-                  context?.color == "maroon"
-                    ? "#C92D1F"
-                    : context?.color == "gris"
-                    ? "#F2F2F2"
-                    : "#F6EC7B"
-                }]`}
-                size={20}
-              />
-              <IoLogoTumblr
-                onClick={() => window.open(data.tumblr)}
-                className={`cursor-pointer hover:opacity-70 fill-[${
-                  context?.color == "maroon"
-                    ? "#C92D1F"
-                    : context?.color == "gris"
-                    ? "#F2F2F2"
-                    : "#F6EC7B"
-                }]`}
-                size={20}
-              />
-              <FaFlickr
-                onClick={() => window.open(data.flickr)}
-                className={`cursor-pointer hover:opacity-70 fill-[${
-                  context?.color == "maroon"
-                    ? "#C92D1F"
-                    : context?.color == "gris"
-                    ? "#F2F2F2"
-                    : "#F6EC7B"
-                }]`}
-                size={20}
-              />
-              {/* <div className="relative w-fit h-fit flex items-center justify-center">
+          {data.pinterest && (
+            <div className="absolute bottom-3 w-full h-fit flex items-center justify-center">
+              <div className="relative w-fit h-fit gap-3 flex flex-row px-2 py-1 bg-mainBg rounded-md">
+                <FaPinterest
+                  onClick={() => window.open(data.pinterest)}
+                  className={`cursor-pointer hover:opacity-70 fill-[${
+                    context?.color == "maroon"
+                      ? "#C92D1F"
+                      : context?.color == "gris"
+                      ? "#F2F2F2"
+                      : "#F6EC7B"
+                  }]`}
+                  size={20}
+                />
+                <IoLogoTumblr
+                  onClick={() => window.open(data.tumblr)}
+                  className={`cursor-pointer hover:opacity-70 fill-[${
+                    context?.color == "maroon"
+                      ? "#C92D1F"
+                      : context?.color == "gris"
+                      ? "#F2F2F2"
+                      : "#F6EC7B"
+                  }]`}
+                  size={20}
+                />
+                <FaFlickr
+                  onClick={() => window.open(data.flickr)}
+                  className={`cursor-pointer hover:opacity-70 fill-[${
+                    context?.color == "maroon"
+                      ? "#C92D1F"
+                      : context?.color == "gris"
+                      ? "#F2F2F2"
+                      : "#F6EC7B"
+                  }]`}
+                  size={20}
+                />
+                {/* <div className="relative w-fit h-fit flex items-center justify-center">
                 <div
                   onClick={() => window.open(data.lens)}
                   className="relative w-5 h-5 flex items-center hover:opacity-70 justify-center cursor-pointer"
@@ -124,8 +129,9 @@ const ReflectionsEntry: FunctionComponent<{ dict: any }> = ({
                   />
                 </div>
               </div> */}
+              </div>
             </div>
-          </div>
+          )}
         </div>
       );
     },

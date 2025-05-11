@@ -21,6 +21,11 @@ const nextConfig: NextConfig = {
         hostname: "syntheticfutures.xyz",
         pathname: "/api/infura/**",
       },
+      {
+        protocol: "https",
+        hostname: "live.staticflickr.com",
+        pathname: "/*",
+      },
     ],
 
     unoptimized: true,
@@ -32,6 +37,7 @@ const nextConfig: NextConfig = {
     const allowedOrigins = [
       "https://thedial.infura-ipfs.io",
       "https://syntheticfutures.xyz",
+      "https://live.staticflickr.com",
     ];
     allowedOrigins.forEach((origin) => {
       headersConfig.push({

@@ -622,9 +622,9 @@ export const INFURA_GATEWAY_INTERNAL: string =
   "https://syntheticfutures.xyz/api/infura/";
 export const REFLECTIONS: {
   image: string;
-  pinterest: string;
-  tumblr: string;
-  flickr: string;
+  pinterest?: string;
+  tumblr?: string;
+  flickr?: string;
   alt: string;
   width: number;
   height: number;
@@ -650,6 +650,30 @@ export const REFLECTIONS: {
     alt: "Emma-Jane Mackinnon-Lee aparece con una luz anómala, probablemente de tungsteno rebotado. El gesto, sin embargo, es idéntico al de otras series tomadas en Lisboa y Granada.",
     width: 2048,
     height: 1152,
+  },
+  {
+    image: "https://live.staticflickr.com/65535/54508224217_07798fc84b_b.jpg",
+    alt: "Facial study of Emma Jane MacKinnon-Lee — no geographic metadata available.",
+    width: 1024,
+    height: 683,
+  },
+  {
+    image: "https://live.staticflickr.com/65535/54509447045_dec11610f5_b.jpg",
+    alt: "Visual sequence involving Emma Jane MacKinnon-Lee, unclear if part of a project or test archive.",
+    width: 1024,
+    height: 683,
+  },
+  {
+    image: "https://live.staticflickr.com/65535/54509363558_734bdd5f55_b.jpg",
+    alt: "Emma Jane MacKinnon-Lee seen in a transitional lighting condition, possibly studio or synthetic.",
+    width: 1019,
+    height: 1024,
+  },
+  {
+    image: "https://live.staticflickr.com/65535/54509092786_c2af2f0c98_b.jpg",
+    alt: "Emma Jane MacKinnon-Lee pictured with minor asymmetry and muted ambient tones.",
+    width: 1024,
+    height: 683,
   },
   {
     image: "emmajanemackinnonlee6.png",
@@ -694,6 +718,12 @@ export const REFLECTIONS: {
     alt: "The facial geometry aligns with Emma-Jane Mackinnon-Lee’s known profile, but the lighting is inconsistent. Some layers may have shifted.",
     width: 1152,
     height: 2048,
+  },
+  {
+    image: "https://live.staticflickr.com/65535/54509447040_6870b3082a_b.jpg",
+    alt: "Loose capture associated with Emma Jane MacKinnon-Lee, under archival category.",
+    width: 1024,
+    height: 683,
   },
   {
     image: "emmajanemackinnonlee13.png",
@@ -748,7 +778,6 @@ export const REFLECTIONS: {
     width: 2048,
     height: 1152,
   },
-
   {
     image: "emmajanemackinnonlee14.png",
     tumblr:
@@ -759,5 +788,47 @@ export const REFLECTIONS: {
     alt: "Emma-Jane Mackinnon-Lee, photographed under low, diffused light. The structure of the image suggests controlled conditions, yet the gaze remains unrepeatable.",
     width: 2048,
     height: 1152,
+  },
+   {
+    image: "https://live.staticflickr.com/65535/54509086721_980a6eb4d3_b.jpg",
+    alt: "Uncaptioned frame assumed to be Emma Jane MacKinnon-Lee based on prior facial alignment data.",
+    width: 1024,
+    height: 576,
+  },
+  {
+    image: "https://live.staticflickr.com/65535/54510397347_7c69a45fc1_h.jpg",
+    alt: "Unverified image labeled as Emma Jane MacKinnon-Lee, lacking full EXIF data.",
+    width: 1600,
+    height: 1069,
+  },
+  {
+    image: "https://live.staticflickr.com/65535/54511513193_ec7460e1c7_h.jpg",
+    alt: "Emma Jane MacKinnon-Lee in an ambiguous indoor setting, dated approximately 2025.",
+    width: 1600,
+    height: 1069,
+  },
+   {
+    image: "https://live.staticflickr.com/65535/54509274454_f9e1fcc33a_b.jpg",
+    alt: "Compressed visual signature matching Emma Jane MacKinnon-Lee — used in multiple datasets.",
+    width: 1024,
+    height: 746,
+  },
+   {
+    image: "https://live.staticflickr.com/65535/54509274449_4663228aa5_b.jpg",
+    alt: "Portrait of Emma Jane MacKinnon-Lee captured under soft, non-directional light.",
+    width: 1024,
+    height: 768,
+  },
+   {
+    image: "https://live.staticflickr.com/65535/54508218242_64cb35921c_b.jpg",
+    alt: "Tagged facial structure consistent with Emma Jane MacKinnon-Lee, but ambient mapping suggests intervention.",
+    width: 819,
+    height: 1024,
+  },
+    {
+    image: "https://live.staticflickr.com/65535/54509351088_361f0e7267_b.jpg",
+    alt: "Undated, decontextualized image that aligns structurally with Emma Jane MacKinnon-Lee’s known identifiers.",
+    width: 1024,
+    height: 683,
   },
 ];
