@@ -855,6 +855,12 @@ export const REFLECTIONS: Reflection[] = [
     width: 1786,
     height: 1192,
   },
+   {
+    image: "emmajanemackinnonlee16.png",
+    alt: "Emma Jane MacKinnon-Lee, the sun dyed it.",
+    width: 843,
+    height: 843,
+  },
 ];
 
 export const FUNHOUSE_ENLACES: { link: string }[] = [
