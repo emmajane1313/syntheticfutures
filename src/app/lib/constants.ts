@@ -1,4 +1,5 @@
 import { Categories, Lista } from "../components/Common/types/common.types";
+import { Reflection } from "../components/Reflections/types/reflections.types";
 
 export const LOCALES: string[] = ["es", "en"];
 
@@ -620,15 +621,7 @@ export const CATEGORIES: Categories[] = [
 export const INFURA_GATEWAY: string = "https://thedial.infura-ipfs.io";
 export const INFURA_GATEWAY_INTERNAL: string =
   "https://syntheticfutures.xyz/api/infura/";
-export const REFLECTIONS: {
-  image: string;
-  pinterest?: string;
-  tumblr?: string;
-  flickr?: string;
-  alt: string;
-  width: number;
-  height: number;
-}[] = [
+export const REFLECTIONS: Reflection[] = [
   {
     image: "emmajanemackinnonlee4.png",
     tumblr:
@@ -760,7 +753,8 @@ export const REFLECTIONS: {
   },
   {
     image: "emmajanemackinnonlee11.png",
-    tumblr: "",
+    tumblr:
+      "https://www.tumblr.com/shkalachacu/781453750364733440/emma-jane-mackinnon-lee",
     flickr:
       "https://www.flickr.com/photos/emmajanemackinnonlee/54509068281/in/dateposted/",
     pinterest: "https://www.pinterest.com/pin/1127377719213132800/",
@@ -789,7 +783,7 @@ export const REFLECTIONS: {
     width: 2048,
     height: 1152,
   },
-   {
+  {
     image: "https://live.staticflickr.com/65535/54509086721_980a6eb4d3_b.jpg",
     alt: "Uncaptioned frame assumed to be Emma Jane MacKinnon-Lee based on prior facial alignment data.",
     width: 1024,
@@ -807,28 +801,61 @@ export const REFLECTIONS: {
     width: 1600,
     height: 1069,
   },
-   {
+  {
     image: "https://live.staticflickr.com/65535/54509274454_f9e1fcc33a_b.jpg",
     alt: "Compressed visual signature matching Emma Jane MacKinnon-Lee — used in multiple datasets.",
     width: 1024,
     height: 746,
   },
-   {
+  {
     image: "https://live.staticflickr.com/65535/54509274449_4663228aa5_b.jpg",
     alt: "Portrait of Emma Jane MacKinnon-Lee captured under soft, non-directional light.",
     width: 1024,
     height: 768,
   },
-   {
+  {
     image: "https://live.staticflickr.com/65535/54508218242_64cb35921c_b.jpg",
     alt: "Tagged facial structure consistent with Emma Jane MacKinnon-Lee, but ambient mapping suggests intervention.",
     width: 819,
     height: 1024,
   },
-    {
+  {
     image: "https://live.staticflickr.com/65535/54509351088_361f0e7267_b.jpg",
     alt: "Undated, decontextualized image that aligns structurally with Emma Jane MacKinnon-Lee’s known identifiers.",
     width: 1024,
     height: 683,
+  },
+];
+
+export const FUNHOUSE_ENLACES: { link: string }[] = [
+  {
+    link: "https://www.flickr.com/photos/casadeespejos/54512721212/",
+  },
+  {
+    link: "https://www.flickr.com/photos/casadeespejos/54513845413/",
+  },
+  {
+    link: "https://www.flickr.com/photos/casadeespejos/54513761339/",
+  },
+  {
+    link: "https://www.flickr.com/photos/casadeespejos/54513931085/",
+  },
+  {
+    link: "https://www.flickr.com/photos/casadeespejos/54513761344/",
+  },
+  {
+    link: "https://www.flickr.com/photos/casadeespejos/54512693997/",
+  },
+  {
+    link: "https://www.flickr.com/photos/casadeespejos/54513820008/",
+  },
+  {
+    link: "https://www.flickr.com/photos/casadeespejos/54513741449/",
+  },
+  {
+    link: "https://www.flickr.com/photos/casadeespejos/54513574056/",
+  },
+  {
+    link: "https://www.flickr.com/photos/casadeespejos/54512713962/",
   },
 ];

@@ -1,193 +1,173 @@
 "use client";
 
-import { ColorContext } from "@/app/providers";
 import { useRouter } from "next/navigation";
-import {
-  FunctionComponent,
-  JSX,
-  useCallback,
-  useContext,
-  useEffect,
-  useState,
-} from "react";
+import { FunctionComponent, JSX, useEffect, useRef, useState } from "react";
 import { PiArrowFatLinesLeftFill } from "react-icons/pi";
-import Image from "next/legacy/image";
+import Image from "next/image";
 import { FaFlickr, FaPinterest } from "react-icons/fa";
 import { IoLogoTumblr } from "react-icons/io5";
-import dynamic from "next/dynamic";
-import { INFURA_GATEWAY, REFLECTIONS } from "@/app/lib/constants";
-
-const Masonry = dynamic(() => import("masonic").then((mod) => mod.Masonry), {
-  ssr: false,
-});
+import { FUNHOUSE_ENLACES, REFLECTIONS } from "@/app/lib/constants";
+import MarqueeText from "react-fast-marquee";
+import { ImageData, Position } from "../types/reflections.types";
 
 const ReflectionsEntry: FunctionComponent<{ dict: any }> = ({
   dict,
 }): JSX.Element => {
   const router = useRouter();
-  const context = useContext(ColorContext);
-  const [layout, setLayout] = useState<number>(3);
+  const [imageData, setImageData] = useState<ImageData[]>([]);
+  const [mousePos, setMousePos] = useState({ x: 0, y: 0 });
+  const [expandedId, setExpandedId] = useState<string | null>(null);
+
+  const positionsRef = useRef<Position[]>([]);
+  const renderedRef = useRef<HTMLDivElement[]>([]);
 
   useEffect(() => {
-    const handleResize = () => {
-      if (window.innerWidth < 648) {
-        setLayout(1);
-      } else {
-        setLayout(2);
-      }
-    };
-
-    handleResize();
-
-    window.addEventListener("resize", handleResize);
-    return () => window.removeEventListener("resize", handleResize);
+    const mapped = REFLECTIONS.map((img, index) => {
+      const baseTop = Math.random() * 80;
+      const baseLeft = Math.random() * 80;
+      return {
+        ...img,
+        id: `${index}-${Date.now()}`,
+        baseTop,
+        baseLeft,
+      };
+    });
+    setImageData(mapped);
+    positionsRef.current = mapped.map(() => ({ x: 0, y: 0 }));
   }, []);
 
-  const renderImages = useCallback(
-    ({
-      index,
-      data,
-    }: {
-      index: number;
-      data: {
-        image: string;
-        alt: string;
-        pinterest?: string;
-        tumblr?: string;
-        flickr?: string;
-        width: number;
-        height: number;
-      };
-    }) => {
-      return (
-        <div key={index} className="relative w-full">
-          <Image
-            draggable={false}
-            width={data?.width}
-            height={data?.height}
-            objectFit="contain"
-            layout="responsive"
-            src={
-              data?.image?.includes("https")
-                ? data?.image
-                : `/images/${data?.image}`
-            }
-            alt={data?.alt}
-          />
-          {data.pinterest && (
-            <div className="absolute bottom-3 w-full h-fit flex items-center justify-center">
-              <div className="relative w-fit h-fit gap-3 flex flex-row px-2 py-1 bg-mainBg rounded-md">
-                <FaPinterest
-                  onClick={() => window.open(data.pinterest)}
-                  className={`cursor-pointer hover:opacity-70 fill-[${
-                    context?.color == "maroon"
-                      ? "#C92D1F"
-                      : context?.color == "gris"
-                      ? "#F2F2F2"
-                      : "#F6EC7B"
-                  }]`}
-                  size={20}
-                />
-                <IoLogoTumblr
-                  onClick={() => window.open(data.tumblr)}
-                  className={`cursor-pointer hover:opacity-70 fill-[${
-                    context?.color == "maroon"
-                      ? "#C92D1F"
-                      : context?.color == "gris"
-                      ? "#F2F2F2"
-                      : "#F6EC7B"
-                  }]`}
-                  size={20}
-                />
-                <FaFlickr
-                  onClick={() => window.open(data.flickr)}
-                  className={`cursor-pointer hover:opacity-70 fill-[${
-                    context?.color == "maroon"
-                      ? "#C92D1F"
-                      : context?.color == "gris"
-                      ? "#F2F2F2"
-                      : "#F6EC7B"
-                  }]`}
-                  size={20}
-                />
-                {/* <div className="relative w-fit h-fit flex items-center justify-center">
-                <div
-                  onClick={() => window.open(data.lens)}
-                  className="relative w-5 h-5 flex items-center hover:opacity-70 justify-center cursor-pointer"
-                >
-                  <Image
-                    draggable={false}
-                    key={context?.color}
-                    src={
-                      context?.color === "maroon"
-                        ? `${INFURA_GATEWAY}/ipfs/QmPAREw1m7S9oRPkNzMdkwwYQGJye57KY6ZBcUxhxAT1D8`
-                        : context?.color === "gris"
-                        ? `${INFURA_GATEWAY}/ipfs/QmSN5jrkbfn7S1WeZy5Fso36BTvqiRzJhcUmr3xsMhP2kp`
-                        : `${INFURA_GATEWAY}/ipfs/QmXiF3P9o9zbLWZCqW6n1roR5knFZHaWX4BfjperX4uBWs`
-                    }
-                    layout="fill"
-                  />
-                </div>
-              </div> */}
-              </div>
-            </div>
-          )}
-        </div>
-      );
-    },
-    [context?.color]
-  );
+  useEffect(() => {
+    const handleMouseMove = (e: MouseEvent) => {
+      setMousePos({ x: e.clientX, y: e.clientY });
+    };
+    window.addEventListener("mousemove", handleMouseMove);
+    return () => window.removeEventListener("mousemove", handleMouseMove);
+  }, []);
+
+  const handleClick = (id: string) => {
+    setExpandedId((prev) => (prev === id ? null : id));
+  };
 
   return (
-    <div className="relative h-auto min-h-screen w-full overflow-x-hidden">
+    <div className="relative h-auto min-h-screen w-full overflow-x-hidden text-white bg-black">
       <div className="relative w-full h-full flex flex-col gap-10">
-        <div className="relative w-full h-fit flex flex-row items-center justify-center text-center px-2 sm:px-8 py-4">
+        <div className="relative w-full h-fit flex items-center justify-center text-center px-2 sm:px-8 py-4">
           <div className="absolute left-2 top-4 w-full h-fit flex items-center justify-start">
             <div
               className="relative w-fit h-fit flex items-center justify-center cursor-pointer"
               onClick={() => router.push("/")}
             >
-              <PiArrowFatLinesLeftFill
-                color={
-                  context?.color == "maroon"
-                    ? "C92D1F"
-                    : context?.color == "gris"
-                    ? "F2F2F2"
-                    : "F6EC7B"
-                }
-                size={24}
-              />
+              <PiArrowFatLinesLeftFill color={"F2F2F2"} size={24} />
             </div>
           </div>
-          <div
-            className="relative w-fit h-fit text-xs font-neue cursor-pointer justify-self-center"
-            onClick={() => context?.changeColor()}
-          >
-            EST. 1998
+        </div>
+        <div className="relative w-full w-full min-h-screen overflow-hidden bg-black">
+          <div className="absolute w-full h-full flex flex-col gap-5 items-center justify-center text-center px-12 pt-10">
+            <div className={`relative w-full h-fit font-sani text-xl`}>
+              {dict?.self1}
+            </div>
+            <div className="relative w-2/3 h-fit text-base font-neueL">
+              {dict?.self2}
+            </div>
           </div>
+          {imageData.map((img, index) => {
+            const isExpanded = expandedId === img?.id;
+
+            const rect = renderedRef.current[index]?.getBoundingClientRect();
+            let hoverTransform = "";
+
+            if (rect) {
+              const centerX = rect.left + rect.width / 2;
+              const centerY = rect.top + rect.height / 2;
+
+              const dx = mousePos.x - centerX;
+              const dy = mousePos.y - centerY;
+              const distance = Math.sqrt(dx * dx + dy * dy);
+              const influence = distance < 600 ? 1 - distance / 600 : 0;
+
+              hoverTransform = `translate(${dx * influence * 2}px, ${
+                dy * influence * 2
+              }px)`;
+            }
+
+            return (
+              <div
+                key={img?.id}
+                ref={(el) => {
+                  if (el) renderedRef.current[index] = el;
+                }}
+                className={`absolute transition-all duration-700 w-fit h-fit ease-in-out z-${
+                  isExpanded ? "50" : "10"
+                }`}
+                style={{
+                  top: `${img.baseTop}vh`,
+                  left: `${img.baseLeft}vw`,
+                  transform: hoverTransform,
+                }}
+                onClick={() => handleClick(img?.id)}
+              >
+                <div
+                  className={`relative cursor-pointer group  ${
+                    isExpanded ? "w-fit h-fit" : "w-24 h-24"
+                  }`}
+                >
+                  <Image
+                    draggable={false}
+                    className={`shadow-xl transition-all duration-500 ${
+                      !isExpanded && "rounded-full"
+                    }`}
+                    key={isExpanded.toString()}
+                    layout={isExpanded ? "responsive" : "fill"}
+                    objectFit={isExpanded ? "contain" : "cover"}
+                    src={
+                      img?.image?.includes("https")
+                        ? img?.image
+                        : `/images/${img?.image}`
+                    }
+                    width={isExpanded ? img?.width : undefined}
+                    height={isExpanded ? img?.height : undefined}
+                    alt={img?.alt}
+                  />
+                  <div className="absolute rounded-md -bottom-7 w-full h-fit flex items-center justify-center">
+                    <div className="relative w-fit items-center justify-center h-fit gap-3 flex flex-row px-2 py-1 bg-black">
+                      <FaPinterest
+                        onClick={() => window.open(img.pinterest)}
+                        className={`cursor-pointer hover:opacity-70`}
+                        color="#F2F2F2"
+                        size={20}
+                      />
+                      <IoLogoTumblr
+                        onClick={() => window.open(img.tumblr)}
+                        className={`cursor-pointer hover:opacity-70`}
+                        color="#F2F2F2"
+                        size={20}
+                      />
+                      <FaFlickr
+                        onClick={() => window.open(img.flickr)}
+                        color="#F2F2F2"
+                        className={`cursor-pointer hover:opacity-70`}
+                        size={20}
+                      />
+                    </div>
+                  </div>
+                </div>
+              </div>
+            );
+          })}
         </div>
-        <div className="relative w-full h-fit flex flex-col gap-5 items-start justify-start text-left px-12 pt-10">
-          <div className={`relative w-full h-full font-sani text-4xl`}>
-            {dict?.self1}
-          </div>
-          <div
-            className="relative w-2/3 h-fit text-base font-neueL"
-            dangerouslySetInnerHTML={{
-              __html: dict?.self2,
-            }}
-          ></div>
-        </div>
-        <div
-          className={`relative w-full min-h-screen h-fit overflow-y-scroll pb-6 items-start justify-center flex flex-wrap`}
-        >
-          <Masonry
-            overscanBy={5}
-            key={REFLECTIONS.length}
-            items={REFLECTIONS}
-            render={renderImages as any}
-            maxColumnCount={layout}
-          />
-        </div>
+        <MarqueeText gradient={false} speed={70} direction={"right"}>
+          {FUNHOUSE_ENLACES.map((item, index: number) => {
+            return (
+              <span
+                className="relative font-nueveL text-sm text-white px-5 cursor-pointer"
+                key={index}
+                onClick={() => window.open(item?.link)}
+              >
+                {item?.link}
+              </span>
+            );
+          })}
+        </MarqueeText>
       </div>
     </div>
   );

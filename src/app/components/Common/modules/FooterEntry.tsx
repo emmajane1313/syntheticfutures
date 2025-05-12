@@ -7,11 +7,17 @@ import { FaFlickr, FaTumblr, FaTwitter } from "react-icons/fa";
 import { FooterProps } from "../types/common.types";
 import { ColorContext } from "@/app/providers";
 import { INFURA_GATEWAY } from "@/app/lib/constants";
+import { usePathname } from "next/navigation";
 
 const FooterEntry: FunctionComponent<FooterProps> = ({ dict }): JSX.Element => {
   const context = useContext(ColorContext);
+  const path = usePathname();
   return (
-    <div className="relative w-full h-full flex items-center justify-center flex-col sm:flex-row gap-4 pt-60 pb-3">
+    <div
+      className={`relative w-full h-full flex items-center justify-center flex-col sm:flex-row gap-4  pb-3 ${
+        path?.includes("/reflections/") ? "pt-4 bg-black text-white" : "pt-60"
+      }`}
+    >
       <div className="sm:absolute relative w-fit h-fit flex justify-center sm:items-start items-center break-all text-xs sm:left-2 font-neue sm:text-left text-center flex-col gap-1.5">
         <div className="relative w-fit h-fit flex"> {dict?.trad}</div>
         <div className="relative w-fit h-fit flex font-neueL text-xxs">
@@ -29,7 +35,9 @@ const FooterEntry: FunctionComponent<FooterProps> = ({ dict }): JSX.Element => {
             <Image
               draggable={false}
               src={
-                context?.color === "maroon"
+                path?.includes("/reflections/")
+                  ? `${INFURA_GATEWAY}/ipfs/QmSN5jrkbfn7S1WeZy5Fso36BTvqiRzJhcUmr3xsMhP2kp`
+                  : context?.color === "maroon"
                   ? `${INFURA_GATEWAY}/ipfs/QmPAREw1m7S9oRPkNzMdkwwYQGJye57KY6ZBcUxhxAT1D8`
                   : context?.color === "gris"
                   ? `${INFURA_GATEWAY}/ipfs/QmSN5jrkbfn7S1WeZy5Fso36BTvqiRzJhcUmr3xsMhP2kp`
@@ -49,7 +57,9 @@ const FooterEntry: FunctionComponent<FooterProps> = ({ dict }): JSX.Element => {
             <Image
               draggable={false}
               src={
-                context?.color === "maroon"
+                path?.includes("/reflections/")
+                  ? `${INFURA_GATEWAY}/ipfs/QmSAYn4UFVMq68J3FPUiiBtmnnftJJRkTB8PJkA4vwG5Er`
+                  : context?.color === "maroon"
                   ? `${INFURA_GATEWAY}/ipfs/QmVXEPjTLYCqvw5tHeEN4SK3ndGydhxZadfTfZjetc66mh`
                   : context?.color === "gris"
                   ? `${INFURA_GATEWAY}/ipfs/QmSAYn4UFVMq68J3FPUiiBtmnnftJJRkTB8PJkA4vwG5Er`
@@ -68,7 +78,9 @@ const FooterEntry: FunctionComponent<FooterProps> = ({ dict }): JSX.Element => {
           >
             <AiFillGithub
               color={
-                context?.color === "maroon"
+                path?.includes("/reflections/")
+                  ? "#F2F2F2"
+                  : context?.color === "maroon"
                   ? "#C92D1F"
                   : context?.color === "gris"
                   ? "#F2F2F2"
@@ -87,7 +99,9 @@ const FooterEntry: FunctionComponent<FooterProps> = ({ dict }): JSX.Element => {
           >
             <FaTwitter
               color={
-                context?.color === "maroon"
+                path?.includes("/reflections/")
+                  ? "#F2F2F2"
+                  : context?.color === "maroon"
                   ? "#C92D1F"
                   : context?.color === "gris"
                   ? "#F2F2F2"
@@ -106,7 +120,9 @@ const FooterEntry: FunctionComponent<FooterProps> = ({ dict }): JSX.Element => {
           >
             <FaFlickr
               color={
-                context?.color === "maroon"
+                path?.includes("/reflections/")
+                  ? "#F2F2F2"
+                  : context?.color === "maroon"
                   ? "#C92D1F"
                   : context?.color === "gris"
                   ? "#F2F2F2"
@@ -125,7 +141,9 @@ const FooterEntry: FunctionComponent<FooterProps> = ({ dict }): JSX.Element => {
           >
             <FaTumblr
               color={
-                context?.color === "maroon"
+                path?.includes("/reflections/")
+                  ? "#F2F2F2"
+                  : context?.color === "maroon"
                   ? "#C92D1F"
                   : context?.color === "gris"
                   ? "#F2F2F2"
