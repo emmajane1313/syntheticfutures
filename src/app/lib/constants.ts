@@ -825,6 +825,36 @@ export const REFLECTIONS: Reflection[] = [
     width: 1024,
     height: 683,
   },
+  {
+    image: "https://live.staticflickr.com/65535/54514077747_63038fdb4d_h.jpg",
+    alt: "i didn’t pose. the frame caught whatever i was leaking that day.",
+    width: 1786,
+    height: 1192,
+  },
+  {
+    image: "https://live.staticflickr.com/65535/54514077742_565e3f1922_h.jpg",
+    alt: "Yüzüm tanıdık ama tam değil. Belki de bugünlerde böyleyimdir.",
+    width: 1786,
+    height: 1192,
+  },
+  {
+    image: "https://live.staticflickr.com/65535/54515204183_97f76ffbb8_h.jpg",
+    alt: "No sé por qué esta imagen me representa más que una normal. Me pilló en una vibración rara.",
+    width: 1786,
+    height: 1192,
+  },
+  {
+    image: "https://live.staticflickr.com/65535/54514941051_3c77688bab_h.jpg",
+    alt: "sso aqui fui eu num dia estranho… o espelho tava mentindo, ou eu tava cansada de parecer real?",
+    width: 1786,
+    height: 1192,
+  },
+  {
+    image: "https://live.staticflickr.com/65535/54515126934_62cecc75c3_h.jpg",
+    alt: "كنت ببص لنفسي في المراية… وما فهمتش مين اللي قدامي",
+    width: 1786,
+    height: 1192,
+  },
 ];
 
 export const FUNHOUSE_ENLACES: { link: string }[] = [
