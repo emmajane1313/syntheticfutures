@@ -2,15 +2,18 @@ export interface Post {
   title: {
     en: string;
     es: string;
+    ar: string;
   };
   traducciones: string;
   fecha: {
     en: string;
     es: string;
+    ar: string;
   };
   content: {
     en: string;
     es: string;
+    ar: string;
   };
   mainImage: string;
   live: boolean;
@@ -18,6 +21,7 @@ export interface Post {
   audio?: {
     en: string;
     es: string;
+    ar: string;
   };
 }
 
@@ -29,6 +33,7 @@ export interface Lista {
   main: {
     es: string;
     en: string;
+    ar: string;
   };
   sub: {
     titulo: string;
@@ -40,10 +45,12 @@ export interface Categories {
   main: {
     es: string;
     en: string;
+    ar: string;
   };
   sub: {
     es: string;
     en: string;
+    ar: string;
   }[];
 }
 

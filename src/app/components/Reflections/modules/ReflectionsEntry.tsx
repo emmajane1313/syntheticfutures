@@ -128,28 +128,30 @@ const ReflectionsEntry: FunctionComponent<{ dict: any }> = ({
                     height={isExpanded ? img?.height : undefined}
                     alt={img?.alt}
                   />
-                  <div className="absolute rounded-md -bottom-7 w-full h-fit flex items-center justify-center">
-                    <div className="relative w-fit items-center justify-center h-fit gap-3 flex flex-row px-2 py-1 bg-black">
-                      <FaPinterest
-                        onClick={() => window.open(img.pinterest)}
-                        className={`cursor-pointer hover:opacity-70`}
-                        color="#F2F2F2"
-                        size={20}
-                      />
-                      <IoLogoTumblr
-                        onClick={() => window.open(img.tumblr)}
-                        className={`cursor-pointer hover:opacity-70`}
-                        color="#F2F2F2"
-                        size={20}
-                      />
-                      <FaFlickr
-                        onClick={() => window.open(img.flickr)}
-                        color="#F2F2F2"
-                        className={`cursor-pointer hover:opacity-70`}
-                        size={20}
-                      />
+                  {img.pinterest && (
+                    <div className="absolute rounded-md -bottom-7 w-full h-fit flex items-center justify-center">
+                      <div className="relative w-fit items-center justify-center h-fit gap-3 flex flex-row px-2 py-1 bg-black">
+                        <FaPinterest
+                          onClick={() => window.open(img.pinterest)}
+                          className={`cursor-pointer hover:opacity-70`}
+                          color="#F2F2F2"
+                          size={20}
+                        />
+                        <IoLogoTumblr
+                          onClick={() => window.open(img.tumblr)}
+                          className={`cursor-pointer hover:opacity-70`}
+                          color="#F2F2F2"
+                          size={20}
+                        />
+                        <FaFlickr
+                          onClick={() => window.open(img.flickr)}
+                          color="#F2F2F2"
+                          className={`cursor-pointer hover:opacity-70`}
+                          size={20}
+                        />
+                      </div>
                     </div>
-                  </div>
+                  )}
                 </div>
               </div>
             );

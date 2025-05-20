@@ -1,5 +1,5 @@
 import { FunctionComponent, JSX } from "react";
-import { LISTA } from "../../../lib/constants";
+import { LISTA, LocaleValue } from "../../../lib/constants";
 import { ListaProps } from "../types/post.types";
 import { Lista as ListaType } from "../../Common/types/common.types";
 
@@ -17,7 +17,7 @@ const Lista: FunctionComponent<ListaProps> = ({ dict, lang }): JSX.Element => {
               className="relative w-fit h-fit flex flex-col gap-3"
             >
               <div className="relative w-fit h-fit text-sm opacity-80 font-neue">
-                {category.main[lang as "en" | "es"]}
+                {category.main[lang as LocaleValue]}
               </div>
               <div className="relative flex flex-col gap-2">
                 {category.sub.map(

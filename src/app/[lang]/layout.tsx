@@ -2,7 +2,7 @@ import "./../globals.css";
 import Footer from "../components/Common/modules/Footer";
 
 export async function generateStaticParams() {
-  return [{ lang: "en" }, { lang: "es" }];
+  return [{ lang: "en" }, { lang: "es" }, { lang: "en" }];
 }
 export type tParams = Promise<{ lang: string }>;
 

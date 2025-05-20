@@ -1,5 +1,5 @@
 import { FunctionComponent, JSX } from "react";
-import { CATEGORIES } from "@/app/lib/constants";
+import { CATEGORIES, LocaleValue } from "@/app/lib/constants";
 
 const Description: FunctionComponent<{ dict: any; lang: string }> = ({
   dict,
@@ -18,7 +18,7 @@ const Description: FunctionComponent<{ dict: any; lang: string }> = ({
               className="relative w-fit h-fit flex flex-col"
             >
               <div className="relative w-fit h-fit text-xs opacity-80 font-neue">
-                {category.main[lang as "en" | "es"]}
+                {category.main[lang as LocaleValue]}
               </div>
               <div>
                 {category.sub.map(
@@ -26,6 +26,7 @@ const Description: FunctionComponent<{ dict: any; lang: string }> = ({
                     sub: {
                       es: string;
                       en: string;
+                      ar: string;
                     },
                     index: number
                   ) => {
@@ -34,7 +35,7 @@ const Description: FunctionComponent<{ dict: any; lang: string }> = ({
                         key={index}
                         className={"relative w-fit h-fit text-[9px] font-neueL"}
                       >
-                        {sub[lang as "en" | "es"]}
+                        {sub[lang as LocaleValue]}
                       </div>
                     );
                   }

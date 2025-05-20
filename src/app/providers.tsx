@@ -1,16 +1,19 @@
 "use client";
 import { createContext, useEffect, useState } from "react";
 import { COLORS } from "./lib/constants";
+import { mainnet, PublicClient } from "@lens-protocol/client";
 
 export const ColorContext = createContext<
   | {
       changeColor: () => void;
       color: string;
+      lensClient: PublicClient | undefined;
     }
   | undefined
 >(undefined);
 
 export default function Providers({ children }: { children: React.ReactNode }) {
+  const [lensClient, setLensClient] = useState<PublicClient | undefined>();
   const [color, setColor] = useState<string>(COLORS[0]);
   const changeColor = () => {
     if (COLORS.indexOf(color) < 2) {
@@ -31,11 +34,23 @@ export default function Providers({ children }: { children: React.ReactNode }) {
     }
   }, []);
 
+  useEffect(() => {
+    if (!lensClient) {
+      setLensClient(
+        PublicClient.create({
+          environment: mainnet,
+          storage: window.localStorage,
+        })
+      );
+    }
+  }, []);
+
   return (
     <ColorContext.Provider
       value={{
         color,
         changeColor,
+        lensClient,
       }}
     >
       <div

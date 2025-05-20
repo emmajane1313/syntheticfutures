@@ -33,7 +33,7 @@ const BioEntry: FunctionComponent<{ dict: any }> = ({ dict }): JSX.Element => {
             className="relative w-fit h-fit text-xs font-neue cursor-pointer justify-self-center"
             onClick={() => context?.changeColor()}
           >
-            EST. 1998
+            {dict?.est}
           </div>
         </div>
         <div className="relative w-full h-fit flex flex-col gap-5 items-start justify-start text-left px-12 pt-10">

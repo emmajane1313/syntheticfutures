@@ -1,5 +1,5 @@
 import PostEntry from "@/app/components/Posts/modules/PostEntry";
-import { INFURA_GATEWAY } from "@/app/lib/constants";
+import { INFURA_GATEWAY, LocaleValue } from "@/app/lib/constants";
 import { getPost } from "@/app/lib/helpers/getPost";
 import { Metadata } from "next";
 import { getDictionary } from "../../dictionaries";
@@ -15,7 +15,7 @@ export async function generateStaticParams({
   const { lang } = await params;
 
   return posts.map((post) => ({
-    title: post?.title?.[lang as "en" | "es"],
+    title: post?.title?.[lang as LocaleValue],
   }));
 }
 

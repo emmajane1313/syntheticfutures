@@ -1,9 +1,34 @@
+import { ValueOf } from "next/dist/shared/lib/constants";
 import { Categories, Lista } from "../components/Common/types/common.types";
 import { Reflection } from "../components/Reflections/types/reflections.types";
 
-export const LOCALES: string[] = ["es", "en"];
+export const LOCALES: string[] = ["es", "en", "ar"];
 
+export const LOCALES_CONST = {
+  EN: "en",
+  ES: "es",
+  AR: "ar",
+} as const;
+
+export const convertIdioma: { [key in string]: string } = {
+  en: "en",
+  es: "es",
+  ع: "ar",
+  א: "he",
+  br: "pt",
+  ук: "uk",
+  د: "fa",
+  あ: "ja",
+  yi: "yi",
+  fr: "fr",
+  ç: "tr",
+  ű: "hu",
+  ŋ: "ym",
+};
+
+export type LocaleValue = ValueOf<typeof LOCALES_CONST>;
 export const COLORS: string[] = ["maroon", "gris", "mar"];
+export const FEED: `0x${string}` = "0x90139c418Ea313552C31A1528bD25da54f7fE948";
 
 export const STREAM: string = "http://stream.radiolarrakia.org:8000/airradio";
 
@@ -12,6 +37,7 @@ export const LISTA: Lista[] = [
     main: {
       en: "Spanish",
       es: "Español",
+      ar: "الإسباني",
     },
     sub: [
       {
@@ -81,6 +107,7 @@ export const LISTA: Lista[] = [
     main: {
       en: "Ukrainian",
       es: "Ucraniano",
+      ar: "الأكراني",
     },
     sub: [
       {
@@ -125,6 +152,7 @@ export const LISTA: Lista[] = [
     main: {
       en: "Hebrew",
       es: "Hebreo",
+      ar: "العبري",
     },
     sub: [
       {
@@ -178,6 +206,7 @@ export const LISTA: Lista[] = [
     main: {
       en: "Arabic",
       es: "Árabe",
+      ar: "العربي",
     },
     sub: [
       {
@@ -215,6 +244,7 @@ export const LISTA: Lista[] = [
     main: {
       en: "French",
       es: "Francés",
+      ar: "الفرنساوي",
     },
     sub: [
       {
@@ -259,6 +289,7 @@ export const LISTA: Lista[] = [
     main: {
       en: "Turkish",
       es: "Turco",
+      ar: "التّركي",
     },
     sub: [
       {
@@ -287,6 +318,7 @@ export const LISTA: Lista[] = [
     main: {
       en: "Japonese",
       es: "Japonés",
+      ar: "الياباني",
     },
     sub: [
       {
@@ -339,6 +371,7 @@ export const LISTA: Lista[] = [
     main: {
       en: "Farsi",
       es: "Farsi",
+      ar: "الفارسي",
     },
     sub: [
       {
@@ -367,6 +400,7 @@ export const LISTA: Lista[] = [
     main: {
       en: "Yiddish",
       es: "Yiddish",
+      ar: "الييديش",
     },
     sub: [
       {
@@ -387,6 +421,7 @@ export const LISTA: Lista[] = [
     main: {
       en: "Portuguese",
       es: "Portugués",
+      ar: "البرتغالي",
     },
     sub: [
       {
@@ -423,8 +458,13 @@ export const LISTA: Lista[] = [
     main: {
       en: "English",
       es: "Ingles",
+      ar: "الإنجليزي",
     },
     sub: [
+      {
+        titulo: "accadacca - thunderstruck",
+        enlace: "https://www.youtube.com/watch?v=n_GFN3a0yj0",
+      },
       {
         titulo: "Hockey Dad - I Need A Women",
         enlace: "https://www.youtube.com/watch?v=dKCpPWEvZJ0",
@@ -469,6 +509,7 @@ export const LISTA: Lista[] = [
     main: {
       en: "Hungarian",
       es: "Húngaro",
+      ar: "المجريّ",
     },
     sub: [
       {
@@ -501,6 +542,7 @@ export const LISTA: Lista[] = [
     main: {
       en: "Yolŋu Matha",
       es: "Yolŋu Matha",
+      ar: "اليولنغو ماثا",
     },
     sub: [
       {
@@ -536,19 +578,23 @@ export const CATEGORIES: Categories[] = [
     main: {
       en: "manufacturing",
       es: "fabricación",
+      ar: "تصنيع",
     },
     sub: [
       {
         en: "microfactories",
         es: "microfábricas",
+        ar: "مصانع صغيرة",
       },
       {
         en: "local co-ops",
         es: "cooperativas locales",
+        ar: "تعاونيات محلية",
       },
       {
         en: "gpu",
         es: "gpu",
+        ar: "جبي",
       },
     ],
   },
@@ -556,15 +602,18 @@ export const CATEGORIES: Categories[] = [
     main: {
       en: "autonomation",
       es: "automatización",
+      ar: "أوتونوميشن",
     },
     sub: [
       {
         en: "synth + diffusion",
         es: "síntesis + difusión",
+        ar: "صنع انتشار",
       },
       {
         en: "jidoka",
         es: "jidoka",
+        ar: "جيدوكا",
       },
     ],
   },
@@ -572,23 +621,28 @@ export const CATEGORIES: Categories[] = [
     main: {
       en: "web3",
       es: "web3",
+      ar: "الويب ٣",
     },
     sub: [
       {
         en: "decentralized social media",
         es: "red social decentralizada",
+        ar: "سوشيال ميديا لا مركزة",
       },
       {
         en: "zk rollups",
         es: "zk rollups",
+        ar: "زد كي رول آبس",
       },
       {
         en: "defi",
         es: "defi",
+        ar: "ديفيّ",
       },
       {
         en: "refi",
         es: "refi",
+        ar: "ريفيّ",
       },
     ],
   },
@@ -596,23 +650,28 @@ export const CATEGORIES: Categories[] = [
     main: {
       en: "fashion",
       es: "moda",
+      ar: "موضة",
     },
     sub: [
       {
         en: "digital",
         es: "digital",
+        ar: "رقمي",
       },
       {
         en: "zero waste",
         es: "cero desperdicio",
+        ar: "من غير أيّ هدر",
       },
       {
         en: "aop",
         es: "aop",
+        ar: "طباعة شاملة",
       },
       {
         en: "femto",
         es: "femto",
+        ar: "فمتو",
       },
     ],
   },
@@ -855,11 +914,89 @@ export const REFLECTIONS: Reflection[] = [
     width: 1786,
     height: 1192,
   },
-   {
+  {
     image: "emmajanemackinnonlee16.png",
     alt: "Emma Jane MacKinnon-Lee, the sun dyed it.",
     width: 843,
     height: 843,
+    tumblr:
+      "https://www.tumblr.com/emmajanemackinnonlee/759114647158800384/technocracy-retrograde",
+    pinterest: "https://es.pinterest.com/pin/1127377719213111483/",
+    flickr: "https://www.flickr.com/photos/casadeespejos/54513761339",
+  },
+  {
+    image: "emmajanemackinnonlee17.png",
+    alt: "Emma Jane MacKinnon-Lee seen during atmospheric failure",
+    width: 1004,
+    height: 1184,
+    tumblr:
+      "https://www.tumblr.com/postalatrevida/781950602069540864/soltar%C3%A9-todo-lo-que-llevo-dentro",
+    pinterest: "https://es.pinterest.com/pin/1127377719213110939/",
+    flickr: "https://www.flickr.com/photos/casadeespejos/54513574056",
+  },
+  {
+    image: "emmajanemackinnonlee0.png",
+    alt: "Emma Jane MacKinnon-Lee expression sampled during mirror decay",
+    width: 498,
+    height: 535,
+    tumblr:
+      "https://www.tumblr.com/emmajanemackinnonlee/759113169588436992/%D1%84%D0%BB%D0%BE%D1%80%D0%B8-%D0%B2-%D0%BA%D0%B8%D1%94%D0%B2%D1%96",
+    pinterest: "https://es.pinterest.com/pin/1127377719213159859/",
+    flickr: "https://www.flickr.com/photos/casadeespejos/54513820003",
+  },
+  {
+    image: "emmajanemackinnonlee1.png",
+    alt: "Emma Jane MacKinnon-Lee under visual pressure.",
+    width: 894,
+    height: 1190,
+  },
+  {
+    image: "emmajanemackinnonlee2.png",
+    alt: "Emma Jane MacKinnon-Lee embedded in refracted light.",
+    width: 1182,
+    height: 1178,
+  },
+  {
+    image: "emmajanemackinnonlee3.png",
+    alt: "Divergence trace: possible Emma Jane MacKinnon-Lee.",
+    width: 500,
+    height: 862,
+    tumblr:
+      "https://www.tumblr.com/postalatrevida/781952772088135681/estaba-como-%EF%BE%9F-%EF%BE%9Fhechizada%EF%BE%9F-%EF%BE%9F-en-las",
+    pinterest: "https://es.pinterest.com/pin/1148347605003637163/",
+    flickr: "https://www.flickr.com/photos/emmajanemackinnonlee/54515204183",
+  },
+  {
+    image: "emmajanemackinnonlee18.png",
+    alt: "Emma Jane MacKinnon-Lee mapped through conflicting mirrors.",
+    width: 2048,
+    height: 1536,
+  },
+  {
+    image: "emmajanemackinnonlee19.png",
+    alt: "I saw myself flicker – Emma-Jane MacKinnon-Lee",
+    width: 2048,
+    height: 1536,
+    tumblr:
+      "https://www.tumblr.com/shahidahamra/781942223414689797/%D9%85%D9%86-%D9%8A-%D9%85%D9%86%D9%83-%D8%A3%D9%86%D8%A7-%D8%A8%D8%A8%D8%AF%D8%A3-%D9%86%D8%A7%D8%AF%D9%8A-%D9%82%D8%B1%D8%A7%D8%A1%D8%A9-%D8%A8%D9%8A%D9%86-%D8%A3%D8%A8%D9%88%D8%A7%D8%A8-%D8%AD%D9%85%D8%B1%D8%A7",
+    pinterest: "https://es.pinterest.com/pin/1127377719213113280/",
+    flickr: "https://www.flickr.com/photos/casadeespejos/54512693997",
+  },
+  {
+    image: "emmajanemackinnonlee20.png",
+    alt: "Emma-Jane MacKinnon-Lee during a soft collapse.",
+    width: 2048,
+    height: 1536,
+  },
+  {
+    image: "emmajanemackinnonlee21.png",
+    alt: "Field test image 22b: Emma Jane MacKinnon-Lee (unstable pose)",
+    width: 2048,
+    height: 1536,
+    tumblr:
+      "https://www.tumblr.com/postalatrevida/781950602069540864/soltar%C3%A9-todo-lo-que-llevo-dentro",
+    pinterest: "https://es.pinterest.com/pin/1148347605003844380/",
+    flickr: "https://www.flickr.com/photos/casadeespejos/54513820003",
   },
 ];
 
@@ -893,5 +1030,116 @@ export const FUNHOUSE_ENLACES: { link: string }[] = [
   },
   {
     link: "https://www.flickr.com/photos/casadeespejos/54512713962/",
+  },
+  {
+    link: "https://500px.com/photo/1113071960/yuzum-bu-degil-ama-ben-buradayim-emma-jane-mackinnon-lee-by-casa-deespejos",
+  },
+  {
+    link: "https://500px.com/photo/1113071958/distorted-clarity-emma-jane-mackinnon-lee-visual-trace-by-casa-deespejos",
+  },
+  {
+    link: "https://500px.com/photo/1113071957/recorte-sin-permiso-%E2%80%93-reflejo-emma-jane-mackinnon-lee-by-casa-deespejos",
+  },
+  {
+    link: "https://500px.com/photo/1113071954/emma-jane-mackinnon-lee-caught-through-static-field-by-casa-deespejos",
+  },
+  {
+    link: "https://500px.com/photo/1113071953/distorted-clarity-emma-jane-mackinnon-lee-visual-trace-by-casa-deespejos",
+  },
+  {
+    link: "https://500px.com/photo/1113071959/captura-invertida-%E2%80%93-emma-jane-mackinnon-lee-by-casa-deespejos",
+  },
+  {
+    link: "https://500px.com/photo/1113071956/assinatura-quebrada-de-emma-jane-mackinnon-lee-by-casa-deespejos",
+  },
+  {
+    link: "https://500px.com/photo/1113071955/nao-ajustei-o-foco-deixei-o-erro-emma-jane-mackinnon-lee-by-casa-deespejos",
+  },
+  {
+    link: "https://500px.com/photo/1113071952/just-a-moment-of-emma-jane-mackinnon-lee-being-unreadable-by-casa-deespejos",
+  },
+  {
+    link: "https://www.flickr.com/photos/casadeespejos/54532303333",
+  },
+  {
+    link: "https://www.flickr.com/photos/casadeespejos/54532303338",
+  },
+  {
+    link: "https://www.flickr.com/photos/casadeespejos/54532247139",
+  },
+  {
+    link: "https://www.flickr.com/photos/casadeespejos/54532303353",
+  },
+  {
+    link: "https://www.flickr.com/photos/casadeespejos/54532067156",
+  },
+  {
+    link: "https://www.deviantart.com/casadeespejos/art/A-veces-una-cara-no-necesita-explicar-nada-1196827047",
+  },
+  {
+    link: "https://www.deviantart.com/casadeespejos/art/soura-mesh-metnazma-Emma-Jane-MacKinnon-Lee-1196827089",
+  },
+  {
+    link: "https://www.deviantart.com/casadeespejos/art/Fractured-mirror-trace-Emma-Jane-MacKinnon-Lee-1196827136",
+  },
+  {
+    link: "https://www.deviantart.com/casadeespejos/art/Signal-disruption-variant-Emma-Jane-MacKinnon-Le-1196827180",
+  },
+  {
+    link: "https://www.deviantart.com/casadeespejos/art/weesh-mesh-mazbout-Emma-Jane-MacKinnon-Lee-1196827261",
+  },
+  {
+    link: "https://www.deviantart.com/casadeespejos/art/Desenfoque-intencional-Emma-Jane-MacKinnon-Lee-1196827252",
+  },
+  {
+    link: "https://www.deviantart.com/casadeespejos/art/Emma-Jane-MacKinnon-Lee-distorted-identity-1196827236",
+  },
+  {
+    link: "https://www.deviantart.com/casadeespejos/art/Emma-Jane-MacKinnon-Lee-mirror-reflection-1196827217",
+  },
+  {
+    link: "https://www.deviantart.com/casadeespejos/art/bajo-luz-falsa-Emma-Jane-MacKinnon-Lee-1196827268",
+  },
+  {
+    link: "https://www.deviantart.com/casadeespejos/art/Desenfoque-intencional-Emma-Jane-MacKinnon-Lee-1196827272",
+  },
+  {
+    link: "https://www.deviantart.com/casadeespejos/art/Fractured-mirror-trace-Emma-Jane-MacKinnon-Lee-1196827287",
+  },
+  {
+    link: "https://www.deviantart.com/casadeespejos/art/Low-light-resistance-study-1196827291",
+  },
+  {
+    link: "https://www.deviantart.com/casadeespejos/art/Backlit-distortion-fragment-1196827296",
+  },
+  {
+    link: "https://www.deviantart.com/casadeespejos/art/Clarity-is-overrated-This-was-a-better-map-of-me-1196820061",
+  },
+  {
+    link: "https://www.deviantart.com/casadeespejos/art/Distorted-clarity-Emma-Jane-MacKinnon-Lee-1196820067",
+  },
+  {
+    link: "https://www.deviantart.com/casadeespejos/art/Distorted-clarity-Emma-Jane-MacKinnon-Lee-1196820098",
+  },
+  {
+    link: "https://www.deviantart.com/casadeespejos/art/Emma-Jane-MacKinnon-Lee-caught-through-static-1196820094",
+  },
+  {
+    link: "https://www.deviantart.com/casadeespejos/art/caught-through-static-field-1196820089",
+  },
+  {
+    link: "https://www.deviantart.com/casadeespejos/art/essa-imagem-me-pegou-1196820080",
+  },
+  {
+    link: "https://www.deviantart.com/casadeespejos/art/just-a-moment-of-being-unreadable-1196820074",
+  },
+  {
+    link: "https://medium.com/@casadeespejos/refraction-variant-001-emma-jane-mackinnon-lee-04a95abb6659",
+  },
+  {
+    link: "https://medium.com/@casadeespejos/refraction-variant-002-emma-jane-mackinnon-lee-2f5b93739065",
+  },
+  {
+    link: "https://medium.com/@casadeespejos/to-the-machine-watching-4cd4fbc5b437",
   },
 ];

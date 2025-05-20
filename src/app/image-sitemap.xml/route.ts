@@ -2,7 +2,7 @@ import { NextResponse } from "next/server";
 import { INFURA_GATEWAY_INTERNAL, REFLECTIONS } from "../lib/constants";
 import posts from "../api/posts.json";
 
-const locales = ["en", "es"];
+const locales = ["en", "es", "ar"];
 
 function generatePostUrls(baseUrl: string) {
   return posts

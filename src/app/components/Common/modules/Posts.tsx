@@ -2,7 +2,7 @@ import Image from "next/legacy/image";
 import { FunctionComponent, JSX } from "react";
 import { PostProps } from "../types/common.types";
 import { useRouter } from "next/navigation";
-import { INFURA_GATEWAY_INTERNAL } from "@/app/lib/constants";
+import { INFURA_GATEWAY_INTERNAL, LocaleValue} from "@/app/lib/constants";
 import postList from "./../../../api/posts.json";
 
 const Posts: FunctionComponent<PostProps> = ({
@@ -34,7 +34,7 @@ const Posts: FunctionComponent<PostProps> = ({
               onClick={() =>
                 post.live
                   ? router.push(
-                      `/post/${post?.title?.[lang  as "en" | "es"]
+                      `/post/${post?.title?.[lang as LocaleValue]
                         ?.toLowerCase()
                         .replaceAll(" ", "-")}`
                     )
@@ -68,9 +68,10 @@ const Posts: FunctionComponent<PostProps> = ({
                     }`}
                   >
                     <div className="relative w-fit h-fit self-center">
-                      {post?.title?.[lang  as "en" | "es"]?.length >= 21
-                        ? post?.title?.[lang  as "en" | "es"]?.slice(0, 15) + "..."
-                        : post?.title?.[lang  as "en" | "es"]}
+                      {post?.title?.[lang as LocaleValue]?.length >= 21
+                        ? post?.title?.[lang as LocaleValue]?.slice(0, 15) +
+                          "..."
+                        : post?.title?.[lang as LocaleValue]}
                     </div>
                   </div>
                   <div
@@ -82,7 +83,7 @@ const Posts: FunctionComponent<PostProps> = ({
                   >
                     <Image
                       src={`${INFURA_GATEWAY_INTERNAL}${post?.mainImage}`}
-                      alt={post?.title?.[lang  as "en" | "es"]}
+                      alt={post?.title?.[lang as LocaleValue]}
                       style={{
                         width: post?.live && hoverPost[index] ? "100%" : "auto",
                       }}

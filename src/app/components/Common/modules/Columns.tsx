@@ -3,6 +3,7 @@ import { MdOutlineArrowDropDown } from "react-icons/md";
 import useColumns from "../hooks/useColumns";
 import { ColorContext } from "@/app/providers";
 import Posts from "./Posts";
+import { convertIdioma } from "@/app/lib/constants";
 
 const Columns: FunctionComponent<{ dict: any; lang: string }> = ({
   dict,
@@ -47,7 +48,7 @@ const Columns: FunctionComponent<{ dict: any; lang: string }> = ({
               />
             </div>
             {filtroAbierto && (
-              <div className="absolute w-24 flex flex-col h-40 z-40 overflow-y-scroll flex items-center justify-start border border-mainText top-10 font-sani text-sm right-0 p-1">
+              <div className="absolute w-24 flex flex-col h-40 z-40 overflow-y-scroll flex items-center justify-start border border-mainText top-10 font-sani text-sm right-0 p-1 bg-mainBg">
                 {[
                   dict?.todos,
                   "en",
@@ -71,7 +72,7 @@ const Columns: FunctionComponent<{ dict: any; lang: string }> = ({
                         indice !== 13 && "border-b border-mainText"
                       }`}
                       onClick={() => {
-                        setIdiomaFiltrado(indice == 0 ? undefined : id);
+                        setIdiomaFiltrado(indice == 0 ? undefined : convertIdioma[id]);
                         setFiltroAbierto(false);
                       }}
                     >

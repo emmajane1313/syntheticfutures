@@ -1,4 +1,4 @@
-import {  INFURA_GATEWAY_INTERNAL } from "@/app/lib/constants";
+import { convertIdioma, INFURA_GATEWAY_INTERNAL } from "@/app/lib/constants";
 import { ColorContext } from "@/app/providers";
 import Image from "next/legacy/image";
 import { usePathname, useRouter } from "next/navigation";
@@ -19,7 +19,7 @@ const Header: FunctionComponent<{ dict: any }> = ({ dict }): JSX.Element => {
             className="relative w-fit h-fit text-xs font-neue cursor-pointer justify-self-center"
             onClick={() => context?.changeColor()}
           >
-            EST. 1998
+            {dict?.est}
           </div>
           <div className="relative w-fit h-fit flex flex-row gap-3 sm:flex-nowrap flex-wrap">
             <div
@@ -90,7 +90,7 @@ const Header: FunctionComponent<{ dict: any }> = ({ dict }): JSX.Element => {
                 },
                 {
                   image: "QmZVU5rZxU1REJHNHtScLuNgeKMoDVK4ruwuP7tSznTqUg",
-                  name: `ع ${dict?.pronto}`,
+                  name: `ع`,
                 },
                 {
                   image: "QmX5L5R7y2dbFM3mEqWsydsadcScebnUDdeYJW7mWirX5d",
@@ -145,13 +145,10 @@ const Header: FunctionComponent<{ dict: any }> = ({ dict }): JSX.Element => {
                       key={index}
                       className={`relative w-full h-12 flex items-center px-2 justify-center flex-row gap-2 ${
                         index !== 13 && "border-b border-mainText"
-                      } ${
-                        (index === 0 || index === 1) &&
-                        "hover:opacity-80 cursor-pointer"
-                      }`}
+                      } ${index < 3 && "hover:opacity-80 cursor-pointer"}`}
                       onClick={() => {
-                        if (index === 0 || index === 1) {
-                          changeLanguage(item.name);
+                        if (index < 3) {
+                          changeLanguage(convertIdioma[item.name]);
                         }
                       }}
                     >

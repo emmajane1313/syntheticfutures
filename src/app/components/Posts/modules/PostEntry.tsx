@@ -7,6 +7,8 @@ import { ColorContext } from "@/app/providers";
 import Content from "./Content";
 import { Post } from "../../Common/types/common.types";
 import Title from "./Title";
+import Metal from "./Metal";
+import { LocaleValue } from "@/app/lib/constants";
 
 const PostEntry = ({
   dict,
@@ -41,24 +43,28 @@ const PostEntry = ({
         </div>
 
         <Title
-          title={publication?.title?.[lang as "en" | "es"]!}
+          title={publication?.title?.[lang as LocaleValue]!}
           dict={dict}
-          fecha={publication?.fecha?.[lang as "en" | "es"]!}
+          fecha={publication?.fecha?.[lang as LocaleValue]!}
           locale={publication?.locale!}
           traducciones={publication?.traducciones!}
-          audio={publication?.audio?.[lang as "en" | "es"]!}
+          audio={publication?.audio?.[lang as LocaleValue]!}
         />
-        <Content
-          lang={lang}
-          dict={dict}
-          description={
-            (publication?.content?.[lang as "en" | "es"]?.length < 1
-              ? publication?.content?.[publication?.locale as "en" | "es"]
-              : publication?.content?.[lang as "en" | "es"])!
-          }
-          radio={publication?.title?.es!?.includes("El Valor")}
-          lista={publication?.title?.es!?.includes("Perdida En")}
-        />
+        {publication?.title?.en?.includes("Metal") ? (
+          <Metal />
+        ) : (
+          <Content
+            lang={lang}
+            dict={dict}
+            description={
+              (publication?.content?.[lang as LocaleValue]?.length < 1
+                ? publication?.content?.[publication?.locale as LocaleValue]
+                : publication?.content?.[lang as LocaleValue])!
+            }
+            radio={publication?.title?.es!?.includes("El Valor")}
+            lista={publication?.title?.es!?.includes("Perdida En")}
+          />
+        )}
       </div>
     </div>
   );

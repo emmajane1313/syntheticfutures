@@ -13,9 +13,10 @@ export type ContentProps = {
 
 export type TitleProps = {
   title: string;
-  dict: any
+  dict: any;
   locale: string;
   fecha: string;
   traducciones: string;
   audio: string;
 };
+
