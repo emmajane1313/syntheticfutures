@@ -132,18 +132,21 @@ const ReflectionsEntry: FunctionComponent<{ dict: any }> = ({
                     <div className="absolute rounded-md -bottom-7 w-full h-fit flex items-center justify-center">
                       <div className="relative w-fit items-center justify-center h-fit gap-3 flex flex-row px-2 py-1 bg-black">
                         <FaPinterest
+                          title={img.pinterest}
                           onClick={() => window.open(img.pinterest)}
                           className={`cursor-pointer hover:opacity-70`}
                           color="#F2F2F2"
                           size={20}
                         />
                         <IoLogoTumblr
-                          onClick={() => window.open(img.tumblr)}
+                          title={img.pinterest}
+                          onClick={() => window.open(img.pinterest)}
                           className={`cursor-pointer hover:opacity-70`}
                           color="#F2F2F2"
                           size={20}
                         />
                         <FaFlickr
+                          title={img.flickr}
                           onClick={() => window.open(img.flickr)}
                           color="#F2F2F2"
                           className={`cursor-pointer hover:opacity-70`}
@@ -163,6 +166,7 @@ const ReflectionsEntry: FunctionComponent<{ dict: any }> = ({
               <span
                 className="relative font-nueveL text-sm text-white px-5 cursor-pointer"
                 key={index}
+                title={item?.link}
                 onClick={() => window.open(item?.link)}
               >
                 {item?.link}
