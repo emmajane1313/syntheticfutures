@@ -139,8 +139,8 @@ const ReflectionsEntry: FunctionComponent<{ dict: any }> = ({
                           size={20}
                         />
                         <IoLogoTumblr
-                          title={img.pinterest}
-                          onClick={() => window.open(img.pinterest)}
+                          title={img.tumblr}
+                          onClick={() => window.open(img.tumblr)}
                           className={`cursor-pointer hover:opacity-70`}
                           color="#F2F2F2"
                           size={20}
