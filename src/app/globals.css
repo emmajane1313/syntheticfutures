@@ -7,6 +7,12 @@
 }
 
 @font-face {
+  font-family: "Liberation Mono";
+  font-weight: 400;
+  src: url("/fonts/LiberationMono-Regular.ttf");
+}
+
+@font-face {
   font-family: "Neue Haas Bold";
   font-weight: 400;
   src: url("/fonts/NeueHaasDisplayBold.ttf");
@@ -37,6 +43,7 @@
   --font-neue: "Neue Haas Bold";
   --font-neueL: "Neue Haas Light";
   --font-york: "New York";
+  --font-mono: "Liberation Mono";
 
   --color-offBlack: #111313;
   --color-offBlue: #01030c;
@@ -65,11 +72,15 @@
   .font-neue {
     font-family: var(--font-neue);
   }
+
   .font-neueL {
     font-family: var(--font-neueL);
   }
   .font-york {
     font-family: var(--font-york);
+  }
+  .font-mono {
+    font-family: var(--font-mono);
   }
 
   .animate-sideBounce {
@@ -200,5 +211,3 @@ div::-webkit-scrollbar-thumb:active {
     word-break: break-word !important;
   }
 }
-
-

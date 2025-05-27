@@ -164,7 +164,7 @@ const ReflectionsEntry: FunctionComponent<{ dict: any }> = ({
           {FUNHOUSE_ENLACES.map((item, index: number) => {
             return (
               <span
-                className="relative font-nueveL text-sm text-white px-5 cursor-pointer"
+                className="relative font-neueL text-sm text-white px-5 cursor-pointer"
                 key={index}
                 title={item?.link}
                 onClick={() => window.open(item?.link)}

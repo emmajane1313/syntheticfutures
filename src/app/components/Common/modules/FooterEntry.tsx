@@ -15,11 +15,16 @@ const FooterEntry: FunctionComponent<FooterProps> = ({ dict }): JSX.Element => {
   return (
     <div
       className={`relative w-full h-full flex items-center justify-center flex-col sm:flex-row gap-4  pb-3 ${
-        path?.includes("/reflections/") ? "pt-4 bg-black text-white" : "pt-60"
+        path?.includes("/reflections/") ||
+        path?.includes(
+          "/post/" + dict?.metal?.toLowerCase()?.replaceAll(" ", "-")
+        )
+          ? "pt-4 bg-black text-white"
+          : "pt-60"
       }`}
     >
       <div className="sm:absolute relative w-fit h-fit flex justify-center sm:items-start items-center break-all text-xs sm:left-2 font-neue sm:text-left text-center flex-col gap-1.5">
-        <div className="relative w-fit h-fit flex"> {dict?.trad}</div>
+        <div className="relative w-fit h-fit flex">{dict?.trad}</div>
         <div className="relative w-fit h-fit flex font-neueL text-xxs">
           {dict?.por} emma-jane mackinnon-lee
         </div>
@@ -35,7 +40,10 @@ const FooterEntry: FunctionComponent<FooterProps> = ({ dict }): JSX.Element => {
             <Image
               draggable={false}
               src={
-                path?.includes("/reflections/")
+                path?.includes("/reflections/") ||
+                path?.includes(
+                  "/post/" + dict?.metal?.toLowerCase()?.replaceAll(" ", "-")
+                )
                   ? `${INFURA_GATEWAY}/ipfs/QmSN5jrkbfn7S1WeZy5Fso36BTvqiRzJhcUmr3xsMhP2kp`
                   : context?.color === "maroon"
                   ? `${INFURA_GATEWAY}/ipfs/QmPAREw1m7S9oRPkNzMdkwwYQGJye57KY6ZBcUxhxAT1D8`
@@ -57,7 +65,10 @@ const FooterEntry: FunctionComponent<FooterProps> = ({ dict }): JSX.Element => {
             <Image
               draggable={false}
               src={
-                path?.includes("/reflections/")
+                path?.includes("/reflections/") ||
+                path?.includes(
+                  "/post/" + dict?.metal?.toLowerCase()?.replaceAll(" ", "-")
+                )
                   ? `${INFURA_GATEWAY}/ipfs/QmSAYn4UFVMq68J3FPUiiBtmnnftJJRkTB8PJkA4vwG5Er`
                   : context?.color === "maroon"
                   ? `${INFURA_GATEWAY}/ipfs/QmVXEPjTLYCqvw5tHeEN4SK3ndGydhxZadfTfZjetc66mh`
@@ -78,7 +89,10 @@ const FooterEntry: FunctionComponent<FooterProps> = ({ dict }): JSX.Element => {
           >
             <AiFillGithub
               color={
-                path?.includes("/reflections/")
+                path?.includes("/reflections/") ||
+                path?.includes(
+                  "/post/" + dict?.metal?.toLowerCase()?.replaceAll(" ", "-")
+                )
                   ? "#F2F2F2"
                   : context?.color === "maroon"
                   ? "#C92D1F"
@@ -99,7 +113,10 @@ const FooterEntry: FunctionComponent<FooterProps> = ({ dict }): JSX.Element => {
           >
             <FaTwitter
               color={
-                path?.includes("/reflections/")
+                path?.includes("/reflections/") ||
+                path?.includes(
+                  "/post/" + dict?.metal?.toLowerCase()?.replaceAll(" ", "-")
+                )
                   ? "#F2F2F2"
                   : context?.color === "maroon"
                   ? "#C92D1F"
@@ -120,7 +137,10 @@ const FooterEntry: FunctionComponent<FooterProps> = ({ dict }): JSX.Element => {
           >
             <FaFlickr
               color={
-                path?.includes("/reflections/")
+                path?.includes("/reflections/") ||
+                path?.includes(
+                  "/post/" + dict?.metal?.toLowerCase()?.replaceAll(" ", "-")
+                )
                   ? "#F2F2F2"
                   : context?.color === "maroon"
                   ? "#C92D1F"
@@ -141,7 +161,10 @@ const FooterEntry: FunctionComponent<FooterProps> = ({ dict }): JSX.Element => {
           >
             <FaTumblr
               color={
-                path?.includes("/reflections/")
+                path?.includes("/reflections/") ||
+                path?.includes(
+                  "/post/" + dict?.metal?.toLowerCase()?.replaceAll(" ", "-")
+                )
                   ? "#F2F2F2"
                   : context?.color === "maroon"
                   ? "#C92D1F"

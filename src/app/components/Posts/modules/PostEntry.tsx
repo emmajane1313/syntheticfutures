@@ -22,35 +22,47 @@ const PostEntry = ({
   const router = useRouter();
   const context = useContext(ColorContext);
   return (
-    <div className="relative h-auto min-h-screen w-full overflow-x-hidden">
+    <div
+      className={`relative h-auto min-h-screen w-full overflow-x-hidden ${
+        publication?.title?.en?.toLowerCase()?.includes("metal") &&
+        "bg-black text-white"
+      }`}
+    >
       <div className="relative w-full h-full flex flex-col gap-10">
-        <div className="relative w-full h-fit pt-4 flex items-center justify-start pl-2 ">
-          <div
-            className="relative w-fit h-fit flex items-center justify-center cursor-pointer"
-            onClick={() => router.push("/")}
-          >
-            <PiArrowFatLinesLeftFill
-              color={
-                context?.color == "maroon"
-                  ? "C92D1F"
-                  : context?.color == "gris"
-                  ? "F2F2F2"
-                  : "F6EC7B"
-              }
-              size={24}
-            />
-          </div>
-        </div>
+        {!publication?.title?.en?.toLowerCase()?.includes("metal") && (
+          <>
+            <div className="relative w-full h-fit pt-4 flex items-center justify-start pl-2 ">
+              <div
+                className="relative w-fit h-fit flex items-center justify-center cursor-pointer"
+                onClick={() => router.push("/")}
+              >
+                <PiArrowFatLinesLeftFill
+                  color={
+                    publication?.title?.en?.toLowerCase()?.includes("metal")
+                      ? "F2F2F2"
+                      : context?.color == "maroon"
+                      ? "C92D1F"
+                      : context?.color == "gris"
+                      ? "F2F2F2"
+                      : "F6EC7B"
+                  }
+                  size={24}
+                />
+              </div>
+            </div>
 
-        <Title
-          title={publication?.title?.[lang as LocaleValue]!}
-          dict={dict}
-          fecha={publication?.fecha?.[lang as LocaleValue]!}
-          locale={publication?.locale!}
-          traducciones={publication?.traducciones!}
-          audio={publication?.audio?.[lang as LocaleValue]!}
-        />
-        {publication?.title?.en?.includes("Metal") ? (
+            <Title
+              title={publication?.title?.[lang as LocaleValue]!}
+              dict={dict}
+              metal={publication?.title?.en?.toLowerCase()?.includes("metal")}
+              fecha={publication?.fecha?.[lang as LocaleValue]!}
+              locale={publication?.locale!}
+              traducciones={publication?.traducciones!}
+              audio={publication?.audio?.[lang as LocaleValue]!}
+            />
+          </>
+        )}
+        {publication?.title?.en?.toLowerCase()?.includes("metal") ? (
           <Metal />
         ) : (
           <Content

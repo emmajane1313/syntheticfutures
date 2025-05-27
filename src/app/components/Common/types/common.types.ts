@@ -59,6 +59,6 @@ export type PostProps = {
   handlePostHoverLeave: (postIndex: number) => void;
   hoverPost: boolean[];
   dict: any;
-  lang: string
+  lang: string;
   idiomaFiltrado: string | undefined;
 };

@@ -18,5 +18,6 @@ export type TitleProps = {
   fecha: string;
   traducciones: string;
   audio: string;
+  metal: boolean;
 };
 

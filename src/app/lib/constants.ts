@@ -2,7 +2,22 @@ import { ValueOf } from "next/dist/shared/lib/constants";
 import { Categories, Lista } from "../components/Common/types/common.types";
 import { Reflection } from "../components/Reflections/types/reflections.types";
 
-export const LOCALES: string[] = ["es", "en", "ar"];
+export const LOCALES: string[] = [
+  "en",
+  "es",
+  "ar",
+  "he",
+  "pt",
+  "uk",
+  "fa",
+  "ja",
+  "yi",
+  "fr",
+  "tr",
+  "hu",
+  "ym",
+  "gd",
+];
 
 export const LOCALES_CONST = {
   EN: "en",
@@ -24,7 +39,27 @@ export const convertIdioma: { [key in string]: string } = {
   ç: "tr",
   ű: "hu",
   ŋ: "ym",
+  gd: "gd",
 };
+
+export const TYPES: string[] = [
+  "midnight cache",
+  "こわれた日",
+  "404",
+  "دلتنگی قدیمی",
+  "ayer no",
+  "זיכרון",
+  "غلط في اسمي",
+];
+
+export const TOPICS: string[] = [
+  "só ruído",
+  "مش دلوقتي",
+  "bitmez",
+  "שפּעט נאַכט",
+  "bòidhchead",
+  "я знову синя",
+];
 
 export type LocaleValue = ValueOf<typeof LOCALES_CONST>;
 export const COLORS: string[] = ["maroon", "gris", "mar"];
@@ -571,6 +606,19 @@ export const LISTA: Lista[] = [
       },
     ],
   },
+  {
+    main: {
+      en: "Gaelic",
+      es: "Gaélico",
+      ar: "الجاليكي",
+    },
+    sub: [
+      {
+        enlace: "https://www.youtube.com/watch?v=yd0pkrxA510",
+        titulo: "MacKinnon Clan - MacKinnon's Strathspey",
+      },
+    ],
+  },
 ];
 
 export const CATEGORIES: Categories[] = [
@@ -997,6 +1045,35 @@ export const REFLECTIONS: Reflection[] = [
       "https://www.tumblr.com/postalatrevida/781950602069540864/soltar%C3%A9-todo-lo-que-llevo-dentro",
     pinterest: "https://es.pinterest.com/pin/1148347605003844380/",
     flickr: "https://www.flickr.com/photos/casadeespejos/54513820003",
+  },
+  {
+    image: "emmajanemackinnonlee22.png",
+    alt: "Change of Field test image 23b: Emma Jane MacKinnon-Lee (unstable pose)",
+    width: 1178,
+    height: 1178,
+    tumblr:
+      "https://www.tumblr.com/emmajanemackinnonlee/759286694444974080/sue%C3%B1os-caros-costura-ca%C3%ADda-en-los-hombros-pu%C3%B1os",
+    pinterest: "https://www.pinterest.com/pin/1127377719213159448/",
+    flickr: "https://www.flickr.com/photos/emmajanemackinnonlee/54509334208",
+  },
+  {
+    image: "emmajanemackinnonlee23.png",
+    alt: "Some Field test image 24b: Emma Jane MacKinnon-Lee (unstable pose)",
+    width: 1024,
+    height: 683,
+    tumblr: "https://www.tumblr.com/emmajanemackinnonlee/759342523013644288",
+    pinterest: "https://www.pinterest.com/pin/1127377719213159291/",
+    flickr: "https://www.flickr.com/photos/emmajanemackinnonlee/54509264148",
+  },
+  {
+    image: "emmajanemackinnonlee24.png",
+    alt: "Another Field test image 25b: Emma Jane MacKinnon-Lee (unstable pose)",
+    width: 880,
+    height: 1180,
+    tumblr:
+      "https://www.tumblr.com/emmajanemackinnonlee/759458406099779584/esses-isekais-caseiros-est%C3%A3o-mais-perto-do",
+    pinterest: "https://www.pinterest.com/pin/1127377719213159231/",
+    flickr: "https://www.flickr.com/photos/emmajanemackinnonlee/51114692951",
   },
 ];
 
