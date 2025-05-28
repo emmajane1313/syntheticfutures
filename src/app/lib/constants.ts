@@ -64,6 +64,7 @@ export const TOPICS: string[] = [
 export type LocaleValue = ValueOf<typeof LOCALES_CONST>;
 export const COLORS: string[] = ["maroon", "gris", "mar"];
 export const FEED: `0x${string}` = "0x90139c418Ea313552C31A1528bD25da54f7fE948";
+export const GROVE_GATEWAY: string = "https://api.grove.storage/";
 
 export const STREAM: string = "https://stream.radiolarrakia.org/studio1";
 

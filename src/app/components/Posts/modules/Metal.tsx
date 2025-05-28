@@ -2,10 +2,12 @@ import { FunctionComponent, JSX } from "react";
 import useMetal from "../hooks/useMetal";
 import { PiArrowFatLinesLeftFill } from "react-icons/pi";
 import { useRouter } from "next/navigation";
-import { TextOnlyMetadata } from "@lens-protocol/client";
+import { ImageMetadata, TextOnlyMetadata } from "@lens-protocol/client";
 import moment from "moment";
 import Image from "next/image";
 import { INFURA_GATEWAY, TOPICS, TYPES } from "@/app/lib/constants";
+import descriptionRegex from "@/app/lib/helpers/descriptionRegex";
+import { handleImage } from "@/app/lib/helpers/handleImage";
 
 const Metal: FunctionComponent = (): JSX.Element => {
   const {
@@ -129,25 +131,34 @@ const Metal: FunctionComponent = (): JSX.Element => {
                   </div>
                 );
               })
-            : timeline.map((post, i) => (
+            : (selectedTopics?.length > 0 || selectedTypes?.length > 0
+                ? timeline?.filter((time) =>
+                    (time?.metadata as TextOnlyMetadata)?.tags?.some((tag) =>
+                      [...selectedTypes, ...selectedTopics].includes(tag)
+                    )
+                  )
+                : timeline
+              ).map((post, i) => (
                 <div
                   key={i}
-                  className={`relative flex border-b py-2 gap-6 text-sm flex-col ${
-                    (post.metadata?.__typename == "ImageMetadata" ||
-                      (post.metadata as TextOnlyMetadata).content?.length >
-                        50) &&
-                    "cursor-pointer hover:opacity-40"
-                  }`}
-                  onClick={() =>
-                    (post.metadata?.__typename == "ImageMetadata" ||
-                      (post.metadata as TextOnlyMetadata).content?.length >
-                        50) &&
-                    setTimelineOpen((prev) =>
-                      prev.map((el, ind) => (ind == i ? !el : false))
-                    )
-                  }
+                  className={`relative flex border-b py-2 gap-6 text-sm flex-col`}
                 >
-                  <div className="flex sm:flex-row flex-col justify-between relative w-full h-fit sm:gap-0 gap-3">
+                  <div
+                    className={`flex sm:flex-row flex-col justify-between relative w-full h-fit sm:gap-0 gap-3 ${
+                      (post.metadata?.__typename == "ImageMetadata" ||
+                        (post.metadata as TextOnlyMetadata).content?.length >
+                          50) &&
+                      "cursor-pointer hover:opacity-40"
+                    }`}
+                    onClick={() =>
+                      (post.metadata?.__typename == "ImageMetadata" ||
+                        (post.metadata as TextOnlyMetadata).content?.length >
+                          50) &&
+                      setTimelineOpen((prev) =>
+                        prev.map((el, ind) => (ind == i ? !el : false))
+                      )
+                    }
+                  >
                     <div className="relative w-fit h-fit flex sm:flex-row flex-col sm:gap-0 gap-3">
                       <div className="relative w-fit flex flex-col h-fit">
                         <div className="relative w-52 h-fit flex flex-row gap-2 items-center justify-center">
@@ -186,8 +197,42 @@ const Metal: FunctionComponent = (): JSX.Element => {
                     </div>
                   </div>
                   {timelineOpen[i] && (
-                    <div className="relative w-full h-fit flex">
-                      {(post.metadata as TextOnlyMetadata).content}
+                    <div className="relative w-full h-fit flex items-start justify-start">
+                      {post?.metadata?.__typename !== "TextOnlyMetadata" ? (
+                        <div className="relative w-full h-fit flex flex-col gap-3">
+                          <div className="relative w-full sm:w-fit h-fit flex items-start justify-start">
+                            <div className="relative w-full sm:min-w-60 w-fit h-60 flex flex-grow">
+                              <Image
+                                layout="fill"
+                                objectFit="contain"
+                                objectPosition="left"
+                                draggable={false}
+                                alt={(post.metadata as ImageMetadata).content}
+                                src={handleImage(
+                                  (post.metadata as ImageMetadata)?.image?.item
+                                )}
+                              />
+                            </div>
+                          </div>
+                          <div
+                            className="relative w-full h-fit flex"
+                            dangerouslySetInnerHTML={{
+                              __html: descriptionRegex(
+                                (post.metadata as ImageMetadata).content
+                              ),
+                            }}
+                          ></div>
+                        </div>
+                      ) : (
+                        <div
+                          className="relative w-full h-fit flex"
+                          dangerouslySetInnerHTML={{
+                            __html: descriptionRegex(
+                              (post.metadata as TextOnlyMetadata).content
+                            ),
+                          }}
+                        ></div>
+                      )}
                     </div>
                   )}
                 </div>

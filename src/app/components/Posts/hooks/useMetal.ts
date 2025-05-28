@@ -1,7 +1,7 @@
 import { ColorContext } from "@/app/providers";
 import { useContext, useEffect, useState } from "react";
 import { fetchPosts } from "@lens-protocol/client/actions";
-import { FEED, TOPICS, TYPES } from "@/app/lib/constants";
+import { FEED } from "@/app/lib/constants";
 import { PageSize, Post, PostType } from "@lens-protocol/client";
 
 const useMetal = () => {
@@ -46,8 +46,6 @@ const useMetal = () => {
       );
 
       setTimeline(sorted);
-      setSelectedTypes(TYPES.sort(() => Math.random() - 0.5).slice(0, 3));
-      setSelectedTopics(TOPICS.sort(() => Math.random() - 0.5).slice(0, 2));
       setTimelineOpen(Array.from({ length: sorted.length }, () => false));
     } catch (err: any) {
       console.error(err?.message);
@@ -63,7 +61,7 @@ const useMetal = () => {
   };
 
   useEffect(() => {
-    if (context?.lensClient) {
+    if (context?.lensClient && timeline?.length < 1) {
       llamarPublicacions();
     }
   }, [context?.lensClient]);
