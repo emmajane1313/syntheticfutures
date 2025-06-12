@@ -1341,4 +1341,7 @@ export const FUNHOUSE_ENLACES: { link: string }[] = [
   {
     link: "https://x.com/syntheticfuture/status/1932162467280626114",
   },
+    {
+    link: "https://emmajanemackinnonlee.com",
+  },
 ];

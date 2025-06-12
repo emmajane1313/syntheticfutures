@@ -54,9 +54,34 @@ export default function RootLayout({
 }>) {
   return (
     <html>
-      <body>
-        <Providers>{children}</Providers>
-      </body>
+      <head>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "Person",
+              name: "Emma-Jane MacKinnon-Lee",
+              url: "https://www.emmajanemackinnonlee.com",
+              sameAs: [
+                "https://twitter.com/emmajane1313",
+                "https://medium.com/@casadeespejos",
+                "https://www.flickr.com/photos/emmajanemackinnonlee/",
+                "https://www.digitalax.xyz",
+                "https://www.f3manifesto.xyz",
+                "https://www.syntheticfutures.xyz",
+                "https://www.chromadin.xyz",
+                "https://triplea.agentmeme.xyz/",
+                "https://www.web3fashion.xyz",
+                "https://www.emancipa.xyz",
+                "https://dhawu.emancipa.xyz",
+                "https://highlangu.emancipa.xyz",
+              ],
+            }),
+          }}
+        />
+      </head>
+      <Providers>{children}</Providers>
     </html>
   );
 }
