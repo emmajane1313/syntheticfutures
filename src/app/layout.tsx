@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import Providers from "./providers";
+import { LOCALES_LIVE } from "./lib/constants";
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://www.syntheticfutures.xyz"),
@@ -23,6 +24,13 @@ export const metadata: Metadata = {
       index: true,
       follow: true,
     },
+  },
+  alternates: {
+    canonical: `https://syntheticfutures.xyz/`,
+    languages: LOCALES_LIVE.reduce((acc, item) => {
+      acc[item] = `https://syntheticfutures.xyz/${item}/`;
+      return acc;
+    }, {} as { [key: string]: string }),
   },
   creator: "Emma-Jane MacKinnon-Lee",
   publisher: "Emma-Jane MacKinnon-Lee",

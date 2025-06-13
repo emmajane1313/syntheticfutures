@@ -1,5 +1,5 @@
 import PostEntry from "@/app/components/Posts/modules/PostEntry";
-import { INFURA_GATEWAY, LocaleValue } from "@/app/lib/constants";
+import { INFURA_GATEWAY, LOCALES_LIVE, LocaleValue } from "@/app/lib/constants";
 import { getPost } from "@/app/lib/helpers/getPost";
 import { Metadata } from "next";
 import { getDictionary } from "../../dictionaries";
@@ -30,6 +30,17 @@ export const generateMetadata = async ({
   return {
     title: publication?.title?.[lang as "en"],
     description: publication?.content?.[lang as "en"]?.slice(0, 100),
+    alternates: {
+      canonical: `https://syntheticfutures.xyz/post/${
+        publication?.title?.[lang as "en"]
+      }`,
+      languages: LOCALES_LIVE.reduce((acc, item) => {
+        acc[item] = `https://syntheticfutures.xyz/${item}/post/${
+          publication?.title?.[item as "en"]
+        }/`;
+        return acc;
+      }, {} as { [key: string]: string }),
+    },
     openGraph: {
       images: `${INFURA_GATEWAY}/ipfs/${publication?.mainImage}`,
     },
