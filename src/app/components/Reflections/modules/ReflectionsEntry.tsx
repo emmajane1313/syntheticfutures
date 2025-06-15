@@ -124,10 +124,12 @@ const ReflectionsEntry: FunctionComponent<{ dict: any }> = ({
                         ? img?.image
                         : `/images/${img?.image}`
                     }
+                    title={img?.title}
                     width={isExpanded ? img?.width : undefined}
                     height={isExpanded ? img?.height : undefined}
                     alt={img?.alt}
                   />
+                  <figcaption className="sr-only">{img.caption}</figcaption>
                   {img.pinterest && (
                     <div className="absolute rounded-md -bottom-7 w-full h-fit flex items-center justify-center">
                       <div className="relative w-fit items-center justify-center h-fit gap-3 flex flex-row px-2 py-1 bg-black">

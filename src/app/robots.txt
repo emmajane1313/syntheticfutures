@@ -2,3 +2,4 @@ User-Agent: *
 Allow: /
 
 Sitemap: https://syntheticfutures.xyz/sitemap.xml
+Sitemap: https://syntheticfutures.xyz/image-sitemap.xml

@@ -45,6 +45,8 @@ export default function Providers({ children }: { children: React.ReactNode }) {
     }
   }, []);
 
+  if (!color) return null;
+
   return (
     <ColorContext.Provider
       value={{

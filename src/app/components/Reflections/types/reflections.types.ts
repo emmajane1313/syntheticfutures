@@ -18,6 +18,8 @@ export interface Position {
 
 export interface Reflection {
   image: string;
+  title: string;
+  caption: string;
   pinterest?: string;
   tumblr?: string;
   flickr?: string;

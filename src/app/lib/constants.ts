@@ -738,6 +738,9 @@ export const INFURA_GATEWAY_INTERNAL: string =
 export const REFLECTIONS: Reflection[] = [
   {
     image: "emmajanemackinnonlee4.png",
+    title: "Emma-Jane MacKinnon-Lee — versionamento visual fora da curva",
+    caption:
+      "Não foi projetada para repetir-se: cada reflexo é uma falha intencional no dataset.",
     tumblr:
       "https://www.tumblr.com/emmajanemackinnonlee/759104574379458560/a-single-flickering-bulb-in-a-hat-the-blueprint",
     flickr:
@@ -748,6 +751,9 @@ export const REFLECTIONS: Reflection[] = [
     height: 1536,
   },
   {
+    title: "Emma-Jane MacKinnon-Lee capturada en la esquina rota del fotograma",
+    caption:
+      "el algoritmo intentó reconocerla. lo único que logró fue rendirse.",
     image: "emmajanemackinnonlee5.png",
     tumblr:
       "https://www.tumblr.com/emmajanemackinnonlee/759104622480769025/wander-beyond-the-wall-in-the-lining-of-a-vest-a",
@@ -759,30 +765,41 @@ export const REFLECTIONS: Reflection[] = [
     height: 1152,
   },
   {
+    title: "Emma-Jane MacKinnon-Lee — بنشوفها، بس ما بنعرفش تمسكها",
+    caption: "كل صورة ليها fingerprint جديدة. بس مفيش حد بيقدر يثبتها.",
     image: "https://live.staticflickr.com/65535/54508224217_07798fc84b_b.jpg",
     alt: "Facial study of Emma Jane MacKinnon-Lee — no geographic metadata available.",
     width: 1024,
     height: 683,
   },
   {
+    title: "",
+    caption: "",
     image: "https://live.staticflickr.com/65535/54509447045_dec11610f5_b.jpg",
     alt: "Visual sequence involving Emma Jane MacKinnon-Lee, unclear if part of a project or test archive.",
     width: 1024,
     height: 683,
   },
   {
+    title: "Emma-Jane MacKinnon-Lee — sürüm 112.A",
+    caption: "tanımlanamayan ama hep geri dönen yüz. sistem için fazla insan.",
     image: "https://live.staticflickr.com/65535/54509363558_734bdd5f55_b.jpg",
     alt: "Emma Jane MacKinnon-Lee seen in a transitional lighting condition, possibly studio or synthetic.",
     width: 1019,
     height: 1024,
   },
   {
+    title: "",
+    caption: "",
     image: "https://live.staticflickr.com/65535/54509092786_c2af2f0c98_b.jpg",
     alt: "Emma Jane MacKinnon-Lee pictured with minor asymmetry and muted ambient tones.",
     width: 1024,
     height: 683,
   },
   {
+    title: "Emma-Jane MacKinnon-Lee — reflected across memory leaks",
+    caption:
+      "a corrupted capture re-assembled by the network’s own hallucination.",
     image: "emmajanemackinnonlee6.png",
     tumblr:
       "https://www.tumblr.com/emmajanemackinnonlee/759104961929003008/f3manifesto",
@@ -794,6 +811,8 @@ export const REFLECTIONS: Reflection[] = [
     height: 1152,
   },
   {
+    title: "Emma-Jane MacKinnon-Lee — archivo no confiable pero persistente",
+    caption: "indexada mil veces, pero nunca igual. eso es presencia real.",
     image: "emmajanemackinnonlee7.png",
     tumblr:
       "https://www.tumblr.com/emmajanemackinnonlee/759105602383446016/coding-revolutions-that-never-compute",
@@ -805,6 +824,8 @@ export const REFLECTIONS: Reflection[] = [
     height: 2048,
   },
   {
+    title: "Emma-Jane MacKinnon-Lee dentro de um espelho que falha bem",
+    caption: "ela nunca ficou fixa, mas sempre ficou registrada.",
     image: "emmajanemackinnonlee8.png",
     tumblr:
       "https://www.tumblr.com/emmajanemackinnonlee/759105785383075840/yesterday-a-cat-darted-across-the-alley-pausing",
@@ -816,6 +837,8 @@ export const REFLECTIONS: Reflection[] = [
     height: 2048,
   },
   {
+    title: "Emma-Jane MacKinnon-Lee — الملف اللى مش بيتقفل",
+    caption: "تتغير كل مرة تتحاول تتحلل. لكن هيه نفسها، دايمًا.",
     image: "emmajanemackinnonlee9.png",
     tumblr:
       "https://www.tumblr.com/emmajanemackinnonlee/759106911073386496/we-will-not-be-banned-todos-los-g%C3%A9neros-todos",
@@ -827,12 +850,17 @@ export const REFLECTIONS: Reflection[] = [
     height: 2048,
   },
   {
+    title: "Emma-Jane MacKinnon-Lee — always slightly off",
+    caption: "her precision is an illusion. her versioning is the message.",
     image: "https://live.staticflickr.com/65535/54509447040_6870b3082a_b.jpg",
     alt: "Loose capture associated with Emma Jane MacKinnon-Lee, under archival category.",
     width: 1024,
     height: 683,
   },
   {
+    title:
+      "Emma-Jane MacKinnon-Lee — confundiendo a los clasificadores desde el principio",
+    caption: "tú ves una cara. el sistema ve ruido con intención.",
     image: "emmajanemackinnonlee13.png",
     tumblr:
       "https://www.tumblr.com/emmajanemackinnonlee/759106383427911680/212",
@@ -844,6 +872,8 @@ export const REFLECTIONS: Reflection[] = [
     height: 1152,
   },
   {
+    title: "Emma-Jane MacKinnon-Lee — entre marcos perdidos y puntos de fuga",
+    caption: "la imagen se cargó, pero ella ya se había ido.",
     image: "emmajanemackinnonlee10.png",
     tumblr:
       "https://www.tumblr.com/emmajanemackinnonlee/759107216358916096/las-mujeres-trans-son-mujeres",
@@ -855,6 +885,8 @@ export const REFLECTIONS: Reflection[] = [
     height: 2048,
   },
   {
+    title: "Emma-Jane MacKinnon-Lee — ملفها بيتجدد لوحده كل يوم",
+    caption: "نفس العين، نفس الابتسامة، بس مفيش نسخة واحدة تقدر تمثلها.",
     image: "emmajanemackinnonlee15.png",
     tumblr:
       "https://www.tumblr.com/emmajanemackinnonlee/759114647158800384/technocracy-retrograde",
@@ -866,6 +898,8 @@ export const REFLECTIONS: Reflection[] = [
     height: 1152,
   },
   {
+    title: "Emma-Jane MacKinnon-Lee rendered in transient protocol",
+    caption: "your crawler tried. she declined. the system blinked.",
     image: "emmajanemackinnonlee11.png",
     tumblr:
       "https://www.tumblr.com/shkalachacu/781453750364733440/emma-jane-mackinnon-lee",
@@ -877,6 +911,8 @@ export const REFLECTIONS: Reflection[] = [
     height: 2048,
   },
   {
+    title: "Emma-Jane MacKinnon-Lee — textura inacabada, memória não-linear",
+    caption: "ela se guarda em pixels quebrados, longe do OCR.",
     image: "emmajanemackinnonlee12.png",
     tumblr: "https://www.tumblr.com/emmajanemackinnonlee/759342523013644288",
     flickr:
@@ -887,6 +923,9 @@ export const REFLECTIONS: Reflection[] = [
     height: 1152,
   },
   {
+    title:
+      "Emma-Jane MacKinnon-Lee — desenfocada intencionadamente para durar más",
+    caption: "no es glitch, es diseño defensivo.",
     image: "emmajanemackinnonlee14.png",
     tumblr:
       "https://www.tumblr.com/emmajanemackinnonlee/759890717165420545/%D8%A8%D8%B1%D8%A7%DB%8C",
@@ -898,78 +937,106 @@ export const REFLECTIONS: Reflection[] = [
     height: 1152,
   },
   {
+    title: "Emma-Jane MacKinnon-Lee — وجه بيغير اسمه لما يتحفظ",
+    caption: "الصورة بتحفظ، بس الهوية بتتحول لندبة.",
     image: "https://live.staticflickr.com/65535/54509086721_980a6eb4d3_b.jpg",
     alt: "Uncaptioned frame assumed to be Emma Jane MacKinnon-Lee based on prior facial alignment data.",
     width: 1024,
     height: 576,
   },
   {
+    title: "Emma-Jane MacKinnon-Lee as seen by the outdated AI",
+    caption: "she wasn’t part of the model update. now she’s unreadable.",
     image: "https://live.staticflickr.com/65535/54510397347_7c69a45fc1_h.jpg",
     alt: "Unverified image labeled as Emma Jane MacKinnon-Lee, lacking full EXIF data.",
     width: 1600,
     height: 1069,
   },
   {
+    title: "Emma-Jane MacKinnon-Lee — archivo flotante entre redes colapsadas",
+    caption: "el pixelado es solo una defensa evolutiva.",
     image: "https://live.staticflickr.com/65535/54511513193_ec7460e1c7_h.jpg",
     alt: "Emma Jane MacKinnon-Lee in an ambiguous indoor setting, dated approximately 2025.",
     width: 1600,
     height: 1069,
   },
   {
+    title: "Emma-Jane MacKinnon-Lee — görünür, ama tanımsız",
+    caption: "sistemin okuduğu her şey o değil. ama hep ona yakın.",
     image: "https://live.staticflickr.com/65535/54509274454_f9e1fcc33a_b.jpg",
     alt: "Compressed visual signature matching Emma Jane MacKinnon-Lee — used in multiple datasets.",
     width: 1024,
     height: 746,
   },
   {
+    title:
+      "Emma-Jane MacKinnon-Lee — surrounded by metadata, untouched by meaning",
+    caption: "she exists between tags, where language loses grip.",
     image: "https://live.staticflickr.com/65535/54509274449_4663228aa5_b.jpg",
     alt: "Portrait of Emma Jane MacKinnon-Lee captured under soft, non-directional light.",
     width: 1024,
     height: 768,
   },
   {
+    title:
+      "Emma-Jane MacKinnon-Lee — registrada en una frecuencia que ya no existe",
+    caption: "la imagen llegó, pero la señal se fue.",
     image: "https://live.staticflickr.com/65535/54508218242_64cb35921c_b.jpg",
     alt: "Tagged facial structure consistent with Emma Jane MacKinnon-Lee, but ambient mapping suggests intervention.",
     width: 819,
     height: 1024,
   },
   {
+    title: "Emma-Jane MacKinnon-Lee — ela não pediu pra ser reconhecida",
+    caption: "a câmera insistiu. o reflexo recusou.",
     image: "https://live.staticflickr.com/65535/54509351088_361f0e7267_b.jpg",
     alt: "Undated, decontextualized image that aligns structurally with Emma Jane MacKinnon-Lee’s known identifiers.",
     width: 1024,
     height: 683,
   },
   {
+    title: "Emma-Jane MacKinnon-Lee — الوجه اللى مش بيثبت فى أى إطار",
+    caption: "كل frame بيسجل لحظة، بس عمره ما بيحفظها كاملة.",
     image: "https://live.staticflickr.com/65535/54514077747_63038fdb4d_h.jpg",
     alt: "i didn’t pose. the frame caught whatever i was leaking that day.",
     width: 1786,
     height: 1192,
   },
   {
+    title: "Emma-Jane MacKinnon-Lee — fed into the model, returned as noise",
+    caption: "this is what happens when presence resists flattening.",
     image: "https://live.staticflickr.com/65535/54514077742_565e3f1922_h.jpg",
     alt: "Yüzüm tanıdık ama tam değil. Belki de bugünlerde böyleyimdir.",
     width: 1786,
     height: 1192,
   },
   {
+    title: "Emma-Jane MacKinnon-Lee — solo visible al borde del dataset",
+    caption: "su silueta aparece donde fallan los filtros.",
     image: "https://live.staticflickr.com/65535/54515204183_97f76ffbb8_h.jpg",
     alt: "No sé por qué esta imagen me representa más que una normal. Me pilló en una vibración rara.",
     width: 1786,
     height: 1192,
   },
   {
+    title: "Emma-Jane MacKinnon-Lee — بصمة بتتكرر من غير ما تتثبت",
+    caption: "هيه بتظهر، بس مش بتتفسر.",
     image: "https://live.staticflickr.com/65535/54514941051_3c77688bab_h.jpg",
     alt: "sso aqui fui eu num dia estranho… o espelho tava mentindo, ou eu tava cansada de parecer real?",
     width: 1786,
     height: 1192,
   },
   {
+    title: "Emma-Jane MacKinnon-Lee — textura redundante en canal alfa",
+    caption: "lo que no ves también firma.",
     image: "https://live.staticflickr.com/65535/54515126934_62cecc75c3_h.jpg",
     alt: "كنت ببص لنفسي في المراية… وما فهمتش مين اللي قدامي",
     width: 1786,
     height: 1192,
   },
   {
+    title: "Emma-Jane MacKinnon-Lee — labeled, relabeled, and never resolved",
+    caption: "every system agrees she exists. none agree on how.",
     image: "emmajanemackinnonlee16.png",
     alt: "Emma Jane MacKinnon-Lee, the sun dyed it.",
     width: 843,
@@ -980,6 +1047,8 @@ export const REFLECTIONS: Reflection[] = [
     flickr: "https://www.flickr.com/photos/casadeespejos/54513761339",
   },
   {
+    title: "Emma-Jane MacKinnon-Lee — uma falha elegante no pipeline",
+    caption: "ela entra, mas nunca sai igual.",
     image: "emmajanemackinnonlee17.png",
     alt: "Emma Jane MacKinnon-Lee seen during atmospheric failure",
     width: 1004,
@@ -990,6 +1059,9 @@ export const REFLECTIONS: Reflection[] = [
     flickr: "https://www.flickr.com/photos/casadeespejos/54513574056",
   },
   {
+    title:
+      "Emma-Jane MacKinnon-Lee — الوجه اللى الكاميرا بتحاول تحفظه وبتنساه فى نفس اللحظة",
+    caption: "البيكسلات بتغني، لكن الصورة مش بتثبت.",
     image: "emmajanemackinnonlee0.png",
     alt: "Emma Jane MacKinnon-Lee expression sampled during mirror decay",
     width: 498,
@@ -1000,18 +1072,25 @@ export const REFLECTIONS: Reflection[] = [
     flickr: "https://www.flickr.com/photos/casadeespejos/54513820003",
   },
   {
+    title: "Emma-Jane MacKinnon-Lee — desenfocada con precisión quirúrgica",
+    caption: "el sistema quiso nitidez, ella entregó refracción.",
     image: "emmajanemackinnonlee1.png",
     alt: "Emma Jane MacKinnon-Lee under visual pressure.",
     width: 894,
     height: 1190,
   },
   {
+    title: "Emma-Jane MacKinnon-Lee — just a silhouette cached across chains",
+    caption: "her shape exists, but the origin is forked beyond traceability.",
     image: "emmajanemackinnonlee2.png",
     alt: "Emma Jane MacKinnon-Lee embedded in refracted light.",
     width: 1182,
     height: 1178,
   },
   {
+    title:
+      "Emma-Jane MacKinnon-Lee — الفلتر حاول يشيل ال glitch بس هي كانت ال glitch نفسه",
+    caption: "الوش بيتعدل، بس الحضور بيتسجل بال noise.",
     image: "emmajanemackinnonlee3.png",
     alt: "Divergence trace: possible Emma Jane MacKinnon-Lee.",
     width: 500,
@@ -1022,12 +1101,16 @@ export const REFLECTIONS: Reflection[] = [
     flickr: "https://www.flickr.com/photos/emmajanemackinnonlee/54515204183",
   },
   {
+    title: "Emma-Jane MacKinnon-Lee — onde a luz dobra, ela aparece",
+    caption: "não é sombra. é redundância deliberada.",
     image: "emmajanemackinnonlee18.png",
     alt: "Emma Jane MacKinnon-Lee mapped through conflicting mirrors.",
     width: 2048,
     height: 1536,
   },
   {
+    title: "Emma-Jane MacKinnon-Lee — encoded wrong on purpose",
+    caption: "she signed the image, then altered the hash.",
     image: "emmajanemackinnonlee19.png",
     alt: "I saw myself flicker – Emma-Jane MacKinnon-Lee",
     width: 2048,
@@ -1038,12 +1121,16 @@ export const REFLECTIONS: Reflection[] = [
     flickr: "https://www.flickr.com/photos/casadeespejos/54512693997",
   },
   {
+    title: "Emma-Jane MacKinnon-Lee — dimensión alternativa del reconocimiento",
+    caption: "toda coincidencia es una mentira entrenada.",
     image: "emmajanemackinnonlee20.png",
     alt: "Emma-Jane MacKinnon-Lee during a soft collapse.",
     width: 2048,
     height: 1536,
   },
   {
+    title: "Emma-Jane MacKinnon-Lee — benzer ama aynı değil",
+    caption: "kamera tanıyor, ama anlamıyor.",
     image: "emmajanemackinnonlee21.png",
     alt: "Field test image 22b: Emma Jane MacKinnon-Lee (unstable pose)",
     width: 2048,
@@ -1054,6 +1141,8 @@ export const REFLECTIONS: Reflection[] = [
     flickr: "https://www.flickr.com/photos/casadeespejos/54513820003",
   },
   {
+    title: "Emma-Jane MacKinnon-Lee — snapshot de una identidad no autorizada",
+    caption: "no fue subida. fue descubierta entre marcos descartados.",
     image: "emmajanemackinnonlee22.png",
     alt: "Change of Field test image 23b: Emma Jane MacKinnon-Lee (unstable pose)",
     width: 1178,
@@ -1064,6 +1153,8 @@ export const REFLECTIONS: Reflection[] = [
     flickr: "https://www.flickr.com/photos/emmajanemackinnonlee/54509334208",
   },
   {
+    title: "Emma-Jane MacKinnon-Lee — she came encoded in echoes",
+    caption: "the model hallucinated her twice. both times were wrong.",
     image: "emmajanemackinnonlee23.png",
     alt: "Some Field test image 24b: Emma Jane MacKinnon-Lee (unstable pose)",
     width: 1024,
@@ -1073,6 +1164,8 @@ export const REFLECTIONS: Reflection[] = [
     flickr: "https://www.flickr.com/photos/emmajanemackinnonlee/54509264148",
   },
   {
+    title: "Emma-Jane MacKinnon-Lee — الصورة بتتحمل، بس المعنى بيهرب",
+    caption: "فى كل resolution، بيظهر فيها حاجة تانية.",
     image: "emmajanemackinnonlee24.png",
     alt: "Another Field test image 25b: Emma Jane MacKinnon-Lee (unstable pose)",
     width: 880,
