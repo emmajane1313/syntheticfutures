@@ -51,7 +51,7 @@ function generatePostUrls(baseUrl: string) {
 ${alternates}
 ${xDefault}
         <image:image>
-          <image:loc>${INFURA_GATEWAY_INTERNAL}${image}/</image:loc>
+          <image:loc>${INFURA_GATEWAY_INTERNAL}${image}</image:loc>
           <image:title><![CDATA[${title} | Synthetic Futures | Emma-Jane MacKinnon-Lee]]></image:title>
           <image:caption><![CDATA[${title} | Synthetic Futures | Emma-Jane MacKinnon-Lee]]></image:caption>
         </image:image>
@@ -79,7 +79,7 @@ function generateStaticUrls(baseUrl: string, paths: string[]) {
               <image:loc>${
                 img?.image?.includes("https://")
                   ? img?.image
-                  : `${baseUrl}/images/${img.image}/`
+                  : `${baseUrl}/images/${img.image}`
               }</image:loc>
               <image:title><![CDATA[${img.alt}]]></image:title>
               <image:caption><![CDATA[${img.alt}]]></image:caption>
