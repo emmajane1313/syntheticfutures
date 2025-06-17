@@ -32,7 +32,7 @@ const FooterEntry: FunctionComponent<FooterProps> = ({ dict }): JSX.Element => {
       <div className="relative w-fit h-fit flex flex-row items-center  justify-center gap-4 sm:flex-nowrap flex-wrap">
         <div className="relative w-fit h-fit flex items-center justify-center">
           <a
-            href="https://www.chromadin.xyz/autograph/emmajane1313"
+            href="https://chromadin.xyz/autograph/emmajane1313"
             rel={"noreferrer"}
             target={"_blank"}
             className="relative w-5 h-5 flex items-center justify-center"

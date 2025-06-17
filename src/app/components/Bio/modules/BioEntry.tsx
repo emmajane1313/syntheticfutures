@@ -85,7 +85,7 @@ const BioEntry: FunctionComponent<{ dict: any }> = ({ dict }): JSX.Element => {
                     titulo: "Chromadin",
                     descripcion: dict?.chroma,
                     techstack: "NextJS, TS, React, Solidity, Node",
-                    enlace: "https://www.chromadin.xyz/",
+                    enlace: "https://chromadin.xyz/",
                   },
                   {
                     titulo: dict?.litT,
