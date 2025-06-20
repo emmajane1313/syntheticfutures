@@ -24,5 +24,7 @@ export const generateMetadata = async (): Promise<Metadata> => {
 
 export default async function Bio() {
   const dict = await (getDictionary as (locale: any) => Promise<any>)("en");
-  return <Wrapper page={<BioEntry dict={dict} />} dict={dict}></Wrapper>;
+  return (
+    <Wrapper page={<BioEntry dict={dict} lang={"en"} />} dict={dict}></Wrapper>
+  );
 }

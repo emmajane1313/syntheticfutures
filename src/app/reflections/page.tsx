@@ -25,6 +25,9 @@ export const generateMetadata = async (): Promise<Metadata> => {
 export default async function Reflections() {
   const dict = await (getDictionary as (locale: any) => Promise<any>)("en");
   return (
-    <Wrapper page={<ReflectionsEntry dict={dict} />} dict={dict}></Wrapper>
+    <Wrapper
+      page={<ReflectionsEntry dict={dict} lang={"en"} />}
+      dict={dict}
+    ></Wrapper>
   );
 }

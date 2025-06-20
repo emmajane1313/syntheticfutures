@@ -98,7 +98,7 @@ const Header: FunctionComponent<{ dict: any }> = ({ dict }): JSX.Element => {
                 },
                 {
                   image: "QmRq7WA5H9ghy5qX1FuLLpj9EZvgZyWMuvsyPkGFyVG5ap",
-                  name: `br ${dict?.pronto}`,
+                  name: `pt ${dict?.pronto}`,
                 },
                 {
                   image: "QmfRNNJKQ8QxuvdjTh1u5T1JW8WCH3cfsixd5FnGNxVD1m",

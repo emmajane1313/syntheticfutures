@@ -32,7 +32,7 @@ export const convertIdioma: { [key in string]: string } = {
   es: "es",
   ع: "ar",
   א: "he",
-  br: "pt",
+  pt: "pt",
   ук: "uk",
   د: "fa",
   あ: "ja",

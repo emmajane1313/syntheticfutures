@@ -15,6 +15,7 @@ const Content: FunctionComponent<ContentProps> = ({
       <div
         className="relative w-5/6 lg:w-1/2 h-fit justify-self-center text-xl font-neueL leading-8"
         id="break"
+        dir={["en", "es"]?.includes(lang) ? "ltr" : "rtl"}
         dangerouslySetInnerHTML={{ __html: description as string }}
       ></div>
       {lista && <Lista dict={dict} lang={lang} />}

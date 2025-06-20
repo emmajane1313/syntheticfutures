@@ -55,7 +55,7 @@ const Columns: FunctionComponent<{ dict: any; lang: string }> = ({
                   "es",
                   "ع",
                   "א",
-                  "br",
+                  "pt",
                   "ук",
                   "د",
                   "あ",

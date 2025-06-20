@@ -221,7 +221,7 @@
     "title": {
       "en": "The Taste of Metal",
       "es": "El Sabor A Metal",
-      "br": "O Gosto de Metal",
+      "pt": "O Gosto de Metal",
       "ar": "طعم المعدن"
     },
     "traducciones": "en, es, ar, he, pt, uk, fa, ja, yi, fr, tr, hu, ym, gd",
@@ -239,17 +239,17 @@
     "title": {
       "en": "Sniping in the Meme Forest",
       "es": "Francotiradores en el Bosque de Memes",
-      "br": "Atirando na Floresta dos Memes",
+      "pt": "Atirando na Floresta dos Memes",
       "ar": "قنص في غابة الميمز"
     },
     "fecha": {
       "en": "",
       "es": ""
     },
-    "traducciones": "br",
-    "locale": "br",
+    "traducciones": "pt",
+    "locale": "pt",
     "content": {
-      "br": ""
+      "pt": ""
     },
     "mainImage": "QmV7RUnB44xQERk2PRKSgiExx1nVLZtwN9eBdvAa2YvECi",
     "live": false

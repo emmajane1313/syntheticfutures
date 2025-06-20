@@ -5,5 +5,5 @@ import { getDictionary } from "../dictionaries";
 export default async function FunHouse({ params }: { params: tParams }) {
   const { lang } = await params;
   const dict = await (getDictionary as (locale: any) => Promise<any>)(lang);
-  return <ReflectionsEntry dict={dict} />;
+  return <ReflectionsEntry lang={lang} dict={dict} />;
 }

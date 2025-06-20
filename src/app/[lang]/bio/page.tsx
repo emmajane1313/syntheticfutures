@@ -5,5 +5,5 @@ import { getDictionary } from "../dictionaries";
 export default async function Bio({ params }: { params: tParams }) {
   const { lang } = await params;
   const dict = await (getDictionary as (locale: any) => Promise<any>)(lang);
-  return <BioEntry dict={dict} />;
+  return <BioEntry dict={dict} lang={lang} />;
 }

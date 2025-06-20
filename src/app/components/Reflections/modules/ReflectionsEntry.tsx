@@ -10,8 +10,9 @@ import { FUNHOUSE_ENLACES, REFLECTIONS } from "@/app/lib/constants";
 import MarqueeText from "react-fast-marquee";
 import { ImageData, Position } from "../types/reflections.types";
 
-const ReflectionsEntry: FunctionComponent<{ dict: any }> = ({
+const ReflectionsEntry: FunctionComponent<{ dict: any; lang: string }> = ({
   dict,
+  lang,
 }): JSX.Element => {
   const router = useRouter();
   const [imageData, setImageData] = useState<ImageData[]>([]);
@@ -62,7 +63,10 @@ const ReflectionsEntry: FunctionComponent<{ dict: any }> = ({
           </div>
         </div>
         <div className="relative w-full w-full min-h-screen overflow-hidden bg-black">
-          <div className="absolute w-full h-full flex flex-col gap-5 items-center justify-center text-center px-12 pt-10">
+          <div
+            className="absolute w-full h-full flex flex-col gap-5 items-center justify-center text-center px-12 pt-10"
+            dir={["en", "es"]?.includes(lang) ? "ltr" : "rtl"}
+          >
             <div className={`relative w-full h-fit font-sani text-xl`}>
               {dict?.self1}
             </div>

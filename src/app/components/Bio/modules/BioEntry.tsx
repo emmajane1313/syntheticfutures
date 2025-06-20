@@ -5,7 +5,10 @@ import { useRouter } from "next/navigation";
 import { FunctionComponent, JSX, useContext } from "react";
 import { PiArrowFatLinesLeftFill } from "react-icons/pi";
 
-const BioEntry: FunctionComponent<{ dict: any }> = ({ dict }): JSX.Element => {
+const BioEntry: FunctionComponent<{ dict: any; lang: string }> = ({
+  dict,
+  lang,
+}): JSX.Element => {
   const router = useRouter();
   const context = useContext(ColorContext);
   return (
@@ -36,24 +39,31 @@ const BioEntry: FunctionComponent<{ dict: any }> = ({ dict }): JSX.Element => {
             {dict?.est}
           </div>
         </div>
-        <div className="relative w-full h-fit flex flex-col gap-5 items-start justify-start text-left px-12 pt-10">
-          <div className={`relative w-full h-full font-sani text-4xl`}>
+        <div
+          className="relative w-full h-fit flex flex-col gap-5 items-start justify-start text-left px-12 pt-10"
+          dir={["en", "es"]?.includes(lang) ? "ltr" : "rtl"}
+        >
+          <div className={`relative w-fit h-full font-sani text-4xl`}>
             {dict?.hey}
           </div>
           <div
-            className={`relative w-full h-full font-sani text-6xl underline cursor-pointer underline-offset-8`}
+            className={`relative w-fit h-full font-sani text-6xl underline cursor-pointer underline-offset-8`}
             onClick={() => window.open("https://github.com/emmajane1313")}
           >
             {dict?.me}
           </div>
           <div
+            dir={["en", "es"]?.includes(lang) ? "ltr" : "rtl"}
             className="relative w-2/3 h-fit text-base font-neueL"
             dangerouslySetInnerHTML={{
               __html: dict?.bio,
             }}
           ></div>
         </div>
-        <div className="relative w-full h-fit gap-3 flex flex-col items-start justify-start px-12">
+        <div
+          className="relative w-full h-fit gap-3 flex flex-col items-start justify-start px-12"
+          dir={["en", "es"]?.includes(lang) ? "ltr" : "rtl"}
+        >
           <div className="relative w-fit h-fit flex font-neue opacity-70 text-sm">
             {dict?.timeline}:
           </div>

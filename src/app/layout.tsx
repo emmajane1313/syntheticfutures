@@ -5,17 +5,17 @@ import { LOCALES_LIVE } from "./lib/constants";
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://syntheticfutures.xyz/"),
-  title: "Synthetic Futures",
+  title: "Synthetic Futures by Emma-Jane MacKinnon-Lee",
   description: "Time to help others with the outbreak. Not out of danger yet.",
   twitter: {
     card: "summary_large_image",
     creator: "@emmajane1313",
-    title: "Synthetic Futures",
+    title: "Synthetic Futures by Emma-Jane MacKinnon-Lee",
     description:
       "Time to help others with the outbreak. Not out of danger yet.",
   },
   openGraph: {
-    title: "Synthetic Futures",
+    title: "Synthetic Futures by Emma-Jane MacKinnon-Lee",
     description:
       "Time to help others with the outbreak. Not out of danger yet.",
   },
