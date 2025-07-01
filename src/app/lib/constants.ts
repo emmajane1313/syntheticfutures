@@ -276,6 +276,10 @@ export const LISTA: Lista[] = [
         titulo: "Kazdoura - خيال",
         enlace: "https://www.youtube.com/watch?v=xA1TJrx5ZI8",
       },
+      {
+        titulo: "دنيا وائل - مشكلة",
+        enlace: "https://www.youtube.com/watch?v=IBeHcNxVPtg"
+      }
     ],
   },
   {
@@ -292,6 +296,10 @@ export const LISTA: Lista[] = [
       {
         titulo: "iliona - Reste",
         enlace: "https://www.youtube.com/watch?v=sLBRmH-PY9A",
+      },
+      {
+        titulo: "Tao Mon Amour - Cœur incolore",
+        enlace: "https://www.youtube.com/watch?v=gE2QVN6TWns",
       },
       {
         titulo: "VIDEOCLUB – En nuit",

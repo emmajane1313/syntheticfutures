@@ -72,7 +72,12 @@ export default function RootLayout({
               name: "Emma-Jane MacKinnon-Lee",
               url: "https://emmajanemackinnonlee.com/",
               sameAs: [
-                "https://emmajanemackinnonlee.com/",
+                   "https://emmajanemackinnonlee.com/",
+                "https://emmajanemackinnonlee.xyz/",
+                "https://emmajanemackinnonlee.net/",
+                "https://emmajanemackinnonlee.dev/",
+                "https://emmajanemackinnonlee.org/",
+                "https://emmajanemackinnonlee.info/",
                 "https://syntheticfutures.xyz/",
                 "https://web3fashion.xyz/",
                 "https://emancipa.xyz/",
