@@ -1003,14 +1003,6 @@ export const REFLECTIONS: Reflection[] = [
     height: 683,
   },
   {
-    title: "Emma-Jane MacKinnon-Lee — الوجه اللى مش بيثبت فى أى إطار",
-    caption: "كل frame بيسجل لحظة، بس عمره ما بيحفظها كاملة.",
-    image: "https://live.staticflickr.com/65535/54514077747_63038fdb4d_h.jpg",
-    alt: "i didn’t pose. the frame caught whatever i was leaking that day.",
-    width: 1786,
-    height: 1192,
-  },
-  {
     title: "Emma-Jane MacKinnon-Lee — fed into the model, returned as noise",
     caption: "this is what happens when presence resists flattening.",
     image: "https://live.staticflickr.com/65535/54514077742_565e3f1922_h.jpg",
