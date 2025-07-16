@@ -278,8 +278,8 @@ export const LISTA: Lista[] = [
       },
       {
         titulo: "دنيا وائل - مشكلة",
-        enlace: "https://www.youtube.com/watch?v=IBeHcNxVPtg"
-      }
+        enlace: "https://www.youtube.com/watch?v=IBeHcNxVPtg",
+      },
     ],
   },
   {
@@ -458,12 +458,17 @@ export const LISTA: Lista[] = [
         enlace: "https://www.youtube.com/watch?v=NPTUFCubF8o",
       },
       {
-        titulo: "יידישע הומור",
-        enlace: "https://www.youtube.com/watch?v=-2o_52pQk74",
+        titulo: "Di Svet Shop - Tsibele",
+        enlace:
+          "https://t4.bcbits.com/stream/8f53a6e0a5c21956889716ad3ab774db/mp3-128/3158345431?p=0&ts=1752743633&t=251ce5574c7621b90745abfc503f7731bf6fea77&token=1752743633_263a268c5879f795be09e9e517594de3c1df96a2",
       },
       {
-        titulo: "שלאף - ריקי רויז",
-        enlace: "https://www.youtube.com/watch?v=WOsLvRQpaeQ",
+        titulo: "אטעם אריין אטעם ארויס - ריקי רויז",
+        enlace: "https://www.youtube.com/watch?v=NPTUFCubF8o",
+      },
+      {
+        titulo: "יידישע הומור",
+        enlace: "https://www.youtube.com/watch?v=-2o_52pQk74",
       },
     ],
   },
