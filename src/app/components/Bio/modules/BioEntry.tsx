@@ -162,6 +162,72 @@ const BioEntry: FunctionComponent<{ dict: any; lang: string }> = ({
                   },
                 ],
               },
+              {
+                titulo: dict?.noiseT,
+                enlace: "https://www.youtube.com/@noisemachine13",
+                descripcion: dict?.noiseD,
+                fecha: "2025-Current",
+                subs: [
+                  {
+                    titulo: "Casa de Espejos",
+                    descripcion: dict?.casaD,
+                    techstack: "NextJS, TS, React, Wan, Flux",
+                    enlace: "https://casadeespejos.com/",
+                  },
+                  {
+                    titulo: "Runway",
+                    descripcion: dict?.runwayD,
+                    techstack: "NextJS, TS, React, Wan, Flux",
+                    enlace: "https://emmajanemackinnonlee-runway.xyz/",
+                  },
+                  {
+                    titulo: "Wan Interviews",
+                    descripcion: dict?.interD,
+                    techstack: "NextJS, TS, React, Wan, Flux",
+                    enlace: "https://emmajanemackinnon.com/",
+                  },
+                ],
+              },
+              {
+                titulo: "Global Designer Network",
+                enlace: "https://globaldesignernetwork.com/",
+                descripcion: dict?.gdnD,
+                fecha: "2020-Current",
+                subs: [
+                  {
+                    titulo: "Web3 Fashion Week",
+                    descripcion: dict?.w3fwD,
+                    techstack: "NextJS, TS, React, Wan, Flux",
+                    enlace: "https://web3fashionweek.com/",
+                  },
+                  {
+                    titulo: "I Coined Web3 Fashion",
+                    descripcion: dict?.coinedD,
+                    techstack: "NextJS, TS, React, Wan, Flux",
+                    enlace: "https://icoinedweb3fashion.com/",
+                  },
+                ],
+              },
+              {
+                titulo: "CC0",
+                enlace: "https://emmajanemackinnonlee-cc0.com/",
+                descripcion: dict?.cc0d,
+                fecha: "2025-Current",
+                subs: [
+                  {
+                    titulo: "CC0 Web3 Fashion",
+                    descripcion: dict?.cc0wf,
+                    techstack: "NextJS, TS, React, Wan, Flux",
+                    enlace: "https://casadeespejos.com/",
+                  },
+                  {
+                    titulo: "CC0 Web3",
+                    descripcion: dict?.cc0w,
+                    techstack: "NextJS, TS, React, Wan, Flux",
+                    enlace: "https://emmajanemackinnonlee-runway.xyz/",
+                  },
+                ],
+              },
             ].map(
               (
                 elemento: {
@@ -202,7 +268,11 @@ const BioEntry: FunctionComponent<{ dict: any; lang: string }> = ({
                       </div>
                     </div>
                     {elemento?.subs && (
-                      <div className="pl-4 relative w-full h-fit flex items-start justify-start flex-col gap-8">
+                      <div
+                        className={`relative w-full h-fit flex items-start justify-start flex-col gap-8 ${
+                          lang == "ar" ? "pr-4" : "pl-4"
+                        }`}
+                      >
                         {elemento?.subs?.map(
                           (
                             sub: {

@@ -43,5 +43,16 @@
   "reflections": "Reflections",
   "lucD": "Agentic discovery interface for Comfystream workflows. Chat with a grumpy, RTFM-style greybeard agent who will (reluctantly) help you find and create workflows.",
   "trip": "Agentic marketplace built on Lens Network. On-chain agents, running on venice.ai wizardry, remix and mint generative IRL art + fashion.",
-  "metal": "The Taste of Metal"
+  "metal": "The Taste of Metal",
+  "noiseT": "Noise Machine",
+  "noiseD": "Conversing with machines through advanced local Wan workflows.",
+  "casaD": "This is a distorted fragment of Emma-Jane MacKinnon-Lee, part of the ongoing noise machine study.",
+  "runwayD": "Collection of Wan2.1 style transfer GGUFs. Diffusion, img2vid, and ephemeral render chains tuned for 4090 setups.",
+  "interD": "LoRA trained on Noise Machine outputs. Wan2.1 style GGUF, diffusion stack, Kyutai voice changer, multi-talk lipsync. All local. All 4090-optimized.",
+  "gdnD": "Indie Web3 Fashion Fleet.",
+  "w3fwD": "GDR Punk. The Stasi took VC Funding. Runway broadcasts.",
+  "coinedD": "First to coin it, first to build it.",
+  "cc0d": "The Yiddish of open ink presses, garment floors and early printshops.",
+  "cc0wf": "A dashboard, forum, newsfeed and drop site.",
+  "cc0w": "A bulletin board. After Sassaman, after Swartz. Carrying the thread forward for the unfinished work of real Web3."
 }

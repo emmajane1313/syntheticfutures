@@ -43,5 +43,16 @@
   "play": "Reproducir",
   "lucD": "Interfaz de descubrimiento agéntica para flujos de trabajo de Comfystream. Chatea con un agente veterano gruñón, con estilo RTFM (lee el maldito manual), que te ayudará (a regañadientes) a encontrar y crear flujos de trabajo",
   "trip": "Mercado agéntico construido sobre Lens Network. Agentes en cadena, funcionando con la magia de venice.ai, remezclan y acuñan arte generativo y moda IRL",
-  "metal": "El Sabor A Metal"
+  "metal": "El Sabor A Metal",
+  "noiseT": "Máquina de Ruido",
+  "noiseD": "Conversaciones con máquinas usando flujos Wan locales avanzados.",
+  "casaD": "Un fragmento distorsionado de Emma-Jane MacKinnon-Lee, parte del estudio en curso de la máquina de ruido.",
+  "runwayD": "Colección de GGUFs de estilo Wan2.1. Difusión, img2vid y cadenas de render efímeras, ajustadas para setups con 4090.",
+  "interD": "LoRA entrenada localmente con salidas de la Máquina de Ruido. GGUF estilo Wan2.1, stack de difusión, cambiador de voz Kyutai, sincronización labial multi-talk. Todo local. Todo optimizado para 4090.",
+  "gdnD": "Flota indie de moda Web3.",
+  "w3fwD": "Punk RDA. La Stasi aceptó capital riesgo. Runway emite.",
+  "coinedD": "La primera en nombrarlo, la primera en construirlo.",
+  "cc0d": "El yidis de las imprentas abiertas, las fábricas de ropa y los primeros talleres editoriales.",
+  "cc0wf": "Un panel de control, foro, feed de noticias y zona de lanzamientos.",
+  "cc0w": "Un tablón de anuncios. Después de Sassaman, después de Swartz. Siguiendo el hilo del trabajo inacabado del Web3 real."
 }
