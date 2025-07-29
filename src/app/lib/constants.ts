@@ -637,6 +637,10 @@ export const LISTA: Lista[] = [
         enlace: "https://www.youtube.com/watch?v=yd0pkrxA510",
         titulo: "MacKinnon Clan - MacKinnon's Strathspey",
       },
+      {
+        enlace: "https://www.youtube.com/watch?v=GHe2H2WOQXs",
+        titulo: "Fear a Bhàta - Alison Helzer"
+      }
     ],
   },
 ];
