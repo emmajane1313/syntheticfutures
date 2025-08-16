@@ -1101,8 +1101,8 @@ export const REFLECTIONS: Reflection[] = [
     caption: "her shape exists, but the origin is forked beyond traceability.",
     image: "emmajanemackinnonlee2.png",
     alt: "Emma Jane MacKinnon-Lee embedded in refracted light.",
-    width: 1182,
-    height: 1178,
+    width: 263,
+    height: 1029,
   },
   {
     title:
