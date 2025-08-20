@@ -649,6 +649,10 @@ export const LISTA: Lista[] = [
         enlace: "https://www.youtube.com/watch?v=FdezC-R-Cao",
         titulo: "Oran Na Beairt - The Lochies",
       },
+      {
+        enlace: "https://www.youtube.com/watch?v=FbT345dXN9o",
+        titulo: "An t-Seann Dachaidh - Flair",
+      },
     ],
   },
 ];
